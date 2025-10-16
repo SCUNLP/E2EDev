@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Car Registration System</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="main-container">
+<h1>Car Registration System</h1>
+<!-- Tabs -->
+<div class="tabs">
+<button class="tab-button active" data-tab="register" data-testid="register-tab-button">Register Car</button>
+<button class="tab-button" data-tab="view" data-testid="view-tab-button">View All Registrations</button>
+</div>
+<!-- Tab Content -->
+<div class="tab-content active" data-testid="register-tab-content" id="register">
+<div class="card">
+<h3>Register a Car</h3>
+<form data-testid="registration-form" id="registrationForm">
+<div class="form-group">
+<label for="ownerName" data-testid="owner-name-label">Owner's Name</label>
+<input data-testid="owner-name-input" id="ownerName" name="ownerName" placeholder="Enter owner's name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="carModel" data-testid="car-model-label">Car Model</label>
+<input data-testid="car-model-input" id="carModel" name="carModel" placeholder="Enter car model" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="licenseNumber" data-testid="license-number-label">License Number</label>
+<input data-testid="license-number-input" id="licenseNumber" name="licenseNumber" placeholder="Enter license number" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="registrationDate" data-testid="registration-date-label">Registration Date</label>
+<input data-testid="registration-date-input" id="registrationDate" name="registrationDate" required="" type="date"/>
+</div>
+<div class="form-group">
+<button data-testid="submit-button" id="submitButton" type="submit">Save Registration</button>
+</div>
+</form>
+</div>
+</div>
+<div class="tab-content" data-testid="view-tab-content" id="view">
+<div class="card">
+<h3>All Registrations</h3>
+<table data-testid="registration-table" id="registrationTable">
+<thead>
+<tr>
+<th data-testid="owner-name-header">Owner's Name</th>
+<th data-testid="car-model-header">Car Model</th>
+<th data-testid="license-number-header">License Number</th>
+<th data-testid="registration-date-header">Registration Date</th>
+<th data-testid="actions-header">Actions</th>
+</tr>
+</thead>
+<tbody>
+<!-- Dynamic rows will be added here -->
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

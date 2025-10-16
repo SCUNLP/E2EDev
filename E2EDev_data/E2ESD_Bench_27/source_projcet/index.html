@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<title>Meal Finder</title>
+</head>
+<body>
+<header>
+<div class="header">
+<div class="flex">
+<img alt="Meal Finder" src="https://i.ibb.co/ZKCTJ9b/728985-fish-cooking-food-kitchen-meal-icon.png"/>
+<h1>Meal Finder</h1>
+</div>
+<div class="flex">
+<form class="flex" data-testid="submit-form" id="submit">
+<input data-testid="search-input" id="search" placeholder="Search for meals or keywords" type="text"/>
+<button class="search-btn" type="submit" data-testid="search-button">
+<i class="fas fa-search"></i>
+</button>
+</form>
+<button class="random-btn" data-testid="random-button" id="random">
+<i class="fas fa-random"></i>
+</button>
+</div>
+</div>
+</header>
+<div class="container">
+<div data-testid="result-heading" id="result-heading"></div>
+<div class="meals" data-testid="meals-container" id="meals"></div>
+<div data-testid="single-meal-container" id="single-meal"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+    "summary": {
+        "overview": "The Height Converter application allows users to input a height value and convert it between different units (Centimeters, Inches, Meters, Kilometers, Miles). Users can select the input and output units from dropdown menus, and the application displays the converted value in real-time. A reset button is available to clear inputs and outputs.",
+        "predefined_options": "The application provides predefined options for unit selection in dropdown menus, including Centimeters, Inches, Meters, Kilometers, and Miles.",
+        "external_resources": "The application uses Bootstrap for styling, linked via a CDN.",
+        "external_js_libraries": "Bootstrap is used for styling, sourced from 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'."
+    },
+    "requirements": [
+        {
+            "id": "REQ-001",
+            "description": "When the user enters a numeric value in the height input field, the system should display this value in the designated output area and make the output row and reset button visible."
+        },
+        {
+            "id": "REQ-002",
+            "description": "When the user selects a unit from the first dropdown menu, the system should update the input field's placeholder to reflect the selected unit and display the unit name in the height name area."
+        },
+        {
+            "id": "REQ-003",
+            "description": "When the user selects a unit from the second dropdown menu, the system should display the selected unit name in the converted height name area."
+        },
+        {
+            "id": "REQ-004",
+            "description": "Upon any change in the height input or unit selection, the system should automatically convert the height to the selected output unit and display the converted value in the final output area."
+        },
+        {
+            "id": "REQ-005",
+            "description": "When the user clicks the reset button, the system should clear all inputs and outputs, reset the form to its initial state, and hide the output row and reset button."
+        }
+    ]
+}

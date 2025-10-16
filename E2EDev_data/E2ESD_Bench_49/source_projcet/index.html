@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Grade Book</title>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Student Grade Book</h1>
+<form data-testid="student-form" id="student-form" onsubmit="addStudent(event)">
+  <input data-testid="student-name" id="student-name" placeholder="Student Name" required="" type="text"/>
+  <input data-testid="student-grade" id="student-grade" max="100" min="0" placeholder="Grade (0-100)" required="" type="number"/>
+  <button data-testid="add-student-button" type="submit">Add Student</button>
+</form>
+<h2>Student List</h2>
+<ul data-testid="student-list" id="student-list"></ul>
+<script src="script.js"></script>
+</body>
+</html>

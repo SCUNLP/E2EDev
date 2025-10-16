@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["calculator"],
+  "InteractionModes": ["form input", "keyboard input"],
+  "LogicComplexityLevel": "simple input-output",
+  "TechnicalPoints": ["real-time updates", "dynamic DOM manipulation"],
+  "ExternalResources": ["JS libraries", "CDN assets"]
+}
+```

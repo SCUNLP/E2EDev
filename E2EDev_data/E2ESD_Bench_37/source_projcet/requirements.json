@@ -1,0 +1,34 @@
+{
+    "summary": {
+        "overview": "The application is a text-moving tool that allows users to input text into a textarea and move it to a display area on the right by clicking a button. It provides visual feedback on the progress of the text movement through a progress indicator and a progress bar.",
+        "predefined_options": "The application does not specify predefined options or default values for user inputs.",
+        "external_resources": "No external resources such as links, images, or audio files are used in this application.",
+        "external_js_libraries": "No external JavaScript libraries or packages are used in this application."
+    },
+    "requirements": [
+        {
+            "id": "REQ-001",
+            "description": "When the user enters text into the textarea (id='text') and clicks the button (id='button'), the system should move the text to the content display area (id='content') on the right."
+        },
+        {
+            "id": "REQ-002",
+            "description": "If the user clicks the button (id='button') without entering any text in the textarea (id='text'), the system should display an alert message prompting the user to '请输入文本信息' (Please enter text information)."
+        },
+        {
+            "id": "REQ-003",
+            "description": "As the text is moved from the textarea (id='text') to the content display area (id='content'), the system should update the progress indicator (strong element) to reflect the number of characters moved versus the total number of characters."
+        },
+        {
+            "id": "REQ-004",
+            "description": "When the button (id='button') is clicked, the system should change the button's background color to '#ccc' to indicate activation."
+        },
+        {
+            "id": "REQ-005",
+            "description": "Upon clicking the button (id='button'), the system should display the progress bar (ul element) and update its items (li elements) to visually represent the progress of the text movement."
+        },
+        {
+            "id": "REQ-006",
+            "description": "The system should clear the content display area (id='content') each time the button (id='button') is clicked to ensure only the current text is displayed."
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The application is a web-based calculator that allows users to perform basic arithmetic operations. It includes a display screen for showing inputs and results, a set of buttons for numbers and operators, and a theme toggle feature to switch between dark and light modes.",
+    "predefined_options": "The calculator provides predefined buttons for numbers (0-9), operators (+, -, ×, ÷), and additional functions like clear, backspace, and parentheses.",
+    "external_resources": "The application uses an image as a favicon: './images/2344132.png'.",
+    "external_js_libraries": "No external JavaScript libraries are explicitly mentioned in the provided code."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The calculator application must allow users to interact with number buttons (0-9) such that when a user clicks any number button, the corresponding number is appended to the display screen. The display screen is identified by the attribute data-testid='display'. The application should handle sequences of number button clicks by appending each number in the order clicked. If the display is cleared using the button with data-testid='clear-button', subsequent number button clicks should start a new sequence on the display. The system should support clicking all number buttons in sequence, displaying '0123456789'. The application must ensure that the display accurately reflects the user's input sequence, even after clearing the display.
+- Requirement 2: 
+When a user interacts with the calculator's operator buttons, the system should append the corresponding operator to the display screen. The operator buttons include addition ('+', data-testid='add-button'), subtraction ('-', data-testid='subtract-button'), multiplication ('×', data-testid='multiply-button'), and division ('÷', data-testid='divide-button'). If the display is empty and an operator button is clicked, the operator should be shown on the display. If a number is already present on the display, the operator should be appended to the existing number. In cases where multiple operator buttons are clicked consecutively, only the last operator clicked should be displayed. The display should accurately reflect the user's input sequence, ensuring that the calculator's functionality aligns with standard arithmetic operations.
+- Requirement 3: 
+When the user clicks the clear button with the attribute data-testid='clear-button', the system must clear all content from the display screen identified by data-testid='display'. This functionality should work regardless of the current state of the display, ensuring that if the display is already empty, it remains empty after clicking the clear button.
+- Requirement 4: 
+The calculator application must allow users to remove the last character from the display screen by clicking the backspace button. The backspace button is identified by the data-testid 'backspace-button'. When clicked, if the display (identified by data-testid 'display') contains characters, the last character should be removed. If the display is empty, clicking the backspace button should have no effect, and the display should remain empty. The system should handle repeated clicks on the backspace button, removing characters one by one until the display is empty. Additionally, if the user enters an invalid character sequence and clicks backspace, the last character of the sequence should be removed, leaving the remaining valid sequence intact.
+- Requirement 5: 
+The calculator application must allow users to input arithmetic expressions using buttons with specific data-testid attributes for numbers (e.g., 'number-0' to 'number-9'), operators (e.g., 'add-button', 'subtract-button', 'multiply-button', 'divide-button'), and parentheses ('open-parenthesis-button', 'close-parenthesis-button'). When the user clicks the equal button (data-testid 'equal-button'), the system should evaluate the expression displayed in the element with data-testid 'display'. If the expression is valid, the display should update with the calculated result. Special cases include handling division by zero, which should display 'Infinity', and clicking the equal button with an empty display, which should temporarily show 'Empty!' for 2 seconds before clearing. The application should also support toggling between dark and light themes using the theme toggle button (data-testid 'theme-toggler'), which affects the class of the calculator element.
+- Requirement 6: 
+The web application must provide a theme toggle functionality for the calculator interface. Initially, the calculator is displayed in dark mode. The theme toggle button, identifiable by the attribute data-testid='theme-toggler', allows users to switch between dark and light themes. Upon clicking this button, the calculator element with the class 'calculator' should toggle the 'dark' class, effectively changing the theme. Additionally, the theme toggle button itself should toggle the 'active' class to reflect the current theme state. This interaction should be seamless and immediate, ensuring that users can easily switch themes without any delay or additional actions.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

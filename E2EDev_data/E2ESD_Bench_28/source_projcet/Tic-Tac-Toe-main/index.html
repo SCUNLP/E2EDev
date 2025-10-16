@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tic Tac Toe</title>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<main class="background">
+<section class="title">
+<h1>Tic Tac Toe</h1>
+</section>
+<section class="display">
+                player <span class="display-player playerx" data-testid="current-player">X</span>'s turn
+            </section>
+<section class="container">
+<div class="tile" data-testid="tile-1"></div>
+<div class="tile" data-testid="tile-2"></div>
+<div class="tile" data-testid="tile-3"></div>
+<div class="tile" data-testid="tile-4"></div>
+<div class="tile" data-testid="tile-5"></div>
+<div class="tile" data-testid="tile-6"></div>
+<div class="tile" data-testid="tile-7"></div>
+<div class="tile" data-testid="tile-8"></div>
+<div class="tile" data-testid="tile-9"></div>
+</section>
+<section class="display announcer hide" data-testid="announcer"></section>
+<section class="controls">
+<button data-testid="reset-button" id="reset">reset</button>
+</section>
+</main>
+<script src="tictactoe.js" type="text/javascript"></script>
+</body>
+</html>

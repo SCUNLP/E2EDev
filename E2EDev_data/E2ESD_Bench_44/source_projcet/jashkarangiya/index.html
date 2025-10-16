@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="./css/custom.css" rel="stylesheet"/>
+<link href="./images/2344132.png" rel="shortcut icon" type="image/x-icon"/>
+<title>Calculator</title>
+</head>
+<body>
+<div class="container">
+<div class="calculator dark">
+<div class="theme-toggler active" data-testid="theme-toggler">
+<i class="toggler-icon" data-testid="toggler-icon"></i>
+</div>
+<div class="display-screen">
+<div data-testid="display" id="display"></div>
+</div>
+<div class="buttons">
+<table>
+<tr>
+<td><button class="btn-operator" data-testid="clear-button" id="clear">C</button></td>
+<td><button class="btn-operator" data-testid="divide-button" id="/">÷</button></td>
+<td><button class="btn-operator" data-testid="multiply-button" id="*">×</button></td>
+<td><button class="btn-operator" data-testid="backspace-button" id="backspace">&lt;</button></td>
+</tr>
+<tr>
+<td><button class="btn-number" data-testid="number-7" id="7">7</button></td>
+<td><button class="btn-number" data-testid="number-8" id="8">8</button></td>
+<td><button class="btn-number" data-testid="number-9" id="9">9</button></td>
+<td><button class="btn-operator" data-testid="subtract-button" id="-">-</button></td>
+</tr>
+<tr>
+<td><button class="btn-number" data-testid="number-4" id="4">4</button></td>
+<td><button class="btn-number" data-testid="number-5" id="5">5</button></td>
+<td><button class="btn-number" data-testid="number-6" id="6">6</button></td>
+<td><button class="btn-operator" data-testid="add-button" id="+">+</button></td>
+</tr>
+<tr>
+<td><button class="btn-number" data-testid="number-1" id="1">1</button></td>
+<td><button class="btn-number" data-testid="number-2" id="2">2</button></td>
+<td><button class="btn-number" data-testid="number-3" id="3">3</button></td>
+<td rowspan="2"><button class="btn-equal" data-testid="equal-button" id="equal">=</button></td>
+</tr>
+<tr>
+<td><button class="btn-operator" data-testid="open-parenthesis-button" id="(">(</button></td>
+<td><button class="btn-number" data-testid="number-0" id="0">0</button></td>
+<td><button class="btn-operator" data-testid="close-parenthesis-button" id=")">)</button></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<script src="./js/index.js"></script>
+</body>
+</html>

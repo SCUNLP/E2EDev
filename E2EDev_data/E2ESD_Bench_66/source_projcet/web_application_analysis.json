@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["content generator"],
+  "InteractionModes": ["form input", "keyboard input", "visual feedback"],
+  "LogicComplexityLevel": "simple input-output, conditionals",
+  "TechnicalPoints": ["dynamic DOM manipulation", "focus management"],
+  "ExternalResources": []
+}
+```

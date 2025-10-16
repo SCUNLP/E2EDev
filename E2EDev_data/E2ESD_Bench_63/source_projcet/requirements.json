@@ -1,0 +1,76 @@
+{
+    "summary": {
+        "overview": "This web application allows users to calculate the Least Common Multiple (LCM) and Highest Common Factor (HCF) of two numbers. Users can input two numbers, trigger the calculation, and view the results along with an indication of whether the result is even or odd. The application provides a responsive and interactive user interface with visual feedback.",
+        "predefined_options": "No predefined options are available; users manually input two numbers for LCM or HCF calculations.",
+        "external_resources": [
+            {
+                "name": "Logo",
+                "source": "./public/img/logo.jfif"
+            },
+            {
+                "name": "CSS Stylesheet",
+                "source": "./public/css/style.css"
+            },
+            {
+                "name": "Main JavaScript File",
+                "source": "./public/js/main.js"
+            }
+        ],
+        "external_js_libraries": [
+            {
+                "name": "jQuery",
+                "source": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            }
+        ]
+    },
+    "requirements": [
+        {
+            "id": "REQ-001",
+            "description": "When the user clicks the 'Click here to find LCM of two numbers.' button, the LCM input form should be displayed, and the HCF input form should be hidden."
+        },
+        {
+            "id": "REQ-002",
+            "description": "When the user clicks the 'Click here to find HCF of two numbers.' button, the HCF input form should be displayed, and the LCM input form should be hidden."
+        },
+        {
+            "id": "REQ-003",
+            "description": "The user should be able to input two numbers in the LCM form using the input fields labeled 'Num1...' and 'Num2...'."
+        },
+        {
+            "id": "REQ-004",
+            "description": "The user should be able to input two numbers in the HCF form using the input fields labeled 'Num1...' and 'Num2...'."
+        },
+        {
+            "id": "REQ-005",
+            "description": "When the user clicks the 'Calculate' button in the LCM form, the system should calculate the LCM of the two input numbers and display the result in the designated result area."
+        },
+        {
+            "id": "REQ-006",
+            "description": "When the user clicks the 'Calculate' button in the HCF form, the system should calculate the HCF of the two input numbers and display the result in the designated result area."
+        },
+        {
+            "id": "REQ-007",
+            "description": "After calculating the LCM, the system should indicate whether the result is even or odd by adjusting the opacity of the 'even' and 'odd' indicators in the LCM section."
+        },
+        {
+            "id": "REQ-008",
+            "description": "After calculating the HCF, the system should indicate whether the result is even or odd by adjusting the opacity of the 'even' and 'odd' indicators in the HCF section."
+        },
+        {
+            "id": "REQ-009",
+            "description": "When the user hovers over the 'Calculate' button in either the LCM or HCF form, the text color of the button should change to white."
+        },
+        {
+            "id": "REQ-010",
+            "description": "When the user moves the mouse away from the 'Calculate' button in either the LCM or HCF form, the text color of the button should revert to black."
+        },
+        {
+            "id": "REQ-011",
+            "description": "The system should display a message in the console indicating that the server is listening on port 8000 when the application is started."
+        },
+        {
+            "id": "REQ-012",
+            "description": "The application should serve static files (HTML, CSS, JavaScript, and images) from the specified directory to enable the web interface."
+        }
+    ]
+}

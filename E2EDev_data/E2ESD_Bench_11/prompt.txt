@@ -1,0 +1,38 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The Loan Calculator web application allows users to calculate loan payments by entering the loan amount, interest rate, and loan term. It provides a breakdown of monthly payments, total payments, and total interest, and displays this information visually using a chart. The application also includes a dark mode feature for user interface customization.",
+    "predefined_options": "The loan term slider is preset with a minimum value of 1 year and a maximum value of 30 years, with a default value of 15 years.",
+    "external_resources": "The application uses Google Fonts for typography and includes a canvas element for rendering the payment chart.",
+    "external_js_libraries": "The application uses Chart.js for rendering the payment chart, sourced from a CDN link: 'https://cdn.jsdelivr.net/npm/chart.js'."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The system must allow users to toggle between light and dark themes using a dark mode switch. Specifically, when the user interacts with the dark mode switch located by the data-testid 'dark-mode-switch', the system should apply the 'dark-mode' class to the body element when the switch is in the 'checked' position, thereby enabling dark mode. Conversely, when the switch is in the 'unchecked' position, the 'dark-mode' class should be removed from the body element, reverting to light mode.
+- Requirement 2: 
+The Loan Calculator web application must handle user valid numeric input in the 'Loan Amount' input field with data-testid 'amount-input'.
+- Requirement 3: 
+When the user enters a value in the 'Interest Rate' input field with data-testid 'rate-input', the system should accept and store the numeric value for calculation purposes.
+- Requirement 4: 
+When the user interacts with the 'Loan Term' input field, the system should handle and store the numeric value for calculation purposes, covering various scenarios including normal, edge, and error cases.
+- Requirement 5: 
+The Loan Calculator web application must ensure that when a user adjusts the 'Loan Term' slider, the 'Loan Term' input field is dynamically updated to reflect the slider's current value. Specifically, the slider element, identified by data-testid 'year-slider', should allow users to select a value between 1 and 30, inclusive. Upon adjustment, the input field with data-testid 'years-input' must immediately display the selected slider value. 
+- Requirement 6: 
+The system must calculate and display the monthly payment, total payment, and total interest when the user clicks the 'Calculate' button (data-testid 'calculate-button'). The monthly payment is calculated using the formula M = P * (r * (1 + r)^n) / ((1 + r)^n - 1), with special handling for 0 interest rate (M = P / n). Total payment is M * n, and total interest is Total Payment - Principal. The results are displayed in the format 'Monthly Payment: $[value]', 'Total Payment: $[value]', and 'Total Interest: $[value]' (data-testids 'monthly-payment', 'total-payment', 'total-interest'). If any input is invalid or missing, the system must alert the user with the message "Please check your numbers" and prevent the calculation. 
+- Requirement 7: 
+When the user clicks the 'Calculate' button and the input values are valid, the doughnut chart (data-testid 'payment-chart') will update to show the proportions of principal and interest.
+- Requirement 8: 
+When the 'Calculate' button is clicked, the system should check the validity of the input values. If any of the values are zero or invalid, an alert should be displayed with the message 'Please check your numbers'. 
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

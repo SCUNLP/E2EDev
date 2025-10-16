@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<title>Speed Typer</title>
+</head>
+<body>
+<button class="settings-btn" data-testid="settings-btn" id="settings-btn">
+<i class="fas fa-cog"></i>
+</button>
+<div class="settings" data-testid="settings" id="settings">
+<form data-testid="settings-form" id="settings-form">
+<label for="difficulty" data-testid="difficulty-label">Difficulty</label>
+<select data-testid="difficulty-select" id="difficulty">
+<option value="easy" data-testid="difficulty-option-easy">Easy</option>
+<option value="medium" data-testid="difficulty-option-medium">Medium</option>
+<option value="hard" data-testid="difficulty-option-hard">Hard</option>
+</select>
+</form>
+</div>
+<div class="container">
+<h2 data-testid="title">👩‍💻 Speed Typer 👨‍💻</h2>
+<small data-testid="instruction">Type the following:</small>
+<h1 data-testid="word" id="word"></h1>
+<input autocomplete="off" data-testid="text-input" id="text" placeholder="Type the word here..." type="text"/>
+<p class="time-container">Time left: <span data-testid="time" id="time">10s</span></p>
+<p class="score-container">Score: <span data-testid="score" id="score">0</span></p>
+<div class="end-game-container" data-testid="end-game-container" id="end-game-container"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

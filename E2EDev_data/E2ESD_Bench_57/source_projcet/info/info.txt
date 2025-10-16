@@ -1,0 +1,105 @@
+Based on the provided HTML and JavaScript code of the web application, I will infer the user requirements, the involved modules, and the functionalities of each module. Subsequently, I will automatically generate a JSON file that contains all the user requirements, modules, and corresponding test cases.
+
+### Inferred Information
+
+**Task ID**: 01-checkboxChoose  
+**Task Name**: Checkbox Selection Functionality  
+**Task Description**: Implement functionality for selecting/deselecting checkboxes, including support for 'Select All' and 'Invert Selection'.
+
+#### Modules
+1. **Module ID**: 01  
+   **Module Name**: Checkbox Module  
+   **Module Description**: Provides functionality for checkbox selections, including select all, invert selections, and updating selection states based on user interactions.  
+   **Module Type**: Frontend  
+
+#### User Requirements
+1. **User Requirement ID**: 01  
+   **User Requirement Name**: Select/Deselect Checkboxes  
+   **User Requirement Description**: Users should be able to select or deselect all checkboxes with a "Select All" option and can invert their selections with a button.  
+
+### Generated JSON Structure
+```json
+{
+    "task_id": "01-checkboxChoose",
+    "task_name": "Checkbox Selection Functionality",
+    "task_description": "Implement functionality for selecting/deselecting checkboxes, including support for 'Select All' and 'Invert Selection'.",
+    "modules": [
+        {
+            "module_id": "01",
+            "module_name": "Checkbox Module",
+            "module_description": "Provides functionality for checkbox selections, including select all, invert selections, and updating selection states based on user interactions.",
+            "module_type": "Frontend"
+        }
+    ],
+    "user_requirement_list": [
+        {
+            "user_requirement_id": "01",
+            "user_requirement_name": "Select/Deselect Checkboxes",
+            "user_requirement_description": "Users should be able to select or deselect all checkboxes with a 'Select All' option and can invert their selections with a button.",
+            "test_cases": [
+                {
+                    "test_case_id": "TC-01-01",
+                    "test_case_name": "Check All Checkboxes",
+                    "test_case_description": "Verifies that clicking 'Select All' checks all checkboxes.",
+                    "steps": [
+                        "Navigate to the checkbox selection page.",
+                        "Click the 'Select All' checkbox."
+                    ],
+                    "expected_result": "All individual checkboxes should be checked.",
+                    "modules": ["01"]
+                },
+                {
+                    "test_case_id": "TC-01-02",
+                    "test_case_name": "Uncheck All Checkboxes",
+                    "test_case_description": "Verifies that clicking 'Select All' again unchecks all checkboxes.",
+                    "steps": [
+                        "Navigate to the checkbox selection page.",
+                        "Click the 'Select All' checkbox to check all checkboxes.",
+                        "Click the 'Select All' checkbox again."
+                    ],
+                    "expected_result": "All individual checkboxes should be unchecked.",
+                    "modules": ["01"]
+                },
+                {
+                    "test_case_id": "TC-01-03",
+                    "test_case_name": "Invert Checkbox Selection",
+                    "test_case_description": "Tests that clicking 'Invert Selection' toggles the selected state of all checkboxes.",
+                    "steps": [
+                        "Navigate to the checkbox selection page.",
+                        "Select some checkboxes.",
+                        "Click the 'Invert Selection' link."
+                    ],
+                    "expected_result": "All selected checkboxes should be unchecked and vice versa.",
+                    "modules": ["01"]
+                },
+                {
+                    "test_case_id": "TC-01-04",
+                    "test_case_name": "Toggle Checkbox Updates Select All",
+                    "test_case_description": "Verifies that the 'Select All' checkbox reflects the state of the individual checkboxes.",
+                    "steps": [
+                        "Navigate to the checkbox selection page.",
+                        "Check some individual checkboxes.",
+                        "Observe the state of the 'Select All' checkbox."
+                    ],
+                    "expected_result": "'Select All' should be unchecked as not all individual checkboxes are checked.",
+                    "modules": ["01"]
+                },
+                {
+                    "test_case_id": "TC-01-05",
+                    "test_case_name": "Check Individual Checkbox Updates Select All",
+                    "test_case_description": "Checks that the 'Select All' checkbox updates as checkboxes are individually checked.",
+                    "steps": [
+                        "Navigate to the checkbox selection page.",
+                        "Click the 'Select All' checkbox to check all checkboxes.",
+                        "Uncheck one individual checkbox."
+                    ],
+                    "expected_result": "'Select All' should be unchecked.",
+                    "modules": ["01"]
+                }
+            ]
+        }
+    ]
+}
+```
+
+This JSON structure captures the essence of the user requirements, involved modules, and comprehensive test cases necessary to validate the described functionalities of the application.

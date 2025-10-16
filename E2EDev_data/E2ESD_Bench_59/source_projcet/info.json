@@ -1,0 +1,129 @@
+{
+    "task_id": "task_004",
+    "task_name": "Quiz App Testing",
+    "task_description": "测试 Quiz App 的题目加载、答题交互、计分、题目切换以及测验结束显示功能。",
+    "modules": [
+      "题目加载模块",
+      "答案交互模块",
+      "计分模块",
+      "题目切换模块",
+      "测验结束显示模块"
+    ],
+    "user_requirement_list": [
+      {
+        "requirement_id": "req_001",
+        "requirement_description": "系统应正确加载并显示每道题及其选项。",
+        "test_cases": [
+          {
+            "test_case_id": "tc_001",
+            "test_case_name": "首次加载题目",
+            "test_case_description": "验证应用首次加载时，正确显示第一道题目和选项。",
+            "steps": [
+              "打开应用页面。",
+              "检查页面是否显示第一个问题和四个选项。"
+            ],
+            "expected_result": "页面应正确显示第一个问题及四个选项，且所有选项均未被选中。",
+            "modules": ["题目加载模块"]
+          }
+        ]
+      },
+      {
+        "requirement_id": "req_002",
+        "requirement_description": "用户可以通过单选按钮选择答案。",
+        "test_cases": [
+          {
+            "test_case_id": "tc_002",
+            "test_case_name": "答案选择功能",
+            "test_case_description": "验证用户可以选择任意一个答案，且只能选择一个。",
+            "steps": [
+              "打开应用。",
+              "选择第一个选项，观察结果。",
+              "再选择其他选项，检查是否仅最新选择的选项处于选中状态。"
+            ],
+            "expected_result": "用户选择的选项应正确被标记，且每次只能选中一个选项。",
+            "modules": ["答案交互模块"]
+          }
+        ]
+      },
+      {
+        "requirement_id": "req_003",
+        "requirement_description": "系统应正确验证答案并记录得分。",
+        "test_cases": [
+          {
+            "test_case_id": "tc_003",
+            "test_case_name": "答案验证和计分",
+            "test_case_description": "验证系统能正确判断答案是否正确并记录得分。",
+            "steps": [
+              "选择正确答案并提交。",
+              "观察得分是否加 1。",
+              "选择错误答案并提交，观察得分是否不变。"
+            ],
+            "expected_result": "系统应正确记录得分，正确答案加 1，错误答案得分不变。",
+            "modules": ["计分模块"]
+          }
+        ]
+      },
+      {
+        "requirement_id": "req_004",
+        "requirement_description": "系统应在提交当前题目后加载下一题。",
+        "test_cases": [
+          {
+            "test_case_id": "tc_004",
+            "test_case_name": "题目切换功能",
+            "test_case_description": "验证用户提交当前题目后，系统加载下一题。",
+            "steps": [
+              "选择一个答案并提交。",
+              "观察页面是否正确显示下一题及其选项。"
+            ],
+            "expected_result": "提交当前题目后，系统应正确加载下一题并显示。",
+            "modules": ["题目切换模块"]
+          }
+        ]
+      },
+      {
+        "requirement_id": "req_005",
+        "requirement_description": "测验结束时，系统应正确显示最终得分及重新开始按钮。",
+        "test_cases": [
+          {
+            "test_case_id": "tc_005",
+            "test_case_name": "测验结束显示",
+            "test_case_description": "验证用户完成所有题目后，系统正确显示得分和重新开始按钮。",
+            "steps": [
+              "答完最后一道题并提交。",
+              "观察是否显示最终得分。",
+              "点击重新开始按钮，观察页面是否重新加载测验。"
+            ],
+            "expected_result": "测验结束时，应正确显示最终得分及重新开始按钮，点击按钮可重新开始测验。",
+            "modules": ["测验结束显示模块"]
+          }
+        ]
+      }
+    ],
+    "integration_test_cases": [
+      {
+        "test_case_id": "tc_006_integration",
+        "test_case_name": "题目加载与切换集成测试",
+        "test_case_description": "验证题目加载和切换功能是否无缝集成。",
+        "steps": [
+          "答完第一题并提交。",
+          "观察页面是否正确显示第二题。",
+          "重复答完所有题目，观察是否按顺序切换题目。"
+        ],
+        "expected_result": "题目加载和切换应无缝集成，按顺序显示每道题目。",
+        "modules": ["题目加载模块", "题目切换模块"]
+      },
+      {
+        "test_case_id": "tc_007_integration",
+        "test_case_name": "计分与结果显示集成测试",
+        "test_case_description": "验证计分功能与最终结果显示是否正确集成。",
+        "steps": [
+          "按正确答案完成所有题目。",
+          "观察最终显示的分数是否等于题目总数。",
+          "重新开始测验，验证分数是否重置。"
+        ],
+        "expected_result": "计分功能与结果显示应正确集成，分数显示与答题情况一致，重新开始后分数清零。",
+        "modules": ["计分模块", "测验结束显示模块"]
+      }
+    ]
+  }
+  

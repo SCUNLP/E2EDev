@@ -1,0 +1,28 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The application allows users to interact with an image area by double-clicking to 'like' it. Each double-click creates a visual heart icon at the click location and increments a like counter displayed on the page.",
+    "predefined_options": "The image used for the like interaction is located at: 'https://images.unsplash.com/photo-1597540103960-2a6528f09ae9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=321&q=80'.",
+    "external_resources": "The application uses Font Awesome for heart icons, sourced from 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'.",
+    "external_js_libraries": "No external JavaScript libraries are used in this application."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+When the user double-clicks on the image area (div with data-testid 'image-container' and class 'loveMe'), the system should display a heart icon at the exact click location within the image area. The heart icon should be an <i> element with classes 'fas' and 'fa-heart'. The heart icon should be positioned using the click's relative coordinates within the image area, calculated based on the user's click event and the image area's offset. The heart icon should automatically disappear after 1 second. Additionally, the like count displayed in the <span> element with data-testid 'times' should increment by 1 for each successful double-click. The system should handle edge cases such as double-clicks near the boundaries of the image area and rapid consecutive double-clicks, ensuring accurate positioning and proper like count updates. Single clicks or double-clicks outside the image area should not trigger the heart icon display or affect the like count.
+- Requirement 2: 
+When a user double-clicks on the image container (identified by the attribute data-testid='image-container'), a heart icon (an <i> element with classes 'fas' and 'fa-heart') should be dynamically created at the exact location of the double-click within the container. The heart icon should visually appear inside the container and be removed from the DOM exactly 1 second after its creation. If multiple double-clicks occur in rapid succession, multiple heart icons should be created, each at the respective double-click location, and each should be removed from the DOM exactly 1 second after its creation. The double-click detection should account for a maximum interval of 800 milliseconds between two consecutive clicks to qualify as a double-click. This functionality should not interfere with the incrementing of the like count displayed in the element with data-testid='times'.
+- Requirement 3: 
+The application must display an instruction text element with the attribute data-testid='instruction-text' that informs the user to double-click on the image to like it. The text must include the phrase 'Double click on the image' and visually display a heart icon using the Font Awesome 'fas fa-heart' classes for emphasis. This instruction text must be visible immediately upon page load and should not change dynamically during user interactions.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

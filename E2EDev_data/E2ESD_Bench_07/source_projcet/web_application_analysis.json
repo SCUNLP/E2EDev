@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["calculator"],
+  "InteractionModes": ["form input", "button click", "chart visualization"],
+  "LogicComplexityLevel": "simple input-output, conditionals",
+  "TechnicalPoints": ["dynamic DOM manipulation"],
+  "ExternalResources": ["Boxicons for social media icons"]
+}
+```

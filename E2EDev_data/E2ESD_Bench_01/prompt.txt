@@ -1,0 +1,28 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The application is a drag-and-drop shopping cart interface where users can drag items from a list and drop them into a designated area to add them to their cart. The application calculates and displays the total cost of the items in the cart.",
+    "predefined_options": "The application uses predefined product titles and prices for each item, which are displayed in a list format.",
+    "external_resources": "Images for each product are used as external resources, sourced from local paths such as 'img/img1.jpg', 'img/img2.jpg', etc.",
+    "external_js_libraries": "No external JavaScript libraries are explicitly mentioned in the provided code."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+When the user drags a product item (li element) from the product list, the system should initiate a drag event, capturing the product's title and price for transfer. The product items are represented as 'li' elements with the attribute 'draggable' set to 'true'. Each product item contains an image, a title, and a price, identified by data-testid attributes such as 'product-item-1', 'product-title-1', and 'product-price-1'. The drag event should capture the title and price of the product being dragged. 
+- Requirement 2: 
+The system should allow users to drag and drop product items(data-testid="product-item-1", data-testid="product-item-2", etc.) into a designated drop area (id="div1", data-testid="drop-area") to add them to the cart. Upon dropping, the cart display should automatically update: the product title appears in .box2, the unit price in .box3, and the quantity in .box1. The system supports adding both different and repeated products.
+- Requirement 3: 
+"The system calculates the total price by summing the prices of all products in the cart, formatting the total to two decimal places with the appropriate currency symbol (e.g., '$80.00'), and displays the total in the <div id="allMoney"> element."
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

@@ -1,0 +1,30 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The Study Planner application allows users to create and manage study schedules and tasks. Users can input details for schedules and tasks, which are dynamically displayed on the page.",
+    "predefined_options": "The application does not specify predefined options for inputs; users manually enter all data.",
+    "external_resources": "No external resources such as links, images, or audio files are used in the provided code.",
+    "external_js_libraries": "No external JavaScript libraries are referenced in the provided code."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The web application must allow users to create a schedule through the 'Study Planner' page. Specifically, when the user fills out the 'Subject' (data-testid='subject'), 'Date' (Date picker, data-testid='date'), and 'Time' (Time picker, data-testid='time') fields in the schedule form located within the section with data-testid 'schedule-section', and clicks the 'Add Schedule' button (data-testid='add-schedule-button'), the system must validate that all fields are completed. If any field is left empty, the system should prevent the addition of a new schedule item. Upon successful validation, a new schedule item should be created and appended to the schedule list (data-testid='schedule-list'). The schedule item must display the subject, date, and time in the format 'Subject - YYYY-MM-DD at HH:MM'.
+- Requirement 2: 
+The system must allow users to add a new task to the task list by filling out the task form and clicking the 'Add Task' button. Specifically, when the 'Study Planner' page is loaded, the 'Task' input field (data-testid='task') and the 'Deadline' input field (Date picker, data-testid='deadline') must be visible and empty, and the 'Add Task' button (data-testid='add-task-button') must also be visible. The user can enter a task name in the 'Task' input field and a valid date in the 'Deadline' input field. Upon clicking the 'Add Task' button (data-testid='add-task-button'), if both fields are filled, a new task item will be added to the task list (data-testid='task-list'), displaying the task name and deadline in the format 'Task Name - Deadline: YYYY-MM-DD'. If either the 'Task' or 'Deadline' field is left empty, no new task item will be added to the task list.
+- Requirement 3: 
+The web application must ensure that after a user successfully adds a schedule using the 'Add Schedule' button (located via data-testid 'add-schedule-button'), the input fields for 'Subject', 'Date', and 'Time' (located via data-testid 'subject', 'date', and 'time' respectively) within the schedule form (located via data-testid 'schedule-form') are reset to empty. This allows the user to enter new data without manually clearing the fields. 
+- Requirement 4: 
+The Study Planner web application must ensure that after a task is successfully added, the task form fields are reset to be empty, allowing the user to enter new data. 
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

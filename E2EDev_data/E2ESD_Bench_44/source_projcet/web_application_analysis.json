@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["calculator"],
+  "InteractionModes": ["button clicks", "theme toggle"],
+  "LogicComplexityLevel": "simple input-output, conditionals",
+  "TechnicalPoints": ["dynamic DOM manipulation", "state management"],
+  "ExternalResources": ["favicon image"]
+}
+```

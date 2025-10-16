@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["calculator"],
+  "InteractionModes": ["form input", "button click"],
+  "LogicComplexityLevel": "conditionals",
+  "TechnicalPoints": ["dynamic DOM manipulation"],
+  "ExternalResources": ["Bootstrap CSS", "custom stylesheet (styles.css)"]
+}
+```

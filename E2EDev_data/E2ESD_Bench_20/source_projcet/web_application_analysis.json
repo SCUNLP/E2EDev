@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["data manager"],
+  "InteractionModes": ["form input", "tabbed interface", "table view"],
+  "LogicComplexityLevel": "conditionals, state management",
+  "TechnicalPoints": ["localStorage", "dynamic DOM manipulation"],
+  "ExternalResources": ["Google Fonts (Poppins)", "CSS Stylesheet"]
+}
+```

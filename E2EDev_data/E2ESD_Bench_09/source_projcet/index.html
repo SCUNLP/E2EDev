@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Study Planner</title>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+<h1>Study Planner</h1>
+</header>
+<main>
+<section data-testid="schedule-section" id="schedule-section">
+<h2>Create Schedule</h2>
+<form data-testid="schedule-form" id="schedule-form">
+<label for="subject" data-testid="subject-label">Subject:</label>
+<input data-testid="subject" id="subject" required="" type="text"/>
+<label for="date" data-testid="date-label">Date:</label>
+<input data-testid="date" id="date" required="" type="date"/>
+<label for="time" data-testid="time-label">Time:</label>
+<input data-testid="time" id="time" required="" type="time"/>
+<button type="submit" data-testid="add-schedule-button">Add Schedule</button>
+</form>
+<ul data-testid="schedule-list" id="schedule-list">
+<!-- Schedule items go here -->
+</ul>
+</section>
+<section data-testid="task-section" id="task-section">
+<h2>Tasks</h2>
+<form data-testid="task-form" id="task-form">
+<label for="task" data-testid="task-label">Task:</label>
+<input data-testid="task" id="task" required="" type="text"/>
+<label for="deadline" data-testid="deadline-label">Deadline:</label>
+<input data-testid="deadline" id="deadline" required="" type="date"/>
+<button type="submit" data-testid="add-task-button">Add Task</button>
+</form>
+<ul data-testid="task-list" id="task-list">
+<!-- Task items go here -->
+</ul>
+</section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

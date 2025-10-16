@@ -1,0 +1,32 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The Height Converter application allows users to input a height value, select the original unit and the desired conversion unit, and view the converted height. It provides a user-friendly interface for converting between various units of measurement such as Miles, Kilometers, Meters, Centimeters, and Inches.",
+    "predefined_options": "The application provides predefined options for unit selection in dropdown menus, including Centimeters, Inches, Meters, Kilometers, and Miles.",
+    "external_resources": "The application uses external resources such as Bootstrap for styling, linked via a CDN.",
+    "external_js_libraries": "Bootstrap is used for styling, sourced from 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+When the user enters a numeric value in the height input field (data-testid='height-input'), the system must display this value in the height output section (data-testid='height-output') and make both the output row (data-testid='output-row') and the reset button (data-testid='reset-button') visible.
+- Requirement 2: 
+When the user selects an option from the first dropdown (data-testid='first-option-select')—which includes 'Select an Option' (data-testid='first-option-select'), 'Centimeters' (data-testid='first-option-centimeters'), 'Inches' (data-testid='first-option-inches'), 'Meters' (data-testid='first-option-meters'), 'Kilometers' (data-testid='first-option-kilometers'), and 'Miles' (data-testid='first-option-miles'), the system should dynamically update the input field's (data-testid='height-input') placeholder to reflect the selected unit. The placeholder should change to 'Enter [Selected Unit]...' where [Selected Unit] is the unit chosen by the user. Additionally, the height name section (data-testid='height-name') should display '[Selected Unit]:' to indicate the current unit of measurement. If the user selects the default option 'Select an Option', the input field should retain its original placeholder 'Enter Height...', and the height name section should remain empty. 
+- Requirement 3: 
+When the user selects a unit from the second dropdown (data-testid='second-option-select', which includes 'Select' (data-testid='second-option-select-default'), 'Centimeters' (data-testid='second-option-select-centimeters'), 'Inches' (data-testid='second-option-select-inches'), 'Meters' (data-testid='second-option-select-meters'), 'Kilometers' (data-testid='second-option-select-kilometers'), and 'Miles' (data-testid='second-option-select-miles')), the system must immediately update the converted height name section (data-testid='converted-height-name') to display '[Selected Unit]:', reflecting the chosen unit. 
+- Requirement 4: 
+The Height Converter web app lets users convert height values between units like 'Centimeters', 'Inches', 'Meters', 'Kilometers', and 'Miles'. It includes an input field (data-testid='height-input') where users enter a height, two dropdown menus (data-testid='first-option-select' and data-testid='second-option-select') to choose the units to convert from and to, and an output section (data-testid='final-output') to show the result. The app updates the input placeholder and labels based on selected units, and shows the converted height.
+- Requirement 5: 
+When the user clicks the reset button with data-testid 'reset-button', the system should perform the following actions: clear the height input field with data-testid 'height-input', reset the first option select with data-testid 'first-option-select' to display 'Select an Option', reset the second option select with data-testid 'second-option-select' to display 'Select', hide the output row with data-testid 'output-row', and hide the reset button itself. This functionality should work regardless of whether the user has entered valid, invalid, or no input prior to clicking the reset button.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

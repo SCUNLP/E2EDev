@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "overview": "The application is a simple number guessing game where users try to guess a randomly generated number between 1 and 20. Users receive feedback on their guesses and can track their score and highscore. The game can be restarted at any time.",
+    "predefined_options": "The application defines predefined options, including a number range from 1 to 20 and initial score values, with the score starting at 20 and the high score at 0. (The correct answer is set to 13.)",
+    "external_resources": "No external resources such as links, images, or audio files are used in the application.",
+    "external_js_libraries": "No external JavaScript libraries are used; the application relies on vanilla JavaScript."
+  },
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "description": "When the user enters a number in the input field and clicks the 'Check!' button, the system should validate the input and display a message indicating whether the input is valid or not. If no number is entered, the system should display '⛔️ No number!'."
+    },
+    {
+      "id": "REQ-002",
+      "description": "When the user correctly guesses the secret number by entering it in the input field and clicking the 'Check!' button, the system should display '🎉 Correct Number!', reveal the secret number, change the background color to green, and increase the width of the hidden number display."
+    },
+    {
+      "id": "REQ-003",
+      "description": "When the user clicks the 'Check!' button and the guess is incorrect, the system should display '📈 Too high!' if the guess is greater than the secret number or '📉 Too low!' if the guess is less than the secret number, and decrease the score by 1."
+    },
+    {
+      "id": "REQ-004",
+      "description": "If the user's score reaches 0 after clicking the 'Check!' button, the system should display '💥 You lost the game!' and set the score display to 0."
+    },
+    {
+      "id": "REQ-005",
+      "description": "When the user achieves a new highscore by correctly guessing the secret number, the system should update the highscore display with the current score."
+    },
+    {
+      "id": "REQ-006",
+      "description": "When the user clicks the 'Again!' button, the system should reset the game by generating a new secret number, resetting the score to 20, clearing the input field, setting the hidden number display to '?', restoring the background color to dark gray, and resetting the width of the hidden number display."
+    }
+  ]
+}

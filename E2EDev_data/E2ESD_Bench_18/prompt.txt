@@ -1,0 +1,49 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The Timetable Generator application allows users to create and manage a weekly timetable by entering subject details, specifying time ranges, and selecting days. Users can view the timetable dynamically updated in a table format.",
+    "predefined_options": "Days of the week are predefined as Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday. These options are presented as checkboxes for user selection.",
+    "external_resources": [
+        {
+            "name": "Roboto Font",
+            "source": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        },
+        {
+            "name": "CSS Stylesheet",
+            "source": "styles.css"
+        }
+    ],
+    "external_js_libraries": []
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The 'Subject' input field (identified by data-testid='subject') must accept and display valid text input, including long names and special characters, without truncation or alteration.
+- Requirement 2: 
+The user must be able to either select or input a valid time using the start-time picker (data-testid='start-time'), in 24-hour HH:MM format (00:00–23:59).
+- Requirement 3: 
+The user must be able to either select or input a valid time using the end-time picker (data-testid='end-time'), in 24-hour HH:MM format (00:00–23:59).
+- Requirement 4: 
+The user must be able to select or deselect one or more days (Monday to Saturday) using checkboxes in the 'Days' group (data-testid='days'). The functionality should support selecting a single day, multiple days, all days, and deselecting a selected day. Each checkbox is uniquely identifiable (e.g., data-testid='day-monday'). 
+- Requirement 5: 
+When the user clicks the 'Add to Timetable' button (data-testid='add-timetable-button') after filling out the required fields in the form (data-testid='timetable-form'), a new row is added to the timetable table (data-testid='timetable'). The row will display the time range in the first column and the subject under the selected days' columns. If any required field is empty (e.g., data-testid='subject', data-testid='start-time', data-testid='end-time', or no days selected with data-testid='days'), an alert with the message 'Please fill in all the fields.' will appear, and no row will be added. Each dynamically added row has a unique data-id in the format 'timetable-row-{startTime}-{endTime}'.
+- Requirement 6: 
+If a row with the same time range already exists in the timetable, the system will update the cells for the selected days with the new subject name instead of creating a new row.
+- Requirement 7: 
+When the user adds a new row to the timetable table, the system must insert the row in chronological order based on the start time.
+- Requirement 8: 
+When the user clicks the 'Add to Timetable' button (located by data-testid 'add-timetable-button'), the system must reset the form fields to their default state after successfully adding or updating a timetable entry. This includes clearing the 'Subject' input field (located by data-testid 'subject'), resetting the 'Start Time' input field (located by data-testid 'start-time'), resetting the 'End Time' input field (located by data-testid 'end-time'), and ensuring that no checkboxes within the 'Days' checkbox group (located by data-testid 'days') are checked. The reset should occur only if all required fields are filled and at least one day is selected, ensuring a valid timetable entry is added to the table (located by data-testid 'timetable').
+- Requirement 9: 
+Upon loading the Timetable Generator webpage, the system must display an empty timetable table with the following specifications: The table should be located within a <table> element with the data-testid attribute set to 'timetable'. The table must include a <thead> section containing headers with data-testids 'time-header', 'monday-header', 'tuesday-header', 'wednesday-header', 'thursday-header', 'friday-header', and 'saturday-header', corresponding to the columns 'Time', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', and 'Saturday', respectively. The <tbody> section of the table must be empty, ensuring no rows are present with any data-id attributes. This setup ensures that the timetable is ready for user interaction without any pre-existing data.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

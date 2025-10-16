@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bill Splitter</title>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<h1>Bill Splitter</h1>
+<p class="tagline">Easily split your bills with friends</p>
+<main>
+<div class="bill-input">
+<p>Bill</p>
+<div class="input-container">
+<span>₹</span>
+<input data-testid="bill-amount" id="bill-amount" type="number"/>
+</div>
+<p>Select Tip</p>
+<div class="tip-container disabled">
+<button class="tip" data-testid="tip-button-5">5%</button>
+<button class="tip" data-testid="tip-button-10">10%</button>
+<button class="tip" data-testid="tip-button-15">15%</button>
+<button class="tip" data-testid="tip-button-25">25%</button>
+<button class="tip" data-testid="tip-button-50">50%</button>
+<button class="tip" data-testid="tip-button-75">75%</button>
+</div>
+<input class="custom-tip gray-input" data-testid="custom-tip-input" disabled="" placeholder="Custom Tip in Percentage" type="number"/>
+<p>Number of People</p>
+<input class="number-of-people gray-input" data-testid="number-of-people-input" disabled="" placeholder="Number of people" type="number"/>
+<button class="generate-bill-btn" data-testid="generate-bill-button" disabled="">Generate Bill</button>
+</div>
+<div class="bill-output">
+<p class="tip-amount">Tip amount <span data-testid="tip-amount-value"></span></p>
+<p class="total">Total <span data-testid="total-value"></span></p>
+<p class="each-person-bill">Each Person Bill <span data-testid="each-person-bill-value"></span></p>
+<button class="reset-btn" data-testid="reset-button" disabled="">Reset</button>
+</div>
+</main>
+<footer>
+      Made by <a href="https://github.com/msranjana" data-testid="github-link">msranjana</a> with <span>&lt;3</span>
+</footer>
+</body>
+</html>

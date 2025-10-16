@@ -1,0 +1,54 @@
+{
+    "summary": {
+        "overview": "The Salary Calculator application allows users to input job details, work hours, salary, tax percentage, and overtime details to calculate and display various salary metrics, including hourly, daily, monthly, and yearly earnings, as well as tax deductions and overtime earnings.",
+        "predefined_options": "Default values are set for empty input fields: '______' for job title and '0' for numeric fields such as work hours, salary, tax percentage, overtime hours, and overtime rate.",
+        "external_resources": "External resources include Bootstrap CSS for styling (https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css) and a custom stylesheet (styles.css).",
+        "external_js_libraries": "No external JavaScript libraries are explicitly mentioned in the provided code."
+    },
+    "requirements": [
+        {
+            "id": "REQ-001",
+            "description": "When the user clicks the 'Calculate Salary' button, the system should retrieve values from all input fields, perform salary calculations, and update the results section with calculated values including hourly salary, daily salary, monthly gross salary, tax deduction, monthly net salary, yearly net salary, overtime earnings, and total earnings."
+        },
+        {
+            "id": "REQ-002",
+            "description": "When the user clicks the 'Clear' button, the system should reset all input fields to their default state and clear the results section, setting all displayed values to '$0' or '______'."
+        },
+        {
+            "id": "REQ-003",
+            "description": "The system should allow the user to enter text in the 'Job' input field and display this text in the results section under 'Salary Overview for'. If the field is empty, the default value '______' should be displayed."
+        },
+        {
+            "id": "REQ-004",
+            "description": "The system should allow the user to enter numeric values in the 'Hours per Day', 'Workdays per Week', 'Gross Monthly Salary', 'Tax Percentage', 'Overtime Hours per Week', and 'Overtime Rate per Hour' input fields. If any field is empty, the default value '0' should be used for calculations."
+        },
+        {
+            "id": "REQ-005",
+            "description": "The system should calculate the monthly tax deduction as a percentage of the gross monthly salary and display it as a negative value in the results section."
+        },
+        {
+            "id": "REQ-006",
+            "description": "The system should calculate the net monthly salary by subtracting the monthly tax deduction from the gross monthly salary and display it in the results section."
+        },
+        {
+            "id": "REQ-007",
+            "description": "The system should calculate the hourly salary based on the net monthly salary, work hours per day, and workdays per week, and display it in the results section."
+        },
+        {
+            "id": "REQ-008",
+            "description": "The system should calculate the daily salary by multiplying the hourly salary by the work hours per day and display it in the results section."
+        },
+        {
+            "id": "REQ-009",
+            "description": "The system should calculate the yearly net salary by multiplying the net monthly salary by 12 and display it in the results section."
+        },
+        {
+            "id": "REQ-010",
+            "description": "The system should calculate the total overtime earnings by multiplying the overtime hours per week by the overtime rate per hour and by 4 (weeks per month), and display it in the results section."
+        },
+        {
+            "id": "REQ-011",
+            "description": "The system should calculate the total earnings by adding the yearly net salary and total overtime earnings, and display it in the results section."
+        }
+    ]
+}

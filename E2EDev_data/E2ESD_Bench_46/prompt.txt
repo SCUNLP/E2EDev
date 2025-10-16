@@ -1,0 +1,26 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The application displays the current day of the week and a corresponding quote. It dynamically updates the content based on the user's local date settings.",
+    "predefined_options": "The application sets a predefined quote for each day of the week, ensuring consistent messaging without the need for manual input. Specifically:\nSunday: \"Time to chillax!\"\nMonday: \"Monday morning blues!\"\nTuesday: \"Taco Time!\"\nWednesday: \"Two more days to the weekend.\"\nThursday: \"The weekend is almost here...\"\nFriday: \"Weekend is here!\"\nSaturday: \"Time to party!\"\nThe application automatically displays the relevant quote based on the current day of the week.",
+    "external_resources": "The application does not explicitly list external resources such as images or links in the provided code.",
+    "external_js_libraries": "The application does not use any external JavaScript libraries in the provided code."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+Upon loading the web page, the application must automatically determine the current day of the week using the user's local date settings. It should display the name of the day in the span element with the attribute data-testid='weekday'. Additionally, a corresponding quote should be displayed in the span element with the attribute data-testid='phrase'. The application should handle all days from Sunday to Saturday, ensuring the correct day name and quote are shown based on the local date settings. No user interaction is required for this functionality, and the display should update immediately upon page load.
+- Requirement 2: 
+Upon loading the web page, the system must dynamically determine the current day of the week using the local computer's date. It should then display the name of the day in the span element with the data-testid 'weekday' and a predefined quote associated with that day in the span element with the data-testid 'phrase'. The page structure includes a container div with data-testid 'container', a heading with data-testid 'heading', and two span elements for displaying the day and quote. The JavaScript code should execute upon page load, selecting the appropriate elements using their data-testid attributes and updating their innerHTML properties with the correct day name and quote. No user interaction is required for this functionality to execute, and no persistent storage is involved.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

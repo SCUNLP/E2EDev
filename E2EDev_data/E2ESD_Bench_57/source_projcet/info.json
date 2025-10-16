@@ -1,0 +1,109 @@
+{
+    "task_id": "task_001",
+    "task_name": "复选框全选与反选功能测试",
+    "task_description": "本任务旨在测试复选框功能，包括全选、反选、动态更新状态，以及功能模块之间的集成测试。",
+    "modules": [
+      "全选模块",
+      "反选模块",
+      "复选框动态更新模块"
+    ],
+    "user_requirement_list": [
+      {
+        "requirement_id": "req_001",
+        "requirement_description": "用户能够使用全选功能勾选或取消所有选项。",
+        "test_cases": [
+          {
+            "test_case_id": "tc_001",
+            "test_case_name": "全选功能",
+            "test_case_description": "验证点击全选复选框后，所有选项被勾选。",
+            "steps": [
+              "加载页面。",
+              "点击“全选”复选框。",
+              "检查是否所有选项均被勾选。",
+              "检查全选文字是否更新为“全不选”。"
+            ],
+            "expected_result": "所有选项均被勾选，文字更新为“全不选”。",
+            "modules": ["全选模块"]
+          },
+          {
+            "test_case_id": "tc_002",
+            "test_case_name": "取消全选功能",
+            "test_case_description": "验证再次点击全选复选框后，所有选项取消勾选。",
+            "steps": [
+              "确保所有选项被勾选。",
+              "再次点击“全选”复选框。",
+              "检查是否所有选项均取消勾选。",
+              "检查全选文字是否更新为“全选”。"
+            ],
+            "expected_result": "所有选项均取消勾选，文字更新为“全选”。",
+            "modules": ["全选模块"]
+          }
+        ]
+      },
+      {
+        "requirement_id": "req_002",
+        "requirement_description": "用户能够使用反选功能切换每个选项的状态。",
+        "test_cases": [
+          {
+            "test_case_id": "tc_003",
+            "test_case_name": "反选功能",
+            "test_case_description": "验证点击反选链接后，每个选项的状态被切换。",
+            "steps": [
+              "加载页面。",
+              "点击“反选”链接。",
+              "检查每个选项的状态是否正确切换（勾选变为未勾选，未勾选变为勾选）。"
+            ],
+            "expected_result": "所有选项的状态均被正确切换。",
+            "modules": ["反选模块"]
+          }
+        ]
+      },
+      {
+        "requirement_id": "req_003",
+        "requirement_description": "用户手动勾选或取消勾选部分选项时，全选复选框状态会动态更新。",
+        "test_cases": [
+          {
+            "test_case_id": "tc_004",
+            "test_case_name": "部分选中状态",
+            "test_case_description": "验证手动勾选部分选项后，全选复选框状态是否动态更新。",
+            "steps": [
+              "加载页面。",
+              "手动勾选部分选项。",
+              "检查全选复选框是否未被勾选。",
+              "手动勾选所有选项。",
+              "检查全选复选框是否被勾选，文字是否更新为“全不选”。"
+            ],
+            "expected_result": "全选复选框状态和文字正确更新。",
+            "modules": ["复选框动态更新模块"]
+          }
+        ]
+      }
+    ],
+    "integration_test_cases": [
+      {
+        "test_case_id": "tc_005_integration",
+        "test_case_name": "全选与反选功能集成测试",
+        "test_case_description": "验证全选与反选功能的交互是否正常。",
+        "steps": [
+          "点击全选复选框，确保所有选项均被勾选。",
+          "点击反选链接，确保所有选项状态正确切换。",
+          "再次点击全选复选框，检查是否恢复为所有选项均被勾选。"
+        ],
+        "expected_result": "全选和反选功能交互正常，选项状态切换正确。",
+        "modules": ["全选模块", "反选模块"]
+      },
+      {
+        "test_case_id": "tc_006_integration",
+        "test_case_name": "复选框动态更新与全选功能集成测试",
+        "test_case_description": "验证用户手动操作时，全选复选框状态能正确更新。",
+        "steps": [
+          "手动勾选部分选项，检查全选复选框是否未被勾选。",
+          "手动勾选所有选项，检查全选复选框是否被勾选，文字是否为“全不选”。",
+          "取消勾选部分选项，检查全选复选框是否未被勾选，文字是否为“全选”。"
+        ],
+        "expected_result": "全选复选框状态根据用户操作正确更新。",
+        "modules": ["全选模块", "复选框动态更新模块"]
+      }
+    ]
+  }
+  

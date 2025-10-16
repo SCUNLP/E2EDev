@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="style.css" rel="stylesheet"/>
+<title>Quiz App</title>
+</head>
+<body>
+<div class="quiz-container" data-testid="quiz" id="quiz">
+  <div class="quiz-header">
+    <h2 data-testid="question" id="question">Question is loading...</h2>
+    <ul>
+      <li>
+        <input class="answer" data-testid="answer-a" id="a" name="answer" type="radio"/>
+        <label data-testid="answer-a-text" for="a" id="a_text">Answer...</label>
+      </li>
+      <li>
+        <input class="answer" data-testid="answer-b" id="b" name="answer" type="radio"/>
+        <label data-testid="answer-b-text" for="b" id="b_text">Answer...</label>
+      </li>
+      <li>
+        <input class="answer" data-testid="answer-c" id="c" name="answer" type="radio"/>
+        <label data-testid="answer-c-text" for="c" id="c_text">Answer...</label>
+      </li>
+      <li>
+        <input class="answer" data-testid="answer-d" id="d" name="answer" type="radio"/>
+        <label data-testid="answer-d-text" for="d" id="d_text">Answer...</label>
+      </li>
+    </ul>
+  </div>
+  <button data-testid="submit-button" id="submit">Submit</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+    "summary": {
+        "overview": "The application is a Body Mass Index (BMI) Calculator that allows users to input their height and weight to calculate their BMI. It displays the BMI result and provides a chart categorizing BMI ranges.",
+        "predefined_options": "The application does not have predefined options for height and weight inputs; users must manually enter these values.",
+        "external_resources": "The application uses external resources such as Boxicons for social media icons and links to social media profiles.",
+        "external_js_libraries": "The application does not explicitly use external JavaScript libraries in the provided code, but it links to a script.js file for functionality."
+    },
+    "requirements": [
+        {
+            "id": "REQ-001",
+            "description": "When the user enters a value in the 'Height in cm' input field, the system should accept and store this value for BMI calculation."
+        },
+        {
+            "id": "REQ-002",
+            "description": "When the user enters a value in the 'Weight in kg' input field, the system should accept and store this value for BMI calculation."
+        },
+        {
+            "id": "REQ-003",
+            "description": "When the user clicks the 'Calculate' button, the system should calculate the BMI using the formula weight (kg) / (height (m) * height (m)) and display the result rounded to two decimal places in the 'result' display area."
+        },
+        {
+            "id": "REQ-004",
+            "description": "The system should display a table with BMI ranges and corresponding categories (Underweight, Ideal, Overweight, Obesity) for user reference."
+        },
+        {
+            "id": "REQ-005",
+            "description": "When the user views the footer, the system should display social media links (Facebook, GitHub, Twitter, LinkedIn) that open the respective profiles in a new tab when clicked."
+        }
+    ]
+}

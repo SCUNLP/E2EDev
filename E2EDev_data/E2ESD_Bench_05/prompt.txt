@@ -1,0 +1,36 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The application is a web-based dictionary that allows users to search for word definitions, pronunciations, and examples. It also provides a daily quote, manages bookmarks for frequently accessed words, and maintains a history of recent searches.",
+    "predefined_options": "The application uses predefined options such as default values for input fields and preset selections for bookmarks and recent searches.",
+    "external_resources": "The application uses external resources such as quotes from 'https://type.fit/api/quotes' and 'http://api.quotable.io/random', and word data from 'https://api.dictionaryapi.dev/api/v2/entries/en/'.",
+    "external_js_libraries": "The application uses external JavaScript libraries such as jQuery (https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js), Bootstrap (https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js), and Modernizr (https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js)."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The system must allow users to interact with the search functionality on the 'Dictionary' webpage. When the search input field, identified by data-testid 'search-input', is empty and the user clicks the 'Search' button (data-testid 'search-button'), a toast notification with data-testid 'error-toast' should be displayed, containing the message "ERROR: Please type the word to be searched...". If the search input contains a valid word, the error toast should not be shown, ensuring the user is only prompted when necessary.
+- Requirement 2: 
+The web application must allow users to search for word details. When a user enters a word in the search input field (data-testid 'search-input') and clicks the 'Search' button (data-testid 'search-button'), the system should fetch the word's definition, pronunciation, and example from the dictionary API. A result card (data-testid 'result-card') should then be displayed with the searched word as the title (data-testid 'card-title'), its pronunciation (data-testid 'word-pronunciation'), meaning (data-testid 'word-meaning'), and an example sentence (data-testid 'word-example'). 
+- Requirement 3: 
+The system must provide a 'Reset' button on the Dictionary page that clears the search input field and hides the result card. When the user clicks the 'Reset' button (data-testid 'reset-button'), the search input field (data-testid 'search-input') should be cleared, and the result card (data-testid 'result-card') should be hidden. This functionality should work whether the search input field is empty or contains text, and regardless of whether a search has been performed. The system should ensure that the result card remains hidden after the reset, providing a consistent user experience.
+- Requirement 4: 
+The web application must allow users to toggle the bookmark status of a word's result card and update the list of bookmarked words in the offcanvas section. When the user clicks the 'Bookmark' icon (data-testid 'bookmark-icon') on a word's result card (data-testid 'result-card'), the system should update the icon to reflect the current bookmark status. If the word is bookmarked, it should be added to the list of bookmarked words displayed in the offcanvas section (data-testid 'bookmarked-words-list'). The user can view this list by clicking the 'Bookmarks' button (data-testid 'bookmark-button'), which opens the offcanvas section. The system must ensure that the list accurately reflects the bookmarked words, allowing users to add and remove words from the bookmark list by toggling the bookmark icon.
+- Requirement 5: 
+The system should maintain a list of the five most recent searched words and display them in the 'Recent Searches' section (data-testid 'recently-searched'). Each time the user performs a search by entering a word in the search input field (data-testid 'search-input') and clicking the 'Search' button (data-testid 'search-button'), the system should update the list. If the list exceeds five entries, the oldest search should be removed to make room for the new one. 
+- Requirement 6: 
+The web application must display a 'Back to Top' button (data-testid 'back-to-top-button') when the user scrolls more than 20 pixels down. Clicking the button should smoothly scroll the page to the top, and the button should hide once the page is at the top.
+- Requirement 7: 
+The system must allow users to manage bookmarked words in the offcanvas section. When the user clicks the 'Bookmarks' button (data-testid="bookmark-button"), the offcanvas opens, displaying the bookmarked words list (data-testid="bookmarked-words-list"). Each word has a close button (data-testid="bookmark-delete-button-${index}") for removal. Clicking the close button deletes the word and updates the list. If no words are bookmarked, an <h5> with the text 'No words bookmarked !!' is shown in the offcanvas.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

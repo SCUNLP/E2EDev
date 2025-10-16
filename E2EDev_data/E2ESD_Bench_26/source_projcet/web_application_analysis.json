@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["content generator"],
+  "InteractionModes": ["form input", "tabbed interface"],
+  "LogicComplexityLevel": "conditionals",
+  "TechnicalPoints": ["dynamic DOM manipulation"],
+  "ExternalResources": []
+}
+```

@@ -1,0 +1,34 @@
+{
+    "summary": {
+        "overview": "The Quiz App is a web application that presents users with a series of multiple-choice questions. Users can select one answer per question and submit their choice. The application provides immediate feedback on the user's performance after all questions are answered.",
+        "predefined_options": "The application uses a predefined set of questions and answers stored in a JavaScript array. Each question has four possible answers, and one correct answer is specified.",
+        "external_resources": "No external resources such as links, images, or audio files are used in the provided code.",
+        "external_js_libraries": "No external JavaScript libraries are used in the provided code."
+    },
+    "requirements": [
+        {
+            "id": "REQ-001",
+            "description": "When the page loads, the system must display the first question and its corresponding answer options from the predefined quiz data. The user sees the question text and four radio buttons with labels for each answer option."
+        },
+        {
+            "id": "REQ-002",
+            "description": "The user can select one answer option by clicking on a radio button. The system must allow only one radio button to be selected at a time, ensuring mutual exclusivity among the options."
+        },
+        {
+            "id": "REQ-003",
+            "description": "Upon clicking the 'Submit' button, the system must evaluate the selected answer. If the answer is correct, the system increments the user's score by one."
+        },
+        {
+            "id": "REQ-004",
+            "description": "After submitting an answer, the system must load the next question and its answer options if there are remaining questions. The user sees the new question and can select an answer."
+        },
+        {
+            "id": "REQ-005",
+            "description": "If the user has answered all questions, the system must display the user's total score and a 'Play Again' button. The user sees a summary of their performance and can restart the quiz by clicking the button."
+        },
+        {
+            "id": "REQ-006",
+            "description": "When the 'Play Again' button is clicked, the system must reload the page, resetting the quiz to the first question and resetting the user's score to zero."
+        }
+    ]
+}

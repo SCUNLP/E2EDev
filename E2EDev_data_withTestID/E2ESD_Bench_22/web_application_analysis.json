@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["data manager", "visualization tool"],
+  "InteractionModes": ["form input", "button clicks", "chart visualization"],
+  "LogicComplexityLevel": "state management, conditionals, dynamic updates",
+  "TechnicalPoints": ["localStorage", "dynamic DOM manipulation", "real-time updates"],
+  "ExternalResources": ["JS libraries (Chart.js)", "CDN assets", "external media (candidate images)"]
+}
+```

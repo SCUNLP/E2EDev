@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["Content Generator"],
+  "InteractionModes": ["Button Click"],
+  "LogicComplexityLevel": "Simple Input-Output",
+  "TechnicalPoints": ["External API Calls", "Dynamic DOM Manipulation"],
+  "ExternalResources": ["Dad Jokes API"]
+}
+```

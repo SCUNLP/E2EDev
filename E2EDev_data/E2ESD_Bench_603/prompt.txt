@@ -1,0 +1,26 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The Number To Words Converter application allows users to input numeric values and receive their word representation in real-time. It provides immediate feedback on input validity and displays conversion results directly on the page.",
+    "predefined_options": "The application uses predefined arrays for digit names, tens, ties, and denominations to standardize the conversion process and ensure consistent output.",
+    "external_resources": "The application uses external resources such as stylesheets (styles.css) for styling and JavaScript files (script.js) for functionality.",
+    "external_js_libraries": "No external JavaScript libraries are used; the application relies on custom JavaScript code for its functionality."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+Upon accessing the application, the user should see the main title 'Number To Words Conversion' prominently displayed at the top of the page within an HTML element with the class 'heading'. This title should be visible immediately upon page load, ensuring that users can easily identify the purpose of the application without any additional interaction. The title should be styled according to the CSS rules associated with the 'heading' class, maintaining consistency with the overall design of the application.
+- Requirement 2: 
+The application provides a real-time number-to-words conversion feature. When a user enters a numeric value into the input field with data-testid 'input-box', the system validates the input and displays the corresponding word representation in the output paragraph with data-testid 'output-paragraph'. The input is padded with leading zeros until its length is divisible by 3 before conversion. If the user enters non-numeric characters, the system shows an error message 'Invalid input. Please enter only digits.' styled in red text. For numbers exceeding 15 digits, the system displays a 'Too Large Number.' error message, also in red. If the input is zero, the output displays 'Zero' in black text. For valid numbers with leading zeros, the leading zeros are ignored, and the number is correctly converted and shown in black text.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

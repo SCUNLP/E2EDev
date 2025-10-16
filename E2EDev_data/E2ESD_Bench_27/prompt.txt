@@ -1,0 +1,48 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The Meal Finder application allows users to search for meals by keywords, view detailed information about specific meals, and fetch random meals. The application dynamically updates the UI based on user interactions and API responses.",
+    "predefined_options": "Default behavior includes fetching and displaying a random meal when the page loads or when the 'Random' button is clicked.",
+    "external_resources": [
+        {
+            "name": "Meal Finder Logo",
+            "source": "https://i.ibb.co/ZKCTJ9b/728985-fish-cooking-food-kitchen-meal-icon.png"
+        },
+        {
+            "name": "Meal Images",
+            "source": "Fetched dynamically from TheMealDB API"
+        }
+    ],
+    "external_js_libraries": [
+        {
+            "name": "Font Awesome",
+            "source": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        }
+    ]
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The Meal Finder web application must allow users to search for meals by entering a keyword into the search input field identified by the attribute data-testid 'search-input'. Upon clicking the search button with data-testid 'search-button', the application should fetch meals matching the keyword from the API and display them within the meals container with data-testid 'meals-container'. The result heading with data-testid 'result-heading' should update to show 'Search results for "<keyword>":'. If no matching meals are found, the meals container should be cleared, and the result heading should display 'No results found. Try another keyword!'. In the case of an empty keyword, the application should automatically fetch and display a random meal in the single meal container with data-testid 'single-meal-container', leaving the result heading empty. Additionally, clicking on a meal within the meals container should navigate to detailed meal information, fetched using the meal's ID, and displayed in the single meal container, ensuring smooth scrolling into view.
+- Requirement 2: 
+When the user clicks the 'Random' button with data-testid 'random-button', the system must fetch a random meal from the API and display its details in the single meal container with data-testid 'single-meal-container'. The meals container with data-testid 'meals-container' and the result heading with data-testid 'result-heading' must be cleared. If the user clicks the 'Random' button multiple times in quick succession, the single meal container should display the latest meal details fetched, ensuring the result heading remains empty throughout.
+- Requirement 3: 
+Upon clicking a meal element within the meals container (identified by data-testid 'meals-container'), the application must retrieve detailed information about the selected meal using its data-mealid attribute. The details, including the meal's name, image, category, area, ingredients, and instructions, must be displayed in the single meal container (identified by data-testid 'single-meal-container'). The page should then smoothly scroll to bring the single meal container into view. This interaction is triggered by a click event on any element with the class 'meal-info' within the meals container.
+- Requirement 4: 
+When the 'Meal Finder' webpage loads, the system must automatically fetch a random meal from the MealDB API using the endpoint 'https://www.themealdb.com/api/json/v1/1/random.php'. The fetched meal must be displayed in the 'single meal container' (identified by the attribute data-testid='single-meal-container'). The displayed meal must include the following details: the meal's title, an image of the meal, a list of ingredients with their corresponding measurements, and preparation instructions. Additionally, the 'result heading' (identified by data-testid='result-heading') and the 'meals container' (identified by data-testid='meals-container') must be cleared and remain empty. If the API request fails, the 'single meal container' must display an error message stating 'Failed to fetch a random meal.'
+- Requirement 5: 
+When the user submits the search form with an empty input field or an input containing only whitespace, the system must fetch and display a random meal in the single meal container. The search form is identified by the data-testid 'submit-form', and the search input field is identified by the data-testid 'search-input'. The search button is identified by the data-testid 'search-button'. Upon submission, the single meal container, identified by the data-testid 'single-meal-container', should be updated to display the random meal details, including the meal name, image, category, area, ingredients, and instructions. The result heading, identified by the data-testid 'result-heading', should be cleared to ensure no search results are displayed.
+- Requirement 6: 
+The system must clear the search input field (identified by the attribute data-testid='search-input') after the user submits the search form (identified by the attribute data-testid='submit-form') under all scenarios. This includes: (1) a valid search where results are successfully fetched and displayed, (2) an empty search submission where no input is provided, and (3) an invalid search where no results are found. The clearing of the input field must occur immediately after the form submission event is triggered, regardless of the outcome of the search. The search button is identified by the attribute data-testid='search-button'.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- Title -->
+<title>Number To Words Converter</title>
+<!-- Stylesheet -->
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<!-- Heading of the project -->
+<div class="header">
+<h1 class="heading">Number To Words Conversion</h1>
+</div>
+<!-- Input Box -->
+<div class="input">
+<h3 class="input-text">Enter Number </h3> <br/>
+<input data-testid="input-box" id="input-box" oninput="getValue()" placeholder="eg., 123"/> <br/>
+</div>
+<!-- Output Box -->
+<div class="output">
+<h3 class="convert-text">Converted In Words </h3>
+<div class="output-box">
+<p data-testid="output-paragraph"></p>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

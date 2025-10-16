@@ -1,0 +1,30 @@
+{
+    "summary": {
+        "overview": "The Movie Seat Booking application allows users to select a movie and book seats in a theater. Users can choose from a list of movies, select available seats, and view the total cost of their selections. The application retains user selections using local storage to persist data across sessions.",
+        "predefined_options": "The application offers a set of predefined movie options, each associated with a specific ticket price and uniquely identifiable by its corresponding data-testid. The default selection is 'The Big Lebowski' priced at $10 (data-testid='movie-option-1'), followed by 'Fargo' at $12 (data-testid='movie-option-2'), 'O Brother' at $8 (data-testid='movie-option-3'), and 'No Country for Old Men' at $9 (data-testid='movie-option-4'). The theater seating is arranged in 6 rows, with each row containing 8 seats. Every seat is uniquely identifiable via a data-testid in the format seat-row-column. For example, seat-1-1 refers to the first seat in the first row, and seat-2-3 refers to the third seat in the second row. Initially, the following seats are marked as occupied: Row 2: Seat 4 (seat-2-4) and Seat 5 (seat-2-5); Row 3: Seat 7 (seat-3-7) and Seat 8 (seat-3-8); Row 5: Seat 4 (seat-5-4) and Seat 5 (seat-5-5); Row 6: Seat 5 (seat-6-5), Seat 6 (seat-6-6), and Seat 7 (seat-6-7). This configuration ensures that each seat and movie option can be distinctly identified and interacted with, facilitating robust and precise testing.",
+        "external_resources": "No external resources such as images or audio files are directly referenced in the provided code.",
+        "external_js_libraries": "No external JavaScript libraries are referenced in the provided code."
+    },
+    "requirements": [
+        {
+            "id": "REQ-001",
+            "description": "When the user selects a movie from the dropdown menu, the system updates the ticket price and stores the selected movie index and price in local storage."
+        },
+        {
+            "id": "REQ-002",
+            "description": "Upon clicking an available seat, the system toggles the seat's selection status, updates the count of selected seats, calculates the total price, and stores the indices of selected seats in local storage."
+        },
+        {
+            "id": "REQ-003",
+            "description": "When the page loads, the system retrieves and applies previously selected seats and movie selection from local storage, updating the UI accordingly."
+        },
+        {
+            "id": "REQ-004",
+            "description": "The system displays the number of selected seats and the total price dynamically as the user interacts with seat selections and movie choices."
+        },
+        {
+            "id": "REQ-005",
+            "description": "The user can view the status of seats (available, selected, occupied) visually, with occupied seats being non-interactive."
+        }
+    ]
+}

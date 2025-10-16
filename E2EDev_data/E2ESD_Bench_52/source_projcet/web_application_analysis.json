@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["Step-by-step navigation tool"],
+  "InteractionModes": ["Button clicks", "Visual feedback"],
+  "LogicComplexityLevel": "State management",
+  "TechnicalPoints": ["Dynamic DOM manipulation"],
+  "ExternalResources": []
+}
+```

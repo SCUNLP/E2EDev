@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "overview": "The Speech Text Reader application allows users to input text, select a voice, and have the text read aloud. It also provides predefined phrases with associated images that can be clicked to trigger speech synthesis.",
+    "predefined_options": "The application provides a set of predefined phrases such as 'I'm Thirsty', 'I'm Hungry', 'I'm Tired', 'I'm Hurt', 'I'm Happy', 'I'm Angry', 'I'm Sad', 'I'm Scared', 'I Want to Go Outside', 'I Want to Go Home', 'I Want to Go to School', 'I Want to Go to Grandmas'. each associated with an image. These phrases can be clicked to trigger speech synthesis.",
+    "external_resources": [
+      {
+        "name": "Images for predefined phrases",
+        "source": "https://github.com/bradtraversy/vanillawebprojects/blob/master/speech-text-reader/img/"
+      }
+    ],
+    "external_js_libraries": [
+      {
+        "name": "Font Awesome",
+        "source": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "description": "When the user clicks the 'Toggle Text Box' button, the system should toggle the visibility of the text box containing the voice selection dropdown, textarea, and 'Read Text' button."
+    },
+    {
+      "id": "REQ-002",
+      "description": "When the user clicks the 'Close' button within the text box, the system should hide the text box."
+    },
+    {
+      "id": "REQ-003",
+      "description": "The system should populate the 'Choose Voice' dropdown with available voices from the Web Speech API when the page loads or when the available voices change."
+    },
+    {
+      "id": "REQ-004",
+      "description": "When the user selects a voice from the 'Choose Voice' dropdown, the system should set the selected voice for speech synthesis."
+    },
+    {
+      "id": "REQ-005",
+      "description": "When the user enters text into the textarea and clicks the 'Read Text' button, the system should read the entered text aloud using the selected voice."
+    },
+    {
+      "id": "REQ-006",
+      "description": "For each predefined phrase box, when the user clicks on a box, the system should read the associated text aloud and visually highlight the box momentarily."
+    }
+  ]
+}

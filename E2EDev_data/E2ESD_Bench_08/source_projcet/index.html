@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" rel="stylesheet"/>
+<title>Library Management System</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<a class="navbar-brand" href="#" data-testid="navbar-brand">Online Library</a>
+<button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button" data-testid="navbar-toggler">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" data-testid="navbarSupportedContent" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active">
+<a class="nav-link" href="#" data-testid="nav-link-home">Home <span class="sr-only">(current)</span></a>
+</li>
+</ul>
+<form class="form-inline my-2 my-lg-0" data-testid="search-form">
+<input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search" data-testid="search-input"/>
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-testid="search-button">
+            Search
+          </button>
+</form>
+</div>
+</nav>
+<div data-testid="alert-user" id="alertuser"></div>
+<div class="container my-3">
+<h1 data-testid="welcome-heading">Welcome to My Library</h1>
+<hr/>
+<form data-testid="my-library-form" id="mylibraryform">
+<div class="form-group">
+<label for="exampleInputEmail1" data-testid="username-label">User Name</label>
+<input aria-describedby="emailHelp" class="form-control" data-testid="user-name-input" id="User-Name" type="text"/>
+<small class="form-text text-muted" data-testid="email-help-text" id="emailHelp">We'll never share your user name with anyone else.</small>
+</div>
+<div class="form-group">
+<label for="exampleInputPassword1" data-testid="bookname-label">Book Name</label>
+<input class="form-control" data-testid="book-name-input" id="Book-Name" type="text"/>
+</div>
+<div class="form-group">
+<label for="bookType" data-testid="booktype-label">Book Type</label>
+<div class="check-boxes my-3 mx-5">
+<div class="form-check p-2">
+<input class="form-check-input" data-testid="fiction-radio" id="Fiction" name="check-box" type="radio" value="Fiction"/>
+<label class="form-check-label" for="Fiction" data-testid="fiction-label"> Fiction </label>
+</div>
+<div class="form-check p-2">
+<input class="form-check-input" data-testid="programming-radio" id="Programing" name="check-box" type="radio" value="Programming"/>
+<label class="form-check-label" for="Programming" data-testid="programming-label">
+                Programming
+              </label>
+</div>
+<div class="form-check p-2">
+<input class="form-check-input" data-testid="cooking-radio" id="Cooking" name="check-box" type="radio" value="Cooking"/>
+<label class="form-check-label" for="Cooking" data-testid="cooking-label"> Cooking </label>
+</div>
+</div>
+</div>
+<button class="btn btn-outline-dark" type="submit" data-testid="add-book-button">Add Book</button>
+</form>
+<table class="table table-dark my-3">
+<thead>
+<tr>
+<th scope="col" data-testid="table-header-slno">Sl No.</th>
+<th scope="col" data-testid="table-header-date">Date of issue</th>
+<th scope="col" data-testid="table-header-reader">Reader</th>
+<th scope="col" data-testid="table-header-bookname">Book Name</th>
+<th scope="col" data-testid="table-header-genre">Genre</th>
+<th scope="col" data-testid="table-header-actions"></th>
+</tr>
+</thead>
+<tbody data-testid="table-body" id="table-body"></tbody>
+</table>
+</div>
+<script src="script.js"></script>
+<script crossorigin="anonymous" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

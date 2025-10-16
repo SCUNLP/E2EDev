@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Expense Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<h1>Expense Tracker</h1>
+<div class="balance">
+<h2>Your Balance</h2>
+<p data-testid="balance" id="balance">$0.00</p>
+</div>
+<div class="income-expense">
+<div>
+<h3>Income</h3>
+<p data-testid="income" id="income">$0.00</p>
+</div>
+<div class="expense">
+<h3>Expenses</h3>
+<p data-testid="expense" id="expense">$0.00</p>
+</div>
+</div>
+<div class="form">
+<h3>Add Transaction</h3>
+<div class="form-control">
+<label for="text" data-testid="description-label">Description</label>
+<input data-testid="description-input" id="text" placeholder="Enter description" type="text"/>
+</div>
+<div class="form-control">
+<label for="amount" data-testid="amount-label">Amount <small>(negative - expense, positive - income)</small></label>
+<input data-testid="amount-input" id="amount" placeholder="Enter amount" type="number"/>
+</div>
+<button class="btn" data-testid="add-transaction-button" id="add-transaction">Add Transaction</button>
+</div>
+<div class="history">
+<h3>Transaction History</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Description</th>
+<th>Amount</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody data-testid="transaction-list" id="list">
+</tbody>
+</table>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

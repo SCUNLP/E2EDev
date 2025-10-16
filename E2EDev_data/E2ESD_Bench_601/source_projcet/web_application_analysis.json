@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["calculator", "data manager"],
+  "InteractionModes": ["form input", "button selection"],
+  "LogicComplexityLevel": "conditionals, state management",
+  "TechnicalPoints": ["dynamic DOM manipulation"],
+  "ExternalResources": ["external link"]
+}
+```

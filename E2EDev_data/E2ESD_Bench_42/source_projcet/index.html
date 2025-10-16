@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Salary Calculator</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container mt-5">
+<h1 class="text-center mb-4">Salary Calculator</h1>
+<div class="row">
+<div class="col-md-6">
+<form data-testid="salary-form" id="salaryForm">
+<div class="form-group">
+<label for="job">Job:</label>
+<input class="form-control" data-testid="job-input" id="job" placeholder="e.g., Web Developer" type="text"/>
+</div>
+<div class="form-row">
+<div class="form-group col-md-6">
+<label for="workHour">Hours per Day:</label>
+<input class="form-control" data-testid="work-hour-input" id="workHour" placeholder="e.g., 8" type="number"/>
+</div>
+<div class="form-group col-md-6">
+<label for="workWeek">Workdays per Week:</label>
+<input class="form-control" data-testid="work-week-input" id="workWeek" placeholder="e.g., 5" type="number"/>
+</div>
+</div>
+<div class="form-group">
+<label for="netSalary">Gross Monthly Salary ($):</label>
+<input class="form-control" data-testid="gross-salary-input" id="netSalary" placeholder="Enter gross salary" type="number"/>
+</div>
+<div class="form-group">
+<label for="tax">Tax Percentage (%):</label>
+<input class="form-control" data-testid="tax-input" id="tax" placeholder="e.g., 20" type="number"/>
+</div>
+<div class="form-group">
+<label for="overtimeHours">Overtime Hours per Week:</label>
+<input class="form-control" data-testid="overtime-hours-input" id="overtimeHours" placeholder="e.g., 5" type="number"/>
+</div>
+<div class="form-group">
+<label for="overtimeRate">Overtime Rate per Hour ($):</label>
+<input class="form-control" data-testid="overtime-rate-input" id="overtimeRate" placeholder="e.g., 15" type="number"/>
+</div>
+<button class="btn btn-primary btn-block" data-testid="calculate-button" id="calculateButton" type="button">Calculate Salary</button>
+<button class="btn btn-secondary btn-block" data-testid="clear-button" id="clearButton" type="reset">Clear</button>
+</form>
+</div>
+<div class="col-md-6">
+<div data-testid="results-section" id="results">
+<h4 class="text-center mb-3" data-testid="salary-overview-title" id="title">Salary Overview for <span data-testid="job-title" id="jobTitle">______</span>:</h4>
+<table class="table table-bordered">
+<tbody>
+<tr>
+<th>Hourly Salary:</th>
+<td data-testid="hourly-salary" id="hourly">$0</td>
+</tr>
+<tr>
+<th>Daily Salary:</th>
+<td data-testid="daily-salary" id="daily">$0</td>
+</tr>
+<tr>
+<th>Monthly Gross Salary:</th>
+<td data-testid="monthly-gross-salary" id="monthlyGross">$0</td>
+</tr>
+<tr>
+<th>Tax Deduction:</th>
+<td data-testid="tax-deduction" id="taxDeduction">$0</td>
+</tr>
+<tr>
+<th>Monthly Net Salary:</th>
+<td data-testid="monthly-net-salary" id="monthlyNet">$0</td>
+</tr>
+<tr>
+<th>Yearly Net Salary:</th>
+<td data-testid="yearly-net-salary" id="yearly">$0</td>
+</tr>
+<tr>
+<th>Total Overtime Earnings:</th>
+<td data-testid="overtime-earnings" id="overtimeEarnings">$0</td>
+</tr>
+<tr>
+<th>Total Earnings (Including Overtime):</th>
+<td data-testid="total-earnings" id="totalEarnings">$0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

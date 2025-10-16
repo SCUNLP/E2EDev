@@ -1,0 +1,33 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The application is a simple web-based 'Dad Jokes' generator. It allows users to fetch and display random dad jokes from an external API ('https://icanhazdadjoke.com') by clicking a button. The jokes are displayed dynamically on the page.",
+    "predefined_options": "No predefined options are available. The jokes are fetched dynamically from the external API.",
+    "external_resources": [
+        {
+            "name": "Dad Jokes API",
+            "source": "https://icanhazdadjoke.com"
+        }
+    ],
+    "external_js_libraries": "No external JavaScript libraries are used in the provided code."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+Upon loading the 'Dad Jokes' webpage, the system must automatically initiate a fetch request to the 'https://icanhazdadjoke.com' API to retrieve a random dad joke. The joke must be displayed in the designated joke display area, which is identified by the data-testid attribute 'joke'. 
+- Requirement 2: 
+The user must be able to click the 'Get Another Joke' button (data-testid='get-another-joke-button'). Upon clicking, the application must asynchronously fetch a new random dad joke and display it in the joke container (data-testid='joke').
+- Requirement 3: 
+The user must be able to click the 'Get Another Joke' button (data-testid='get-another-joke-button'). Upon clicking, the application must asynchronously fetch a new random dad joke and display it in the joke container (data-testid='joke'), replacing either the placeholder text '// Joke goes here' or the previously displayed joke.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

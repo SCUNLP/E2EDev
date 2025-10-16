@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<link href="./style.css" rel="stylesheet"/>
+<title>Cool Custom Video Control 😎</title>
+</head>
+<body>
+<div class="player">
+<video class="player__video viewer" src="./video.mp4" type="video/*"></video>
+<div class="player__controls">
+<div class="progress">
+<div class="progress__filled"></div>
+</div>
+<button class="player__button toggle" title="Toggle Play" data-testid="toggle-play-button">
+          ►
+        </button>
+<input class="player__slider" max="1" min="0" name="volume" step="0.05" type="range" value="1" data-testid="volume-slider"/>
+<input class="player__slider" max="2" min=".5" name="playbackRate" step="0.05" type="range" value="1" data-testid="playback-rate-slider"/>
+<button class="player__button" data-skip="-10" data-testid="skip-backward-button">« 10s</button>
+<button class="player__button" data-skip="25" data-testid="skip-forward-button">25s »</button>
+<button class="player__button fullscreen" data-testid="fullscreen-button">Fullscreen</button>
+</div>
+</div>
+</body>
+<script src="./script.js"></script>
+</html>

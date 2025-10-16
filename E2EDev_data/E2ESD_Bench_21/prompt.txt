@@ -1,0 +1,45 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The application is a web-based music player that allows users to play, pause, and navigate through a playlist of songs. It provides visual feedback through a progress bar and displays the current song's title and cover image.",
+    "predefined_options": "The application has a predefined playlist consisting of three songs: 'hey', 'summer', and 'ukulele'. These are set by the system and loaded dynamically.",
+    "external_resources": [
+        {
+            "songs": [
+                "hey",
+                "summer",
+                "ukulele"
+            ],
+            "song_audio_src": "https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/music/${song}.mp3?raw=true",
+            "song_cover_src": "https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/images/${song}.jpg?raw=true"
+        }
+    ],
+    "external_js_libraries": [
+        {
+            "name": "Font Awesome",
+            "source": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        }
+    ]
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+When the user clicks the play button (data-testid='play-button'), if the music is not playing (the music container doesn't have the 'play' class and the button shows a play icon with class 'fa-play'), the audio (data-testid='audio') should start playing, the 'play' class should be added to the music container (data-testid='music-container'), and the play icon should change to a pause icon (class 'fa-pause'). If the music is already playing (the container has the 'play' class and the button shows a pause icon with class 'fa-pause'), clicking the button should pause the audio, remove the 'play' class from the container, and switch the icon back to play. The music is paused by default when the page loads, and no play/pause state is saved in localStorage.
+- Requirement 2: 
+When the user clicks the next button (data-testid='next-button'), the system should move to the next song in the playlist, update the song title (data-testid='title'), cover image (data-testid='cover'), and audio source (data-testid='audio'), and automatically start playback. If the currently playing song is not the last one, it simply switches to the next; if it's the last song (like "Ukulele"), the playlist loops back to the first song ("Hey"). In both cases, the play button icon (data-testid='play-button') should reflect the playing state by showing a pause icon (fa-pause). All updates should be seamless, with audio playback starting immediately and UI reflecting the new song.
+- Requirement 3: 
+When the user clicks the previous button (data-testid='prev-button'), the music player should switch to the correct song and start playing it immediately. If the current song is "Summer", it should go back to "Hey"; if it's "Hey" (the first song), it should loop to the last song, "Ukulele". In each case, the song title (data-testid='title'), cover image (data-testid='cover'), and audio source (data-testid='audio') should all update to match the new song, and playback should start automatically. This ensures smooth and continuous music navigation for the user.
+- Requirement 4: 
+When a song finishes playing, the music player should automatically switch to the next song and start playing it without user action. If the current song is "Summer", it should move to "Ukulele"; if it's the last song "Ukulele", it should loop back to the first song "Hey". In all cases, the audio should play automatically, and the song title (data-testid='title'), cover image (data-testid='cover'), and audio source (data-testid='audio') must update accordingly to ensure a smooth and uninterrupted listening experience.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

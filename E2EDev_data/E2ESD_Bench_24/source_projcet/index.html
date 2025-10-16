@@ -1,0 +1,52 @@
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet"/>
+</head>
+<body class="body">
+<br/>
+<div class="container">
+<div class="card text-black bg-light mb-9" style="max-width: 200rem;">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h1 data-testid="title" id="title">Compound Interest Calculator</h1>
+</div>
+</div>
+<br/>
+<div class="row">
+<div class="col-md-12">
+<form>
+<div class="form-group">
+<label class="form-group" data-testid="principal-label">Principal</label>
+<input class="form-control" data-testid="principal" id="principal" placeholder="Amount" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-group" data-testid="interest-rate-label">Interest rate (%)</label>
+<input class="form-control" data-testid="annual-interest-rate" id="annual-interest-rate" placeholder="Rate in %" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-group" data-testid="years-label">Number of Years</label>
+<input class="form-control" data-testid="number-of-year" id="number-of-year" placeholder="Years" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-group" data-testid="times-in-year-label">Number of Times in a Single Year </label>
+<input class="form-control" data-testid="number-of-times-in-year" id="number-of-times-in-year" placeholder="Times in Year" type="text"/>
+</div>
+<button class="btn btn-block btn-info" data-testid="calculate-button" id="btn" type="button">Calculate</button>
+</form>
+</div>
+</div>
+<br/>
+<h5 class="total" data-testid="result-label">Result</h5>
+<div class="row">
+<div class="col-md-12">
+<h1 data-testid="result-value" id="res">0</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+<script src="script.js" type="text/javascript"></script>
+</html>

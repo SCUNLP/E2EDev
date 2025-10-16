@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["data manager"],
+  "InteractionModes": ["form input"],
+  "LogicComplexityLevel": "simple input-output",
+  "TechnicalPoints": ["dynamic DOM manipulation"],
+  "ExternalResources": []
+}
+```

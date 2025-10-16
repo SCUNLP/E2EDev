@@ -1,0 +1,32 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The Playable Piano web application allows users to interact with a virtual piano. Users can click on piano keys or press corresponding keyboard keys to play notes. The application includes features for adjusting volume and toggling the visibility of key labels.",
+    "predefined_options": "The web application initializes with a default volume level set to 0.5, and piano key labels are displayed by default upon launch. It features a virtual piano with both black and white keys, each mapped to specific keyboard characters. The black keys correspond to the uppercase letters W, E, T, Y, U, O, and P, while the white keys correspond to A, S, D, F, G, H, J, K, L, and ;. Each key element in the DOM is assigned a unique data-test-id attribute in the format data-test-id=\"piano-key-'x'\", where 'x' is the lowercase version of the corresponding keyboard character (e.g., the key for W uses data-test-id=\"piano-key-'w'\").",
+    "external_resources": "The corresponding audio files for each piano note are stored in the tunes directory, with filenames matching the lowercase key characters followed by .wav, such as tunes/a.wav, tunes/;.wav, tunes/d.wav, tunes/e.wav, and so on, covering all relevant keys including w, e, t, y, u, o, p, a, s, d, f, g, h, j, k, l, and ;.",
+    "external_js_libraries": "No external JavaScript libraries are used in this application."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+When the user clicks any visible piano key on the webpage, identified by its data-testid (e.g., 'piano-key-a' for the white key 'a' or 'piano-key-w' for the black key 'w'), the system must play the corresponding sound file from the 'tunes' directory (e.g., 'tunes/a.wav' for key 'a'). The clicked key must receive the 'active' class to visually highlight it, and the highlight must be removed after 150ms by removing the 'active' class.
+- Requirement 2: 
+The system must allow the user to adjust the audio volume using a slider (data-testid='volume-slider') with a range from 0 (mute) to 1 (maximum volume). Interacting with the slider updates the audio volume accordingly, with 0 muting the audio, 1 playing at full volume. The volume change must be reflected immediately upon slider adjustment.
+- Requirement 3: 
+When the user interacts with the 'Show Keys' checkbox (identified by `data-testid='show-keys-checkbox'`), the system must toggle the visibility of key labels on the piano keys (identified by `data-testid` starting with 'piano-key') by adding or removing the 'hide' class. Initially, the labels are visible. When the checkbox is checked, clicking it should hide the labels by adding the 'hide' class to all piano keys. When unchecked, clicking it should restore the labels by removing the 'hide' class. The system must handle rapid toggling, ensuring the final state of the labels is consistent and correct.
+- Requirement 4: 
+The system must display all piano keys (white and black) in the UI, each labeled with its corresponding keyboard key. The piano keys must include both white and black keys, with the following labels: 'a', 'w', 's', 'e', 'd', 'f', 't', 'g', 'y', 'h', 'u', 'j', 'k', 'o', 'l', 'p', ';'. Each key must be represented as an HTML <li> element with the class 'key' and either 'white' or 'black', depending on the type of key. The keys must also include a 'data-key' attribute corresponding to their label and a 'data-testid' attribute in the format 'piano-key-{label}' (e.g., 'piano-key-a'). The labels must be displayed as <span> elements nested within the <li> elements. The keys must be contained within a <ul> element with the class 'piano-keys'. The system must ensure that all keys are visible by default when the webpage is loaded, and their labels must be displayed unless the 'Show Keys' checkbox is unchecked. The checkbox must be represented as an HTML <input> element with the type 'checkbox', a 'data-testid' attribute of 'show-keys-checkbox', and must toggle the visibility of the labels when clicked.
+- Requirement 5: 
+The system must allow users to interact with the piano keys using both mouse clicks and keyboard presses, ensuring consistent functionality across both input methods.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

@@ -1,0 +1,39 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "This web application is a custom video player that allows users to play, pause, skip, adjust volume, change playback speed, seek using a progress bar, and toggle fullscreen mode. The interface is designed to provide intuitive controls for video playback.",
+    "predefined_options": "Predefined options include default values for volume (1.0), playback rate (1.0), and progress bar starting at 0%. Skip buttons are preset to skip -10 seconds backward and 25 seconds forward. Structurally, the player consists of a container element (.player) that wraps both the video playback area and the control interface, and a video element (.player__video.viewer) where the actual playback occurs.",
+    "external_resources": [
+        {
+            "name": "Video file",
+            "source": "./video.mp4"
+        }
+    ],
+    "external_js_libraries": []
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The video player starts in a paused state. Users can toggle between play and pause by clicking the video element (class='viewer') or the Play/Pause button (data-testid='toggle-play-button'). The button icon displays '►' when paused and '❚ ❚' when playing. Rapid clicks will stabilize the video in either playing or paused state, with the icon reflecting the final state. The video listens for 'click', 'play', and 'pause' events to toggle and update the button icon. The video plays when toggled from paused and pauses when toggled from playing.
+- Requirement 2: 
+The video player allows users to rewind or fast-forward using the Skip Backward (data-testid='skip-backward-button') and Skip Forward (data-testid='skip-forward-button') buttons. Clicking Skip Backward rewinds by 10 seconds, and Skip Forward fast-forwards by 25 seconds. The buttons use data-skip attributes to adjust currentTime, ensuring it doesn't exceed the video's duration or go below 0 seconds.
+- Requirement 3: 
+When the user interacts with the Volume slider (identified by the attribute data-testid='volume-slider'), the video's audio level should update to match the slider value. The slider allows values ranging from 0 (mute) to 1 (maximum volume) in increments of 0.05. The slider's value should be reflected in the video's 'volume' property, and the slider's UI element must be updated in real-time to reflect the current volume level. The slider is located within the '.player__controls' div and is identified by the 'player__slider' class and the 'data-testid' attribute. Any changes to the slider should trigger the 'handleRangeUpdate' function in the JavaScript code to update the video's volume property.
+- Requirement 4: 
+The Playback Rate slider (data-testid='playback-rate-slider') lets users adjust video speed from 0.5x to 2x in 0.05 steps. Changing the slider updates the video’s playback rate in real time via the handleRangeUpdate function. Values outside the range (e.g. 3) are rejected, and the video keeps playing at the last valid speed. The slider starts at 1x and is implemented as a range input with min 0.5, max 2, and default value 1.
+- Requirement 5: 
+The progress bar visually tracks the video’s playback progress by dynamically updating the width of the .progress__filled element based on the formula (video.currentTime / video.duration) * 100. It begins filling when playback starts (triggered via the data-testid='toggle-play-button'), reaches 100% upon video completion, and resets to 0% when the video restarts. Users can scrub manually by clicking or dragging on the .progress element, with real-time updates to both the video's currentTime and the progress bar's fill.
+- Requirement 6: 
+When the user clicks the Fullscreen button, the video player should toggle between fullscreen mode and normal mode. The Fullscreen button is identified by the attribute 'data-testid' with the value 'fullscreen-button'. The video player element is represented by the 'player' class in the DOM. When toggling to fullscreen mode, the 'fullPlayer' class should be added to the player element, and when toggling back to normal mode, the 'fullPlayer' class should be removed. The functionality should work regardless of the current state of the video player (fullscreen or normal mode).
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

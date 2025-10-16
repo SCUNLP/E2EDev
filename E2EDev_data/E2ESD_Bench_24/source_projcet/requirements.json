@@ -1,0 +1,43 @@
+{
+    "summary": {
+        "overview": "The Compound Interest Calculator web application allows users to calculate the compound interest based on user-provided inputs such as principal amount, annual interest rate, number of years, and number of times interest is compounded per year. The application provides real-time feedback and results upon user interaction.",
+        "predefined_options": "The application does not set predefined options for input fields; users must manually enter all values.",
+        "external_resources": "The application uses Bootstrap for styling, which is linked externally via a CDN.",
+        "external_js_libraries": "Bootstrap is used for styling, sourced from https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css."
+    },
+    "requirements": [
+        {
+            "id": "REQ-001",
+            "description": "The system shall accept a numeric value greater than 0 entered in the 'Principal' input field."
+        },
+        {
+            "id": "REQ-002",
+            "description": "The system shall accept a numeric value greater than 0 entered in the 'Interest Rate (%)' input field."
+        },
+        {
+            "id": "REQ-003",
+            "description": "The system shall accept a numeric value greater than 0 entered in the 'Number of Years' input field."
+        },
+        {
+            "id": "REQ-004",
+            "description": "The system shall accept a numeric value greater than 0 entered in the 'Number of Times in a Single Year' input field."
+        },
+        {
+            "id": "REQ-005",
+            "description": "When the user clicks the 'Calculate' button, the system shall compute the compound interest based on the provided inputs and display the result in the 'Result' section."
+        },
+        {
+            "id": "REQ-006",
+            "description": "When the user presses the Enter key while focused on any input field, the system shall compute the compound interest based on the provided inputs and display the result in the 'Result' section."
+        },
+        {
+            "id": "REQ-007",
+            "description": "If the user clicks the 'Calculate' button or presses the Enter key and any input field contains a value less than or equal to 0, the system shall display an alert message stating 'Please Enter Valid Values!!'."
+        },
+        {
+            "id": "REQ-008",
+            "description": "The system shall format the calculated compound interest result to two decimal places before displaying it in the 'Result' section."
+        }
+    ]
+
+}

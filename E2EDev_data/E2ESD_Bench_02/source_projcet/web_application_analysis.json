@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["data manager"],
+  "InteractionModes": ["form input", "toggle view/edit mode", "button clicks"],
+  "LogicComplexityLevel": "state management, conditionals",
+  "TechnicalPoints": ["localStorage", "dynamic DOM manipulation"],
+  "ExternalResources": ["Font Awesome CDN", "Marked.js CDN"]
+}
+```

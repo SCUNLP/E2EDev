@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["data manager", "content generator"],
+  "InteractionModes": ["form input", "button click", "smooth scrolling"],
+  "LogicComplexityLevel": "conditionals, state management",
+  "TechnicalPoints": ["external API calls", "dynamic DOM manipulation"],
+  "ExternalResources": ["JS libraries", "CDN assets", "public APIs", "external media"]
+}
+```

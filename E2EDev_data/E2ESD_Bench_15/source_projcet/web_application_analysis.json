@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["media tool"],
+  "InteractionModes": ["form input", "button clicks", "slider adjustments", "progress bar interaction"],
+  "LogicComplexityLevel": "state management",
+  "TechnicalPoints": ["dynamic DOM manipulation", "audio/video handling", "fullscreen API"],
+  "ExternalResources": ["external media"]
+}
+```

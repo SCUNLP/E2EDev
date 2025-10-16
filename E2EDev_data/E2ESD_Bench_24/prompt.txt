@@ -1,0 +1,49 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The Compound Interest Calculator web application allows users to calculate the compound interest based on user-provided inputs such as principal amount, annual interest rate, number of years, and number of times interest is compounded per year. The application provides real-time feedback and results upon user interaction.",
+    "predefined_options": "The application does not set predefined options for input fields; users must manually enter all values.",
+    "external_resources": "The application uses Bootstrap for styling, which is linked externally via a CDN.",
+    "external_js_libraries": "Bootstrap is used for styling, sourced from https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The system shall validate the 'Principal' input field (data-testid='principal') to ensure that it accepts only numeric values greater than 0. The input field should display the entered value if it meets the validation criteria. If the user enters a value less than or equal to 0, non-numeric characters, or leaves the field empty, the system shall prevent further calculations and display an alert message stating 'Please Enter Valid Values!!'. The validation should occur both when the user clicks the 'Calculate' button (data-testid='calculate-button') and when the user presses the 'Enter' key. The input field should allow decimal values (e.g., 0.01) as valid input.
+- Requirement 2: 
+The system shall validate the 'Interest Rate (%)' input field (data-testid: 'annual-interest-rate') to ensure it accepts only numeric values greater than 0. The input field must display the entered value immediately upon user input. The system shall handle the following scenarios: (1) Normal case: Accept valid numeric values greater than 0 (e.g., 5). (2) Edge case: Accept the smallest valid numeric value (e.g., 0.01). If the user enters an invalid value (e.g., non-numeric or less than or equal to 0), the system shall not allow the input and shall display an appropriate error message or alert. The validation must occur both when the user interacts with the input field directly and when the 'Calculate' button (data-testid: 'calculate-button') is clicked or the Enter key is pressed.
+- Requirement 3: 
+The system shall ensure that the 'Number of Years' input field, identified by the attribute data-testid='number-of-year', accepts only numeric values greater than 0. Upon entering a valid value, the input field should reflect the entered value accurately. The validation should occur both when the user clicks the 'Calculate' button (data-testid='calculate-button') and when the user presses the 'Enter' key while focused on any input field. If the entered value is not valid, an alert should be displayed with the message 'Please Enter Valid Values!!'.
+- Requirement 4: 
+The system shall validate and accept a numeric value greater than 0 entered in the 'Number of Times in a Single Year' input field (data-testid='number-of-times-in-year'). The input field shall allow users to type numeric values directly, and the entered value shall be reflected in the field upon submission. The system shall display an alert message ('Please Enter Valid Values!!') if the entered value is invalid (non-numeric, negative, or zero). The validation shall occur both when the user clicks the 'Calculate' button (data-testid='calculate-button') and when the user presses the 'Enter' key. The input field shall support edge cases, including the minimum valid value of '1'.
+- Requirement 5: 
+The web application shall provide a Compound Interest Calculator that allows users to input the principal amount, annual interest rate, number of years, and number of times interest is compounded per year. The user can initiate the calculation by either clicking the 'Calculate' button or pressing the 'Enter' key. The system shall validate that all inputs are positive numeric values greater than zero. If any input is invalid, an alert with the message 'Please Enter Valid Values!!' shall be displayed. Upon valid input, the system shall compute the compound interest using the formula: CI = principal * (1 + (interest / (ntime * 100)))^(ntime * nyear), round the result to two decimal places, and update the 'Result' section with data-testid 'result-value' to display the calculated value. The UI elements involved include: 'Principal' input field with data-testid 'principal', 'Interest rate (%)' input field with data-testid 'annual-interest-rate', 'Number of Years' input field with data-testid 'number-of-year', 'Number of Times in a Single Year' input field with data-testid 'number-of-times-in-year', 'Calculate' button with data-testid 'calculate-button', and 'Result' section with data-testid 'result-value'.
+- Requirement 6: 
+When the user presses the Enter key while focused on any input field, the system shall compute the compound interest based on the provided inputs and display the result in the 'Result' section. The system shall validate all inputs to ensure they are positive numeric values greater than zero. If any input is invalid (e.g., empty, non-numeric, or negative), an alert with the message 'Please Enter Valid Values!!' shall be displayed, and the 'Result' section shall remain unchanged, displaying '0'. The calculation shall use the formula: CI = Principal * (1 + (Interest Rate / (Number of Times in Year * 100)))^(Number of Times in Year * Number of Years), rounded to two decimal places. The following UI elements and attributes are involved: 
+
+- Input fields:
+  - Principal: [data-testid='principal']
+  - Interest Rate (%): [data-testid='annual-interest-rate']
+  - Number of Years: [data-testid='number-of-year']
+  - Number of Times in a Single Year: [data-testid='number-of-times-in-year']
+
+- Result section:
+  - Result label: [data-testid='result-label']
+  - Result value: [data-testid='result-value']
+
+- Button:
+  - Calculate button: [data-testid='calculate-button']
+
+The Enter key functionality shall trigger the calculation regardless of which input field is focused, and the result shall be displayed in the 'Result' section with data-testid='result-value'.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

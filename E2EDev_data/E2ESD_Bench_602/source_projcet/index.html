@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Random Number Generator</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<h1>Random Number Generator</h1>
+<div class="input-range">
+<label for="min" data-testid="min-label">Min: </label>
+<input data-testid="min" id="min" placeholder="1" type="number" value="1"/>
+<label for="max" data-testid="max-label">Max: </label>
+<input data-testid="max" id="max" placeholder="100" type="number" value="100"/>
+</div>
+<div class="random-number" data-testid="random-number-display" id="randomNumber">0</div>
+<button data-testid="generate-random-number-button" id="generateButton">Generate Random Number</button>
+<button data-testid="copy-to-clipboard-button" id="copyButton">Copy to Clipboard</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

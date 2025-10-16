@@ -1,0 +1,32 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The application provides a step-by-step progress interface with a visual progress bar and navigation buttons. Users can navigate through steps using 'Prev' and 'Next' buttons, with visual feedback provided by active circles and a progress bar.",
+    "predefined_options": "The system initializes with the first step active and the 'Prev' button disabled to prevent backward navigation from the first step.",
+    "external_resources": "No external resources such as images or audio files are used in the provided code.",
+    "external_js_libraries": "No external JavaScript libraries are used in the provided code."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+Upon initial page load, the Progress Steps web application must display the first progress circle with the data-testid 'progress-circle-1' having the class 'active', indicating its active state. All other progress circles ('progress-circle-2', 'progress-circle-3', 'progress-circle-4') should not have the class 'active'. The progress bar, identified by the data-testid 'progress-bar', must have a width of '0%', reflecting no progress. The 'Prev' button, with data-testid 'prev-button', should be disabled, while the 'Next' button, with data-testid 'next-button', should be enabled, allowing the user to proceed to the next step.
+- Requirement 2: 
+The web application should provide a progress tracking feature with a series of progress circles and a progress bar. When the user clicks the 'Next' button (data-testid='next-button'), the following actions should occur: 1) The next progress circle, identified by data-testid attributes in the format 'progress-circle-X', should be marked as active by adding the 'active' class. 2) The progress bar (data-testid='progress-bar') should update its width to reflect the proportion of active circles, calculated as ((number of active circles - 1) / (total number of circles - 1)) * 100%. 3) If the first circle is active, the 'Prev' button (data-testid='prev-button') should be disabled. 4) If the last circle becomes active, the 'Next' button should be disabled. Conversely, clicking the 'Prev' button should deactivate the current circle, reduce the progress bar width accordingly, and enable the 'Next' button if it was previously disabled. The application should ensure that the 'Prev' button is enabled only when there is more than one active circle.
+- Requirement 3: 
+The web application must provide a progress component with a series of progress circles and a progress bar. The component should include a 'Prev' button with data-testid 'prev-button' and a 'Next' button with data-testid 'next-button'. When the user clicks the 'Prev' button, the following behaviors must occur: 1) The current active progress circle, identified by data-testid attributes such as 'progress-circle-1', 'progress-circle-2', etc., should be marked as inactive by removing the 'active' class. 2) The progress bar, identified by data-testid 'progress-bar', should decrease in width proportionally to the number of active circles, calculated as ((number of active circles - 1) / (total number of circles - 1)) * 100%. 3) If the first circle is active, the 'Prev' button should be disabled to prevent further clicks. 4) The 'Next' button should be enabled unless the last circle is active. The application must handle rapid clicks on the 'Prev' button gracefully, ensuring that the first circle remains active and the progress bar width does not fall below 0%.
+- Requirement 4: 
+The web application features a progress tracker with four circles, each representing a step in the process. The progress tracker is visually represented by a progress bar with the attribute data-testid='progress-bar'. Users can navigate through the steps using 'Prev' and 'Next' buttons, identified by data-testid='prev-button' and data-testid='next-button', respectively. The 'Prev' button must be disabled when the first progress circle (data-testid='progress-circle-1') is active, ensuring users cannot navigate to a previous step. Conversely, the 'Next' button should be disabled when the last progress circle (data-testid='progress-circle-4') is active, preventing further navigation. The progress bar's width dynamically updates based on the number of active circles, calculated as a percentage of the total circles. The application must handle edge cases where users attempt to navigate beyond the first or last circle, maintaining the integrity of the navigation controls and visual indicators.
+- Requirement 5: 
+The 'Next' button (identified by data-testid='next-button') must be disabled when the last progress circle (identified by data-testid='progress-circle-4') is active. The progress circles (identified by data-testid attributes in the format 'progress-circle-{number}') should visually indicate the current step by toggling the 'active' class. When the user clicks the 'Next' button, the following behavior must occur: 1) The 'active' class is added to the next progress circle, 2) The progress bar (identified by data-testid='progress-bar') updates its width proportionally to the number of active circles, and 3) The 'Next' button is disabled when the last circle becomes active. Conversely, the 'Prev' button (identified by data-testid='prev-button') must be enabled or disabled based on whether the first circle is active. The system must ensure that users cannot navigate beyond the last step or before the first step, maintaining proper button states and visual feedback at all times.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

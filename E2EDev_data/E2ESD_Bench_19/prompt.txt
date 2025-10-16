@@ -1,0 +1,30 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The application is a simple Todo List that allows users to add, complete, and delete tasks. Users can enter tasks into an input field, view them in a list, and interact with each task to mark it as completed or remove it.",
+    "predefined_options": "The application does not have predefined options for tasks; users manually enter each task.",
+    "external_resources": "The application uses external resources for styling and functionality, including 'style.css' for CSS and 'script.js' for JavaScript.",
+    "external_js_libraries": "No external JavaScript libraries are explicitly mentioned in the provided code."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The web application allows users to add tasks to a todo list. When the user types a task into the input field (data-testid='todo-input') and submits the form (data-testid='todo-form'), the system adds the task to the todo list (data-testid='todo-list'). The input field is cleared after submission. The system trims spaces, accepts special characters, and prevents empty tasks. 
+- Requirement 2: 
+The web application must allow users to toggle the 'completed' status of a todo item by clicking on it. On page load, todos stored in localStorage under the key 'todos' should be displayed. Each todo is a list item ('li') in the 'todos' list. Clicking a todo toggles its 'completed' class, visually updating its status. The changes must be saved to localStorage to persist across page reloads.
+- Requirement 3: 
+The system must allow users to remove todo items by right-clicking on them, ensuring the default context menu is suppressed. This applies to all items, including completed ones, and works even when there's only one item in the list. After removal, the 'todos' list in localStorage must be updated to reflect the change. The todo items are represented as `<li>` elements within the `<ul>` element with the attribute `data-testid='todo-list'`. The removal process involves updating the `localStorage` variable named 'todos' to reflect the current state of the list after any item is removed.
+- Requirement 4: 
+Upon loading the todo list page, the system must retrieve the todos from localStorage using the 'todos' key. Each todo item is displayed as a list item (<li>) within the unordered list with data-testid='todo-list'. The completion status is reflected by the presence or absence of the 'completed' class on the list item. If a todo is completed in localStorage, the 'completed' class is applied; otherwise, it is absent. If localStorage is empty, no items are displayed. The data should be parsed as JSON to reconstruct the list.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

@@ -1,0 +1,30 @@
+{
+    "summary": {
+        "overview": "This web application provides a user interface for managing a list of checkboxes. Users can select all options, deselect all options, or reverse the selection of options. The application dynamically updates the state of the 'Select All/None' checkbox and its label based on user interactions.",
+        "predefined_options": "The application includes predefined options for checkbox selections, such as 'Select All', 'Deselect All', and 'Reverse Selection'. These options standardize user interactions with the checkbox list.",
+        "external_resources": "No external resources such as links, images, or audio files are used in this application.",
+        "external_js_libraries": "No external JavaScript libraries are used in this application; all functionality is implemented using native JavaScript."
+    },
+    "requirements": [
+        {
+            "id": "REQ-001",
+            "description": "Context: The user views the checkbox list. User Action: The user clicks the 'Select All/None' checkbox. System Response: All individual checkboxes are selected, and the label changes to '\u5168\u4e0d\u9009'."
+        },
+        {
+            "id": "REQ-002",
+            "description": "Context: The user views the checkbox list with all options selected. User Action: The user clicks the 'Select All/None' checkbox again. System Response: All individual checkboxes are deselected, and the label changes to '\u5168\u9009'."
+        },
+        {
+            "id": "REQ-003",
+            "description": "Context: The user views the checkbox list. User Action: The user clicks the 'Reverse Selection' link. System Response: The checked state of each individual checkbox is toggled (checked becomes unchecked and vice versa)."
+        },
+        {
+            "id": "REQ-004",
+            "description": "Context: The user views the checkbox list. User Action: The user clicks an individual checkbox. System Response: The 'Select All/None' checkbox updates its state to reflect whether all individual checkboxes are selected or not, and the label changes accordingly."
+        },
+        {
+            "id": "REQ-005",
+            "description": "Context: The user views the checkbox list with some options selected. User Action: The user clicks additional individual checkboxes. System Response: The 'Select All/None' checkbox updates its state to reflect whether all individual checkboxes are selected or not, and the label changes accordingly."
+        }
+    ]
+}

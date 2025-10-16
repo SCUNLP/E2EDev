@@ -1,0 +1,42 @@
+{
+    "summary": {
+        "overview": "The Bill Splitter application allows users to input a bill amount, select or enter a tip percentage, specify the number of people to split the bill, and calculate the total amount each person needs to pay. It provides a simple interface for managing shared expenses.",
+        "predefined_options": "Predefined tip percentages are available as button selections: 5%, 10%, 15%, 25%, 50%, 75%. These options standardize tip selection and reduce manual input errors.",
+        "external_resources": "The application includes a link to the developer's GitHub profile: https://github.com/msranjana.",
+        "external_js_libraries": "No external JavaScript libraries are used in the provided code."
+    },
+    "requirements": [
+        {
+            "id": "REQ-001",
+            "description": "When the user enters a valid bill amount in the 'Bill Amount' input field, the system enables the 'Select Tip' buttons, 'Custom Tip' input, and 'Number of People' input, allowing further interactions."
+        },
+        {
+            "id": "REQ-002",
+            "description": "When the user clicks on a predefined tip percentage button, the system updates the selected tip percentage, clears any custom tip input, and enables the 'Generate Bill' button if the 'Number of People' input has a valid value."
+        },
+        {
+            "id": "REQ-003",
+            "description": "When the user enters a custom tip percentage in the 'Custom Tip' input field, the system updates the tip percentage, deselects any predefined tip buttons, and enables the 'Generate Bill' button if the 'Number of People' input has a valid value."
+        },
+        {
+            "id": "REQ-004",
+            "description": "When the user enters a valid number in the 'Number of People' input field, the system enables the 'Generate Bill' button if a tip percentage is selected or entered."
+        },
+        {
+            "id": "REQ-005",
+            "description": "When the user clicks the 'Generate Bill' button, the system calculates the tip amount, total bill, and per-person bill, displaying these values in the respective output fields, and enables the 'Reset' button."
+        },
+        {
+            "id": "REQ-006",
+            "description": "When the user clicks the 'Reset' button, the system clears all input fields and output displays, resets the tip percentage, and disables the 'Generate Bill' and 'Reset' buttons."
+        },
+        {
+            "id": "REQ-007",
+            "description": "The system displays the calculated tip amount, total bill, and per-person bill in the output section after the user clicks the 'Generate Bill' button."
+        },
+        {
+            "id": "REQ-008",
+            "description": "The system provides a link to the developer's GitHub profile in the footer, allowing users to navigate to the external site."
+        }
+    ]
+}

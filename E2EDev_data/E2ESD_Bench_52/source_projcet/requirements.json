@@ -1,0 +1,34 @@
+{
+    "summary": {
+        "overview": "The application provides a step-by-step progress interface with a visual progress bar and navigation buttons. Users can navigate through steps using 'Prev' and 'Next' buttons, with visual feedback provided by active circles and a progress bar.",
+        "predefined_options": "The system initializes with the first step active and the 'Prev' button disabled to prevent backward navigation from the first step.",
+        "external_resources": "No external resources such as images or audio files are used in the provided code.",
+        "external_js_libraries": "No external JavaScript libraries are used in the provided code."
+    },
+    "requirements": [
+        {
+            "id": "REQ-001",
+            "description": "When the page loads, the first progress circle should be marked as active, and the progress bar should have a width of 0%."
+        },
+        {
+            "id": "REQ-002",
+            "description": "When the user clicks the 'Next' button, the next progress circle should be marked as active, and the progress bar should increase in width proportionally to the number of active circles."
+        },
+        {
+            "id": "REQ-003",
+            "description": "When the user clicks the 'Prev' button, the current active progress circle should be marked as inactive, and the progress bar should decrease in width proportionally to the number of active circles."
+        },
+        {
+            "id": "REQ-004",
+            "description": "The 'Prev' button should be disabled when the first progress circle is active, preventing the user from navigating to a previous step."
+        },
+        {
+            "id": "REQ-005",
+            "description": "The 'Next' button should be disabled when the last progress circle is active, preventing the user from navigating to a next step."
+        },
+        {
+            "id": "REQ-006",
+            "description": "The progress bar should visually represent the proportion of completed steps by adjusting its width based on the number of active circles."
+        }
+    ]
+}

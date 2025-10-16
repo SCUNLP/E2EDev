@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["media tool"],
+  "InteractionModes": ["button clicks", "visual feedback"],
+  "LogicComplexityLevel": "state management, conditionals",
+  "TechnicalPoints": ["dynamic DOM manipulation", "audio handling"],
+  "ExternalResources": ["public audio files", "public image files", "Font Awesome CDN"]
+}
+```

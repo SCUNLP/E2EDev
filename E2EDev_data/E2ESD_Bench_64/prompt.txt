@@ -1,0 +1,34 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The application is a simple number guessing game where users try to guess a randomly generated number between 1 and 20. Users receive feedback on their guesses and can track their score and highscore. The game can be restarted at any time.",
+    "predefined_options": "The application sets predefined options such as the range of numbers (1 to 20) and initial score values (score starts at 20, highscore starts at 0).",
+    "external_resources": "No external resources such as links, images, or audio files are used in the application.",
+    "external_js_libraries": "No external JavaScript libraries are used; the application relies on vanilla JavaScript."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The 'Guess My Number!' web application should allow users to interact with the game through a user interface consisting of specific elements. The user interface includes an input field with the attribute data-testid 'guess-input' for entering a number between 1 and 20, and a 'Check!' button with the attribute data-testid 'check-button' for submitting the guess. Upon clicking the 'Check!' button, the system should validate the input number. If the input field is empty, the system should display the message '⛔️ No number!' in the element with data-testid 'game-message'. If a number is entered, the system should compare the input against a randomly generated secret number (between 1 and 20) and display a message in the element with data-testid 'game-message' indicating whether the guess is '📈 Too high!', '📉 Too low!', or '🎉 Correct Number!'. The game should also update the score displayed in the element with data-testid 'current-score', decrementing it by 1 for each incorrect guess, and reset it to 0 if the user loses the game. If the user guesses the correct number, the background color of the page should change to '#60b347', and the width of the element with data-testid 'hidden-number' should expand to '30rem'. The highscore should be updated in the element with data-testid 'highscore-value' if the current score exceeds the previous highscore. Additionally, the 'Again!' button with data-testid 'again-button' should reset the game state, including the score, secret number, input field, and UI styles, allowing the user to play again.
+- Requirement 2: 
+When the user correctly guesses the secret number by entering it into the input field with data-testid 'guess-input' and clicking the 'Check!' button with data-testid 'check-button', the system should perform the following actions: display the message '🎉 Correct Number!' in the element with data-testid 'game-message', reveal the secret number in the element with data-testid 'hidden-number', change the background color of the body to '#60b347', and increase the width of the element with data-testid 'hidden-number' to '30rem'. Additionally, if the current score is higher than the highscore, update the highscore displayed in the element with data-testid 'highscore-value'.
+- Requirement 3: 
+When the user enters a guess into the input field with data-testid 'guess-input' and clicks the 'Check!' button with data-testid 'check-button', the system should evaluate the guess against a randomly generated secret number between 1 and 20. If the guess is greater than the secret number, the message '📈 Too high!' should be displayed using the element with data-testid 'game-message'. If the guess is less than the secret number, the message '📉 Too low!' should be displayed. In both scenarios, the score, initially set at 20, should be decreased by 1 and updated in the element with data-testid 'current-score'. This logic should handle all valid guesses, including edge cases such as guessing the number 1 or 20.
+- Requirement 4: 
+When the user interacts with the 'Guess My Number!' web application, if the user's score reaches 0 after clicking the 'Check!' button (identified by data-testid 'check-button'), the system must update the UI to reflect the game loss. Specifically, the message element (identified by data-testid 'game-message') should display the text '💥 You lost the game!', and the score element (identified by data-testid 'current-score') should be updated to show a score of 0. This behavior should occur regardless of the number of attempts made, ensuring that the user is clearly informed of their loss once their score depletes to zero.
+- Requirement 5: 
+The 'Guess My Number!' web application must display a hint indicating the valid input range '(Between 1 and 20)' near the guess input field. This hint should be visible at all times, regardless of browser window resizing, and should be associated with the element having the attribute data-testid='range-info'. The hint serves to guide users in entering a number within the specified range, ensuring clarity and preventing invalid inputs.
+- Requirement 6: 
+When the user clicks the 'Again!' button with the data-testid 'again-button', the system should reset the game by performing the following actions: generate a new secret number between 1 and 20, reset the score to 20 and update the score display in the element with data-testid 'current-score', clear the input field with data-testid 'guess-input', set the hidden number display with data-testid 'hidden-number' to '?', change the background color of the body to '#222', and reset the width of the hidden number display to '15rem'. These actions ensure the game is restored to its initial state, ready for a new round of play.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["media tool", "musical instrument"],
+  "InteractionModes": ["form input", "keyboard input", "mouse click"],
+  "LogicComplexityLevel": "state management, conditionals, animations",
+  "TechnicalPoints": ["dynamic DOM manipulation", "audio handling"],
+  "ExternalResources": ["external media (audio files)"]
+}
+```

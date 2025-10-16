@@ -1,0 +1,30 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The application is a Body Mass Index (BMI) Calculator that allows users to input their height and weight to calculate their BMI. It displays the BMI result and provides a chart categorizing BMI ranges.",
+    "predefined_options": "The application does not have predefined options for height and weight inputs; users must manually enter these values.",
+    "external_resources": "The application uses external resources such as Boxicons for social media icons and links to social media profiles.",
+    "external_js_libraries": "The application does not explicitly use external JavaScript libraries in the provided code, but it links to a script.js file for functionality."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The system must allow the user to input a height value in centimeters in the 'Height in cm' input field, identified by the data-testid 'height-input'. The system should accept and store this value for BMI calculation.
+- Requirement 2: 
+The system must allow the user to input a weight value in kilograms into the 'Weight in kg' input field. The input field is located in the DOM with the attribute `data-testid='weight-input'`. The system must ensure that the entered value is stored in memory for subsequent BMI calculations.
+- Requirement 3: 
+The web application must enable users to calculate their Body Mass Index (BMI) based on their height and weight inputs using the formula BMI = weight (kg) / (height (m) * height (m)). The result must be rounded to two decimal places and displayed in the result area identified by data-testid "result-display" in the format "Your BMI is <calculated_value>". The implementation must support normal and edge scenarios, including valid numeric input, minimum non-zero values (e.g., weight = 1, height = 0.01 resulting in "Your BMI is 10000.00"), and maximum reasonable values (e.g., weight = 635, height = 2.72 resulting in "Your BMI is 85.89"). It must also handle error conditions gracefully: if either height or weight input is non-numeric, such as "xyz", or left empty, the result must be "NaN". The interface must use the specified data-testid attributes: "weight-input" for the weight field, "calculate-button" for the trigger button, and "result-display" for the output, and must ensure consistent behavior across all cases.
+- Requirement 4: 
+The system must display a static, responsive, and accessible table upon page load that provides users with BMI ranges and their corresponding categories for reference. The table must contain two headers—'BMI' and 'Category'—with data-testid='bmi-header' and data-testid='category-header', respectively. It must include four rows: 'less than 18.5' (data-testid='bmi-value-1') paired with 'Underweight' (data-testid='category-value-1'), 'between 18.5 and 24.9' (data-testid='bmi-value-2') with 'Ideal' (data-testid='category-value-2'), 'between 25 and 29.9' (data-testid='bmi-value-3') with 'Overweight' (data-testid='category-value-3'), and 'over 30' (data-testid='bmi-value-4') with 'Obesity' (data-testid='category-value-4'). The table must be properly formatted and remain fully visible across different screen sizes without requiring user interaction, and all elements must be accessible through their respective data-testid attributes for testing purposes.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

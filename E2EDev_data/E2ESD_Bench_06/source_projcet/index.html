@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="style.css" rel="stylesheet"/>
+<title>Playable Piano</title>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<div class="wrapper">
+<header>
+<h2>PIANO</h2>
+<div class="column volume-slider">
+<span>Volume</span>
+<input max="1" min="0" step="any" type="range" value="0.5" data-testid="volume-slider"/>
+</div>
+<div class="column keys-checkbox">
+<span>Show Keys</span>
+<input checked="" type="checkbox" data-testid="show-keys-checkbox"/>
+</div>
+</header>
+<ul class="piano-keys">
+<li class="key white" data-key="a" data-testid="piano-key-a"><span>a</span></li>
+<li class="key black" data-key="w" data-testid="piano-key-w"><span>w</span></li>
+<li class="key white" data-key="s" data-testid="piano-key-s"><span>s</span></li>
+<li class="key black" data-key="e" data-testid="piano-key-e"><span>e</span></li>
+<li class="key white" data-key="d" data-testid="piano-key-d"><span>d</span></li>
+<li class="key white" data-key="f" data-testid="piano-key-f"><span>f</span></li>
+<li class="key black" data-key="t" data-testid="piano-key-t"><span>t</span></li>
+<li class="key white" data-key="g" data-testid="piano-key-g"><span>g</span></li>
+<li class="key black" data-key="y" data-testid="piano-key-y"><span>y</span></li>
+<li class="key white" data-key="h" data-testid="piano-key-h"><span>h</span></li>
+<li class="key black" data-key="u" data-testid="piano-key-u"><span>u</span></li>
+<li class="key white" data-key="j" data-testid="piano-key-j"><span>j</span></li>
+<li class="key white" data-key="k" data-testid="piano-key-k"><span>k</span></li>
+<li class="key black" data-key="o" data-testid="piano-key-o"><span>o</span></li>
+<li class="key white" data-key="l" data-testid="piano-key-l"><span>l</span></li>
+<li class="key black" data-key="p" data-testid="piano-key-p"><span>p</span></li>
+<li class="key white" data-key=";" data-testid="piano-key-semicolon"><span>;</span></li>
+</ul>
+</div></body>
+</html>

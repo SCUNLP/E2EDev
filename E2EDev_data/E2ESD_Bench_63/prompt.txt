@@ -1,0 +1,56 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "This web application allows users to calculate the Least Common Multiple (LCM) and Highest Common Factor (HCF) of two numbers. Users can input two numbers, trigger the calculation, and view the results along with an indication of whether the result is even or odd. The application provides a responsive and interactive user interface with visual feedback.",
+    "predefined_options": "No predefined options are available; users manually input two numbers for LCM or HCF calculations.",
+    "external_resources": [
+        {
+            "name": "Logo",
+            "source": "./public/img/logo.jfif"
+        },
+        {
+            "name": "CSS Stylesheet",
+            "source": "./public/css/style.css"
+        },
+        {
+            "name": "Main JavaScript File",
+            "source": "./public/js/main.js"
+        }
+    ],
+    "external_js_libraries": [
+        {
+            "name": "jQuery",
+            "source": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        }
+    ]
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+Upon loading the webpage, the user should see two buttons: one labeled 'Click here to find LCM of two numbers.' with data-testid 'lcm-button', and another labeled 'Click here to find HCF of two numbers.' with data-testid 'hcf-button'. When the user clicks the 'lcm-button', the LCM input form, identified by the class 'resultboxLcm', should smoothly slide into view using a slow animation, while simultaneously ensuring that the HCF input form, identified by the class 'resultboxHcf', is hidden from view. This interaction should be seamless and intuitive, providing immediate visual feedback to the user by toggling the visibility of the respective forms.
+- Requirement 2: 
+When the user clicks the button with data-testid 'hcf-button', labeled 'Click here to find HCF of two numbers.', the HCF input form with class 'resultboxHcf' should be displayed using a slide toggle animation, and the LCM input form with class 'resultboxLcm' should be hidden by sliding up. If the HCF button is clicked multiple times, the HCF input form should toggle its visibility, ensuring it remains hidden if clicked twice consecutively. The LCM input form should remain hidden regardless of the number of clicks on the HCF button.
+- Requirement 3: 
+The user must be able to input two numbers into the LCM form using the input fields labeled 'Num1...' and 'Num2...', with the following behaviors and validations: The input fields are identified by the attributes data-testid='lcm-num1-input' and data-testid='lcm-num2-input'. The user can input positive integers, zero, or negative integers into these fields. The application must handle edge cases such as both fields containing the same number, one field containing zero, or one field containing a negative number. The input values must persist in the respective fields after entry, and the UI should display the entered values accurately. Any invalid input (e.g., non-numeric values) should be rejected, and the fields should remain empty or display an error message. The LCM form must be visible and accessible when the webpage is loaded.
+- Requirement 4: 
+The user must be able to input two numbers into the HCF form using the input fields with placeholders 'Num1...' and 'Num2...', identified by data-testid attributes 'hcf-num1-input' and 'hcf-num2-input', respectively. Upon loading the webpage, the user should see a button with the text 'Click here to find HCF of two numbers.' and data-testid 'hcf-button'. Clicking this button should reveal the HCF form. The form must accept any valid integer inputs, including edge cases such as both fields having the same number or one field having zero. The input values should be accurately reflected in their respective fields upon entry.
+- Requirement 5: 
+When the user clicks the 'Calculate' button in the LCM form, the system should calculate the LCM of the two input numbers entered in the fields with data-testid 'lcm-num1-input' and 'lcm-num2-input'. The result should be displayed in the area with data-testid 'lcm-result-display'. The button with data-testid 'lcm-button' should be clicked to reveal the LCM form. If either input field is empty, the result area should remain unchanged. The system should also indicate whether the calculated LCM is even or odd by adjusting the opacity of elements with data-testid 'lcm-even-display' and 'lcm-odd-display'. The form should handle normal cases, such as both inputs being positive integers, and edge cases, such as one input being empty.
+- Requirement 6: 
+The web application must allow users to calculate the Highest Common Factor (HCF) of two numbers through a user-friendly interface. Upon loading the webpage, users should see a button labeled 'Click here to find HCF of two numbers.' with the attribute data-testid='hcf-button'. When this button is clicked, the HCF input form should be displayed, allowing users to enter two numbers into input fields with data-testid attributes 'hcf-num1-input' and 'hcf-num2-input'. After entering valid positive integers, users can click the 'Calculate' button with data-testid='hcf-submit-button'. The system should then compute the HCF of the entered numbers and display the result in the paragraph element with data-testid='hcf-result-display'. The result should be formatted as 'HCF of [num1] and [num2] is [result]'. Additionally, the system should visually indicate whether the calculated HCF is even or odd by adjusting the opacity of elements with data-testid 'hcf-even-display' and 'hcf-odd-display'. If the HCF is even, 'hcf-even-display' should have full opacity, and 'hcf-odd-display' should have reduced opacity, and vice versa if the HCF is odd.
+- Requirement 7: 
+After calculating the LCM, the system must dynamically indicate whether the result is even or odd by adjusting the opacity of the 'even' and 'odd' indicators in the LCM section. Specifically, when the LCM result is even, the 'even' indicator (data-testid='lcm-even-display') must have full opacity (1), and the 'odd' indicator (data-testid='lcm-odd-display') must have reduced opacity (0.5). Conversely, when the LCM result is odd, the 'odd' indicator must have full opacity (1), and the 'even' indicator must have reduced opacity (0.5). The calculation is triggered by clicking the 'Calculate' button (data-testid='lcm-submit-button') after entering valid numeric inputs into the first and second LCM input fields (data-testid='lcm-num1-input' and data-testid='lcm-num2-input'). The LCM result must be displayed in the designated result area (data-testid='lcm-result-display') in the format 'LCM of [num1] and [num2] is [result]'.
+- Requirement 8: 
+Upon calculating the HCF using the form in the HCF section, the system must dynamically adjust the opacity of the 'even' and 'odd' indicators based on the parity of the result. Specifically, when the user clicks the button with data-testid 'hcf-button', the HCF section should become visible, allowing the user to input two numbers into fields with data-testid 'hcf-num1-input' and 'hcf-num2-input'. After clicking the submit button with data-testid 'hcf-submit-button', the system should determine the HCF of the entered numbers. If the HCF is even, the element with data-testid 'hcf-even-display' should have its opacity set to '1', while the element with data-testid 'hcf-odd-display' should have its opacity set to '0.5'. Conversely, if the HCF is odd, the element with data-testid 'hcf-odd-display' should have its opacity set to '1', and the element with data-testid 'hcf-even-display' should have its opacity set to '0.5'. This functionality should handle normal cases, such as different numbers, as well as edge cases, such as identical numbers.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

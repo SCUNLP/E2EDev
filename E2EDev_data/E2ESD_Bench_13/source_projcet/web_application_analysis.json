@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["data manager"],
+  "InteractionModes": ["form input", "dropdown selection"],
+  "LogicComplexityLevel": "conditionals",
+  "TechnicalPoints": ["dynamic DOM manipulation"],
+  "ExternalResources": ["Bootstrap CDN"]
+}
+```

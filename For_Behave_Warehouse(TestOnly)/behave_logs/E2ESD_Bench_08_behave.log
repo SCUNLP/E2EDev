@@ -1,0 +1,384 @@
+
+=== Testing 1_0 at 2025-05-22 14:00:04.080901 ===
+Feature: Navbar Toggler Button Functionality # features/features.feature:1
+  The navbar toggler button should expand or collapse the navigation menu when the window size is small, displaying the menu items when expanded and hiding them when collapsed.
+  Scenario: [Normal] Expand the navigation menu by clicking the navbar toggler button     # features/features.feature:5
+    Given the webpage "Library Management System" is loaded                               # features/steps/steps.py:10
+    And the window size is small enough to hide the navigation menu                       # features/steps/steps.py:16
+    And the navigation menu is initially collapsed                                        # features/steps/steps.py:21
+    When the user clicks the navbar toggler button with data-testid "navbar-toggler"      # features/steps/steps.py:26
+    Then the navigation menu with data-testid "navbarSupportedContent" should be expanded # features/steps/steps.py:34
+    And the menu items should be visible                                                  # features/steps/steps.py:39
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+6 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m11.603s
+
+=== End ===
+
+=== Testing 1_1 at 2025-05-22 14:00:07.658405 ===
+Feature: Navbar Toggler Button Functionality # features/features.feature:1
+  The navbar toggler button should expand or collapse the navigation menu when the window size is small, displaying the menu items when expanded and hiding them when collapsed.
+  Scenario: [Normal] Collapse the navigation menu by clicking the navbar toggler button again  # features/features.feature:5
+    Given the webpage "Library Management System" is loaded                                    # features/steps/steps.py:30
+    And the window size is small enough to hide the navigation menu                            # features/steps/steps.py:36
+    And the navigation menu is expanded                                                        # features/steps/steps.py:41
+    When the user clicks the navbar toggler button with data-testid "navbar-toggler"           # features/steps/steps.py:49
+    Then the navigation menu with data-testid "navbarSupportedContent" should be collapsed     # features/steps/steps.py:57
+      Assertion Failed: Expected the navigation menu to be collapsed
+
+    And the menu items should be hidden                                                        # None
+
+
+Failing scenarios:
+  features/features.feature:5  [Normal] Collapse the navigation menu by clicking the navbar toggler button again
+
+0 features passed, 1 failed, 0 skipped
+0 scenarios passed, 1 failed, 0 skipped
+4 steps passed, 1 failed, 1 skipped, 0 undefined
+Took 0m2.997s
+
+=== End ===
+
+=== Testing 3_0 at 2025-05-22 14:00:11.708876 ===
+Feature: Add a book to the library list # features/features.feature:1
+  The system should allow users to add a book to the library list by filling out the form with valid inputs.
+  Scenario: [Normal] Successfully add a book with valid inputs                                                                      # features/features.feature:5
+    Given the "Library Management System" page is loaded                                                                            # features/steps/steps.py:13
+    And the user enters "John Doe" into the username field with data-testid "user-name-input"                                       # features/steps/steps.py:19
+    And the user enters "JavaScript Essentials" into the book name field with data-testid "book-name-input"                         # features/steps/steps.py:28
+    And the user selects the "Programming" radio button with data-testid "programming-radio"                                        # features/steps/steps.py:37
+    When the user clicks the "Add Book" button with data-testid "add-book-button"                                                   # features/steps/steps.py:45
+    Then the system should display a success alert with the message "Success Book is issued"                                        # features/steps/steps.py:53
+    And the book should be added to the list with the reader "John Doe", book name "JavaScript Essentials", and genre "Programming" # features/steps/steps.py:62
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+7 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m3.503s
+
+=== End ===
+
+=== Testing 3_1 at 2025-05-22 14:00:16.406790 ===
+Feature: Add a book to the library list # features/features.feature:1
+  The system should allow users to add a book to the library list by filling out the form with valid inputs.
+  Scenario: [Edge] Attempt to add a book with a very long book name                                                                                                                                # features/features.feature:5
+    Given the "Library Management System" page is loaded                                                                                                                                           # features/steps/steps.py:10
+    And the user enters "Jane Smith" into the username field with data-testid "user-name-input"                                                                                                    # features/steps/steps.py:16
+    And the user enters a very long book name "A Comprehensive Guide to Advanced JavaScript Programming Techniques and Best Practices" into the book name field with data-testid "book-name-input" # features/steps/steps.py:25
+    And the user selects the "Fiction" radio button with data-testid "fiction-radio"                                                                                                               # features/steps/steps.py:34
+    When the user clicks the "Add Book" button with data-testid "add-book-button"                                                                                                                  # features/steps/steps.py:42
+    Then the system should display a success alert with the message "Success Book is issued"                                                                                                       # features/steps/steps.py:50
+    And the book should be added to the list with the reader "Jane Smith", book name "A Comprehensive Guide to Advanced JavaScript Programming Techniques and Best Practices", and genre "Fiction" # features/steps/steps.py:58
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+7 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m4.139s
+
+=== End ===
+
+=== Testing 3_2 at 2025-05-22 14:00:19.550347 ===
+Feature: Add a book to the library list # features/features.feature:1
+  The system should allow users to add a book to the library list by filling out the form with valid inputs.
+  Scenario: [Error] Attempt to add a book with missing user name                                  # features/features.feature:5
+    Given the "Library Management System" page is loaded                                          # features/steps/steps.py:10
+    And the user leaves the username field empty with data-testid "user-name-input"               # features/steps/steps.py:16
+    And the user enters "Cooking 101" into the book name field with data-testid "book-name-input" # features/steps/steps.py:22
+    And the user selects the "Cooking" radio button with data-testid "cooking-radio"              # features/steps/steps.py:29
+    When the user clicks the "Add Book" button with data-testid "add-book-button"                 # features/steps/steps.py:36
+    Then the system should display an error alert with the message "Oops! Book is not issued"     # features/steps/steps.py:44
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+6 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m2.722s
+
+=== End ===
+
+=== Testing 3_3 at 2025-05-22 14:00:22.833306 ===
+Feature: Add a book to the library list # features/features.feature:1
+  The system should allow users to add a book to the library list by filling out the form with valid inputs.
+  Scenario: [Error] Attempt to add a book with missing book name                                   # features/features.feature:5
+    Given the "Library Management System" page is loaded                                           # features/steps/steps.py:10
+    And the user enters "Alice Johnson" into the username field with data-testid "user-name-input" # features/steps/steps.py:16
+    And the user leaves the book name field empty with data-testid "book-name-input"               # features/steps/steps.py:25
+    And the user selects the "Fiction" radio button with data-testid "fiction-radio"               # features/steps/steps.py:33
+    When the user clicks the "Add Book" button with data-testid "add-book-button"                  # features/steps/steps.py:41
+    Then the system should display an error alert with the message "Oops! Book is not issued"      # features/steps/steps.py:49
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+6 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m2.859s
+
+=== End ===
+
+=== Testing 3_4 at 2025-05-22 14:00:27.270040 ===
+Feature: Add a book to the library list # features/features.feature:1
+  The system should allow users to add a book to the library list by filling out the form with valid inputs.
+  Scenario: [Error] Attempt to add a book that is already issued                                               # features/features.feature:5
+    Given the "Library Management System" page is loaded                                                       # features/steps/steps.py:13
+    And the user enters "Bob Brown" into the username field with data-testid "user-name-input"                 # features/steps/steps.py:19
+    And the user enters "JavaScript Essentials" into the book name field with data-testid "book-name-input"    # features/steps/steps.py:28
+    And the user selects the "Programming" radio button with data-testid "programming-radio"                   # features/steps/steps.py:37
+    When the user clicks the "Add Book" button with data-testid "add-book-button"                              # features/steps/steps.py:45
+    And the user enters "Charlie Green" into the username field with data-testid "user-name-input"             # features/steps/steps.py:53
+    And the user enters "JavaScript Essentials" into the book name field with data-testid "book-name-input"    # features/steps/steps.py:62
+    And the user selects the "Programming" radio button with data-testid "programming-radio"                   # features/steps/steps.py:71
+    When the user clicks the "Add Book" button with data-testid "add-book-button"                              # features/steps/steps.py:45
+    Then the system should display an error alert with the message "Oops! Book is already issued by Bob Brown" # features/steps/steps.py:79
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+10 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m3.881s
+
+=== End ===
+
+=== Testing 4_0 at 2025-05-22 14:00:30.715599 ===
+Feature: Deleting a Book Entry from the Library List # features/features.feature:1
+  The system should allow users to delete a book entry from the list and update the display accordingly.
+  Scenario: [Normal] Successfully deleting a book entry                                                                     # features/features.feature:5
+    Given the "Library Management System" page is loaded                                                                    # features/steps/steps.py:13
+    And the book list contains an entry with "userName" as "John Doe" and "bookName" as "JavaScript Basics"                 # features/steps/steps.py:19
+    When the user clicks the "delete-button-0" associated with the first book entry                                         # features/steps/steps.py:52
+    Then the book entry with "userName" as "John Doe" and "bookName" as "JavaScript Basics" should be removed from the list # features/steps/steps.py:63
+    And the display should be updated to reflect the removal                                                                # features/steps/steps.py:69
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+5 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m2.900s
+
+=== End ===
+
+=== Testing 4_1 at 2025-05-22 14:00:33.647011 ===
+Feature: Deleting a Book Entry from the Library List # features/features.feature:1
+  The system should allow users to delete a book entry from the list and update the display accordingly.
+  Scenario: [Edge] Deleting the only book entry in the list                                                          # features/features.feature:5
+    Given the "Library Management System" page is loaded                                                             # features/steps/steps.py:10
+    And the book list contains only one entry with "userName" as "Jane Smith" and "bookName" as "Python Programming" # features/steps/steps.py:19
+    When the user clicks the "delete-button-0" associated with the only book entry                                   # features/steps/steps.py:33
+    Then the book list should be empty                                                                               # features/steps/steps.py:41
+    And the display should be updated to show no entries                                                             # features/steps/steps.py:46
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+5 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m2.452s
+
+=== End ===
+
+=== Testing 5_0 at 2025-05-22 14:00:34.050850 ===
+Exception SyntaxError: invalid syntax (steps.py, line 1)
+
+=== End ===
+
+=== Testing 5_1 at 2025-05-22 14:00:36.753415 ===
+Feature: Display list of books from local storage on page load # features/features.feature:1
+  The system should display the list of books stored in local storage in the table body when the page loads.
+  Scenario: [Edge] Display no books when local storage is empty       # features/features.feature:5
+    Given the local storage is empty                                  # features/steps/steps.py:10
+    When the user opens the Library Management System webpage         # features/steps/steps.py:17
+    Then the table body with data-testid "table-body" should be empty # features/steps/steps.py:22
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+3 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m2.214s
+
+=== End ===
+
+=== Testing 1_0 at 2025-05-22 14:03:00.348938 ===
+Feature: Navbar Toggler Button Functionality # features/features.feature:1
+  The navbar toggler button should expand or collapse the navigation menu when the window size is small, displaying the menu items when expanded and hiding them when collapsed.
+  Scenario: [Normal] Expand the navigation menu by clicking the navbar toggler button     # features/features.feature:5
+    Given the webpage "Library Management System" is loaded                               # features/steps/steps.py:10
+    And the window size is small enough to hide the navigation menu                       # features/steps/steps.py:16
+    And the navigation menu is initially collapsed                                        # features/steps/steps.py:21
+    When the user clicks the navbar toggler button with data-testid "navbar-toggler"      # features/steps/steps.py:26
+    Then the navigation menu with data-testid "navbarSupportedContent" should be expanded # features/steps/steps.py:34
+    And the menu items should be visible                                                  # features/steps/steps.py:39
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+6 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m3.533s
+
+=== End ===
+
+=== Testing 1_1 at 2025-05-22 14:03:03.602914 ===
+Feature: Navbar Toggler Button Functionality # features/features.feature:1
+  The navbar toggler button should expand or collapse the navigation menu when the window size is small, displaying the menu items when expanded and hiding them when collapsed.
+  Scenario: [Normal] Collapse the navigation menu by clicking the navbar toggler button again  # features/features.feature:5
+    Given the webpage "Library Management System" is loaded                                    # features/steps/steps.py:30
+    And the window size is small enough to hide the navigation menu                            # features/steps/steps.py:36
+    And the navigation menu is expanded                                                        # features/steps/steps.py:41
+    When the user clicks the navbar toggler button with data-testid "navbar-toggler"           # features/steps/steps.py:49
+    Then the navigation menu with data-testid "navbarSupportedContent" should be collapsed     # features/steps/steps.py:57
+      Assertion Failed: Expected the navigation menu to be collapsed
+
+    And the menu items should be hidden                                                        # None
+
+
+Failing scenarios:
+  features/features.feature:5  [Normal] Collapse the navigation menu by clicking the navbar toggler button again
+
+0 features passed, 1 failed, 0 skipped
+0 scenarios passed, 1 failed, 0 skipped
+4 steps passed, 1 failed, 1 skipped, 0 undefined
+Took 0m2.737s
+
+=== End ===
+
+=== Testing 3_0 at 2025-05-22 14:03:07.703466 ===
+Feature: Add a book to the library list # features/features.feature:1
+  The system should allow users to add a book to the library list by filling out the form with valid inputs.
+  Scenario: [Normal] Successfully add a book with valid inputs                                                                      # features/features.feature:5
+    Given the "Library Management System" page is loaded                                                                            # features/steps/steps.py:13
+    And the user enters "John Doe" into the username field with data-testid "user-name-input"                                       # features/steps/steps.py:19
+    And the user enters "JavaScript Essentials" into the book name field with data-testid "book-name-input"                         # features/steps/steps.py:28
+    And the user selects the "Programming" radio button with data-testid "programming-radio"                                        # features/steps/steps.py:37
+    When the user clicks the "Add Book" button with data-testid "add-book-button"                                                   # features/steps/steps.py:45
+    Then the system should display a success alert with the message "Success Book is issued"                                        # features/steps/steps.py:53
+    And the book should be added to the list with the reader "John Doe", book name "JavaScript Essentials", and genre "Programming" # features/steps/steps.py:62
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+7 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m3.517s
+
+=== End ===
+
+=== Testing 3_1 at 2025-05-22 14:03:11.716979 ===
+Feature: Add a book to the library list # features/features.feature:1
+  The system should allow users to add a book to the library list by filling out the form with valid inputs.
+  Scenario: [Edge] Attempt to add a book with a very long book name                                                                                                                                # features/features.feature:5
+    Given the "Library Management System" page is loaded                                                                                                                                           # features/steps/steps.py:10
+    And the user enters "Jane Smith" into the username field with data-testid "user-name-input"                                                                                                    # features/steps/steps.py:16
+    And the user enters a very long book name "A Comprehensive Guide to Advanced JavaScript Programming Techniques and Best Practices" into the book name field with data-testid "book-name-input" # features/steps/steps.py:25
+    And the user selects the "Fiction" radio button with data-testid "fiction-radio"                                                                                                               # features/steps/steps.py:34
+    When the user clicks the "Add Book" button with data-testid "add-book-button"                                                                                                                  # features/steps/steps.py:42
+    Then the system should display a success alert with the message "Success Book is issued"                                                                                                       # features/steps/steps.py:50
+    And the book should be added to the list with the reader "Jane Smith", book name "A Comprehensive Guide to Advanced JavaScript Programming Techniques and Best Practices", and genre "Fiction" # features/steps/steps.py:58
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+7 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m3.485s
+
+=== End ===
+
+=== Testing 3_2 at 2025-05-22 14:03:14.907962 ===
+Feature: Add a book to the library list # features/features.feature:1
+  The system should allow users to add a book to the library list by filling out the form with valid inputs.
+  Scenario: [Error] Attempt to add a book with missing user name                                  # features/features.feature:5
+    Given the "Library Management System" page is loaded                                          # features/steps/steps.py:10
+    And the user leaves the username field empty with data-testid "user-name-input"               # features/steps/steps.py:16
+    And the user enters "Cooking 101" into the book name field with data-testid "book-name-input" # features/steps/steps.py:22
+    And the user selects the "Cooking" radio button with data-testid "cooking-radio"              # features/steps/steps.py:29
+    When the user clicks the "Add Book" button with data-testid "add-book-button"                 # features/steps/steps.py:36
+    Then the system should display an error alert with the message "Oops! Book is not issued"     # features/steps/steps.py:44
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+6 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m2.706s
+
+=== End ===
+
+=== Testing 3_3 at 2025-05-22 14:03:18.140069 ===
+Feature: Add a book to the library list # features/features.feature:1
+  The system should allow users to add a book to the library list by filling out the form with valid inputs.
+  Scenario: [Error] Attempt to add a book with missing book name                                   # features/features.feature:5
+    Given the "Library Management System" page is loaded                                           # features/steps/steps.py:10
+    And the user enters "Alice Johnson" into the username field with data-testid "user-name-input" # features/steps/steps.py:16
+    And the user leaves the book name field empty with data-testid "book-name-input"               # features/steps/steps.py:25
+    And the user selects the "Fiction" radio button with data-testid "fiction-radio"               # features/steps/steps.py:33
+    When the user clicks the "Add Book" button with data-testid "add-book-button"                  # features/steps/steps.py:41
+    Then the system should display an error alert with the message "Oops! Book is not issued"      # features/steps/steps.py:49
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+6 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m2.802s
+
+=== End ===
+
+=== Testing 3_4 at 2025-05-22 14:03:22.077928 ===
+Feature: Add a book to the library list # features/features.feature:1
+  The system should allow users to add a book to the library list by filling out the form with valid inputs.
+  Scenario: [Error] Attempt to add a book that is already issued                                               # features/features.feature:5
+    Given the "Library Management System" page is loaded                                                       # features/steps/steps.py:13
+    And the user enters "Bob Brown" into the username field with data-testid "user-name-input"                 # features/steps/steps.py:19
+    And the user enters "JavaScript Essentials" into the book name field with data-testid "book-name-input"    # features/steps/steps.py:28
+    And the user selects the "Programming" radio button with data-testid "programming-radio"                   # features/steps/steps.py:37
+    When the user clicks the "Add Book" button with data-testid "add-book-button"                              # features/steps/steps.py:45
+    And the user enters "Charlie Green" into the username field with data-testid "user-name-input"             # features/steps/steps.py:53
+    And the user enters "JavaScript Essentials" into the book name field with data-testid "book-name-input"    # features/steps/steps.py:62
+    And the user selects the "Programming" radio button with data-testid "programming-radio"                   # features/steps/steps.py:71
+    When the user clicks the "Add Book" button with data-testid "add-book-button"                              # features/steps/steps.py:45
+    Then the system should display an error alert with the message "Oops! Book is already issued by Bob Brown" # features/steps/steps.py:79
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+10 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m3.334s
+
+=== End ===
+
+=== Testing 4_0 at 2025-05-22 14:03:25.436582 ===
+Feature: Deleting a Book Entry from the Library List # features/features.feature:1
+  The system should allow users to delete a book entry from the list and update the display accordingly.
+  Scenario: [Normal] Successfully deleting a book entry                                                                     # features/features.feature:5
+    Given the "Library Management System" page is loaded                                                                    # features/steps/steps.py:13
+    And the book list contains an entry with "userName" as "John Doe" and "bookName" as "JavaScript Basics"                 # features/steps/steps.py:19
+    When the user clicks the "delete-button-0" associated with the first book entry                                         # features/steps/steps.py:52
+    Then the book entry with "userName" as "John Doe" and "bookName" as "JavaScript Basics" should be removed from the list # features/steps/steps.py:63
+    And the display should be updated to reflect the removal                                                                # features/steps/steps.py:69
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+5 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m2.842s
+
+=== End ===
+
+=== Testing 4_1 at 2025-05-22 14:03:28.310184 ===
+Feature: Deleting a Book Entry from the Library List # features/features.feature:1
+  The system should allow users to delete a book entry from the list and update the display accordingly.
+  Scenario: [Edge] Deleting the only book entry in the list                                                          # features/features.feature:5
+    Given the "Library Management System" page is loaded                                                             # features/steps/steps.py:10
+    And the book list contains only one entry with "userName" as "Jane Smith" and "bookName" as "Python Programming" # features/steps/steps.py:19
+    When the user clicks the "delete-button-0" associated with the only book entry                                   # features/steps/steps.py:33
+    Then the book list should be empty                                                                               # features/steps/steps.py:41
+    And the display should be updated to show no entries                                                             # features/steps/steps.py:46
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+5 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m2.363s
+
+=== End ===
+
+=== Testing 5_0 at 2025-05-22 14:03:28.632178 ===
+Exception SyntaxError: invalid syntax (steps.py, line 1)
+
+=== End ===
+
+=== Testing 5_1 at 2025-05-22 14:03:31.235654 ===
+Feature: Display list of books from local storage on page load # features/features.feature:1
+  The system should display the list of books stored in local storage in the table body when the page loads.
+  Scenario: [Edge] Display no books when local storage is empty       # features/features.feature:5
+    Given the local storage is empty                                  # features/steps/steps.py:10
+    When the user opens the Library Management System webpage         # features/steps/steps.py:17
+    Then the table body with data-testid "table-body" should be empty # features/steps/steps.py:22
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+3 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m2.156s
+
+=== End ===

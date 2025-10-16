@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["data manager"],
+  "InteractionModes": ["drag-and-drop", "form input"],
+  "LogicComplexityLevel": "state management",
+  "TechnicalPoints": ["dynamic DOM manipulation"],
+  "ExternalResources": ["external media (images)"]
+}
+```

@@ -1,0 +1,67 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The application provides a text manipulation interface where users can search for specific text within a paragraph and replace it with new text. It includes a tabbed interface for switching between search and replace functionalities.",
+    "predefined_options": "The application does not define any predefined options for text input; instead, users are required to manually enter both the search and replacement text for operations.\nHowever, a specific sample value is provided for testing purposes:\n1969年1月，我到文安驿公社接北京知青。就是在这个时候，我第一次见到了近平。当时，梁家河派了十几个年轻力壮的社员去接知青。怕人手不够，我们还牵了毛驴，帮着驮行李。知青们的行李有铺盖卷，有箱子，我们轮流帮着拿行李，你拿一气儿，我拿一气儿，几十个人，浩浩荡荡地就回到村里来了。我记得很清楚，当时梁家河村一共来了十五名北京知青，十一名男知青，四名女知青。当时梁家河村委会接待室是一队的地方，分来五名男知青，四名女知青；近平和其余五名男知青在后面的二队。村里当时安排我父亲给二队的知青做饭。",
+    "external_resources": "No external resources such as links, images, or audio files are used in the application.",
+    "external_js_libraries": "No external JavaScript libraries are used; the application relies on native JavaScript for functionality."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+When the user clicks on the list item with the attribute data-testid='expand-list-item', the system must display the sub-list with the attribute data-testid='lis'. The sub-list should contain two options: '查找' and '替换', each represented as list items with respective data-testid attributes ('search-list-item' and 'replace-list-item'). If the user does not interact with the '展开' list item, the sub-list must remain hidden. The visibility of the sub-list is controlled by the CSS 'display' property, which should toggle between 'none' (hidden) and 'block' (visible) based on user interaction.
+- Requirement 2: 
+When the user interacts with the 查找和替换 functionality, the system must ensure the following behavior: Upon clicking the '展开' button (data-testid: 'expand-list-item'), the list (data-testid: 'lis') becomes visible. If the user clicks the '查找' list item (data-testid: 'search-list-item') within the expanded list, the system must display the '查找' tab (data-testid: 'search') along with its associated input field (data-testid: 'search-input') and button (data-testid: 'search-button'). The system must handle edge cases where the '展开' button is clicked multiple times, ensuring the list remains visible and the '查找' tab is displayed correctly upon selection. All UI elements must update their visibility dynamically without requiring a page reload.
+- Requirement 3: 
+When the user clicks the '展开' button with data-testid 'expand-list-item', the system should display the list with data-testid 'lis'. If the user then clicks the '替换' list item with data-testid 'replace-list-item', the system should display the '替换' tab with data-testid 'replace'. This tab must include the input field for old text with data-testid 'replace-input-old', the input field for new text with data-testid 'replace-input-new', and the '替换' button with data-testid 'replace-button'. If the list is already expanded, clicking '替换' should still display the '替换' tab and its components. If the user attempts to click '替换' without expanding the list first, the '替换' tab should not be displayed, and no action should occur.
+- Requirement 4: 
+The web application should provide a '查找' functionality that allows users to search for text within a specified paragraph. The user can initiate this by clicking the '展开' list item with data-testid 'expand-list-item', followed by selecting the '查找' list item with data-testid 'search-list-item'. This action displays the '查找' tab with data-testid 'search'. Users can then enter text into the input field with data-testid 'search-input' and click the '查找' button with data-testid 'search-button'. Upon clicking, the system should highlight all occurrences of the entered text within the paragraph using a yellow background applied through the <span> tag. If the entered text is not found, the system should display an alert with the message '未找到您要找的文字！'. Additionally, if the input field is left empty, the system should prompt an alert stating '请输入文字！'. The functionality should handle edge cases such as searching for single characters and text that appears multiple times, ensuring all occurrences are highlighted.
+- Requirement 5: 
+The web application must provide a '替换' (Replace) functionality that allows users to replace occurrences of specified text within a paragraph. The functionality should adhere to the following requirements: 
+
+1. **UI Elements and Interactions:**
+   - The '替换' functionality is accessible via a dropdown menu triggered by clicking the '展开' list item with `data-testid='expand-list-item'`.
+   - Within the dropdown, the user must click the '替换' list item with `data-testid='replace-list-item'` to display the '替换' tab with `data-testid='replace`.
+   - The '替换' tab contains:
+     - An input field for the old text with `data-testid='replace-input-old'`.
+     - An input field for the new text with `data-testid='replace-input-new'`.
+     - A button labeled '替换' with `data-testid='replace-button'`.
+
+2. **Functionality:**
+   - When the user enters text into both input fields and clicks the '替换' button:
+     - All occurrences of the old text (case-sensitive) in the paragraph should be replaced with the new text.
+     - The paragraph should visually highlight the replaced text using a `<span>` element with a yellow background.
+   - If the old text appears multiple times in the paragraph, all occurrences must be replaced.
+   - If the old text is a substring of other words, only the exact matches should be replaced.
+
+3. **Error Handling:**
+   - If the old text is not found in the paragraph, an alert should be displayed with the message '未找到您要找的文字！'.
+   - If the old text input field is empty, an alert should be displayed with the message '请输入文字！'.
+
+4. **Expected Results:**
+   - The paragraph's content should be updated dynamically in the DOM to reflect the replacements.
+   - The original paragraph content should be restored when switching between tabs or dropdown options.
+
+5. **Boundary Conditions:**
+   - The system must handle edge cases where the old text appears multiple times or is a substring of other words.
+   - The system must ensure that the replacement process does not affect unrelated text or introduce formatting errors.
+
+6. **UI Behavior:**
+   - The '替换' tab should only be displayed when the corresponding dropdown option is selected.
+   - The dropdown menu should toggle visibility when the '展开' list item is clicked.
+
+This refined requirement ensures that the '替换' functionality is robust, user-friendly, and handles all specified scenarios, including normal cases, edge cases, and error conditions.
+- Requirement 6: 
+Upon loading the webpage, the user should be able to interact with the tab switching functionality. Initially, the user clicks the '展开' button, identified by the data-testid 'expand-list-item', to reveal the options '查找' and '替换'. When the user selects a tab by clicking either the '查找' tab with data-testid 'search-tab-item' or the '替换' tab with data-testid 'replace-tab-item', the system must display the corresponding tab content. Specifically, for the '查找' tab, the system should display the input field with data-testid 'search-input' and the button with data-testid 'search-button', while hiding the '替换' tab content, which includes the input fields with data-testids 'replace-input-old' and 'replace-input-new', and the button with data-testid 'replace-button'. Conversely, when the '替换' tab is selected, its content should be displayed, and the '查找' tab content should be hidden. This ensures a seamless user experience in navigating between the search and replace functionalities.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

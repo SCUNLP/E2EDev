@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voting App</title>
+<link href="styles.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="app-wrapper">
+<header>
+<h1>Vote for Your Candidate</h1>
+<p>Cast your vote and watch the live results!</p>
+</header>
+<main class="voting-section">
+<div class="candidate-card">
+<img alt="Candidate A" src="https://img.freepik.com/premium-photo/avatar-resourcing-company_1254967-6696.jpg"/>
+<h2>Candidate A</h2>
+<button data-testid="vote-button-A" onclick="vote('A')">Vote for A</button>
+</div>
+<div class="candidate-card">
+<img alt="Candidate B" src="https://img.freepik.com/free-psd/3d-illustration-with-online-avatar_23-2151303097.jpg"/>
+<h2>Candidate B</h2>
+<button data-testid="vote-button-B" onclick="vote('B')">Vote for B</button>
+</div>
+<div class="candidate-card">
+<img alt="Candidate C" src="https://img.freepik.com/free-psd/3d-illustration-business-man-with-glasses_23-2149436194.jpg?w=740"/>
+<h2>Candidate C</h2>
+<button data-testid="vote-button-C" onclick="vote('C')">Vote for C</button>
+</div>
+</main>
+<section class="results-section">
+<h2>Live Voting Results</h2>
+<canvas data-testid="results-chart" id="resultsChart"></canvas>
+<p>Total Votes: <span data-testid="total-votes" id="totalVotes">0</span></p>
+<div data-testid="detailed-results" id="detailedResults" style="display:none;">
+<h3>Vote Breakdown:</h3>
+<p>Candidate A: <span data-testid="votes-A" id="votesA">0</span> votes (<span data-testid="percent-A" id="percentA">0%</span>)</p>
+<p>Candidate B: <span data-testid="votes-B" id="votesB">0</span> votes (<span data-testid="percent-B" id="percentB">0%</span>)</p>
+<p>Candidate C: <span data-testid="votes-C" id="votesC">0</span> votes (<span data-testid="percent-C" id="percentC">0%</span>)</p>
+</div>
+<button data-testid="show-results-button" id="showResults" onclick="showDetailedResults()">Show Results</button>
+<button data-testid="reset-button" id="reset" onclick="resetVotes()">Reset</button>
+</section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

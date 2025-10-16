@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<title>Speech Text Reader</title>
+</head>
+<body>
+<div class="container">
+<h1>Speech Text Reader</h1>
+<button class="btn btn-toggle" data-testid="toggle-button" id="toggle">Toggle Text Box</button>
+</div>
+<div class="text-box" data-testid="text-box" id="text-box">
+<div class="close" data-testid="close-button" id="close"><i class="fas fa-times"></i></div>
+<h3>Choose Voice</h3>
+<select data-testid="voice-select" id="voices"></select>
+<textarea data-testid="text-area" id="text" placeholder="Enter text to read..."></textarea>
+<button class="btn" data-testid="read-button" id="read">Read Text</button>
+</div>
+<main></main>
+<script src="script.js"></script>
+</body>
+</html>

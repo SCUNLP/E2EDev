@@ -1,0 +1,56 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The Voting App allows users to cast a vote for one of three candidates, view live voting results in a bar chart, and see detailed vote breakdowns. Users can also reset the votes to start a new voting session.",
+    "predefined_options": "The application provides three predefined candidates (Candidate A, Candidate B, Candidate C) for voting. The voting results are displayed in a bar chart with predefined colors for each candidate.",
+    "external_resources": [
+        {
+            "name": "Candidate A Image",
+            "source": "https://img.freepik.com/premium-photo/avatar-resourcing-company_1254967-6696.jpg"
+        },
+        {
+            "name": "Candidate B Image",
+            "source": "https://img.freepik.com/free-psd/3d-illustration-with-online-avatar_23-2151303097.jpg"
+        },
+        {
+            "name": "Candidate C Image",
+            "source": "https://img.freepik.com/free-psd/3d-illustration-business-man-with-glasses_23-2149436194.jpg?w=740"
+        }
+    ],
+    "external_js_libraries": [
+        {
+            "name": "Chart.js",
+            "source": "https://cdn.jsdelivr.net/npm/chart.js"
+        }
+    ]
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The web application must allow users to cast a vote for Candidate A by clicking the button with the attribute data-testid 'vote-button-A'. Upon clicking, if the user has not voted before (verified by the absence of the 'hasVoted' key in localStorage), the system should increment the vote count for Candidate A, update the total votes displayed in the element with data-testid 'total-votes', and append a confirmation message to the DOM stating 'Thank you for voting for Candidate A!'. If the user has already voted (indicated by the presence of the 'hasVoted' key set to 'true' in localStorage), an alert should be triggered with the message 'You've already voted!', and no changes should be made to the vote counts or total votes. The confirmation message should fade out after 3 seconds and be removed from the DOM.
+- Requirement 2: 
+When the user clicks the 'Vote for B' button with data-testid 'vote-button-B', the system should first check if the user has already voted by verifying the presence of the 'hasVoted' key in localStorage. If the user has not voted, the system increments the vote count for Candidate B, updates the total votes displayed in the element with data-testid 'total-votes', and displays a confirmation message 'Thank you for voting for Candidate B!' as a temporary DOM element with the class 'confirmation'. This element should fade out after 3 seconds and be removed from the DOM. If the user has already voted, an alert with the message 'You've already voted!' should be displayed, and the vote counts should remain unchanged. The system should ensure that the voting results are updated in the chart with data-testid 'results-chart', reflecting the new vote counts for Candidate B, and the detailed results section should remain hidden unless explicitly shown by the user.
+- Requirement 3: 
+The web application must allow users to vote for Candidate C by clicking the button with data-testid 'vote-button-C'. Upon clicking, if the user has not voted yet, the system should increment the vote count for Candidate C, update the total votes displayed in the element with data-testid 'total-votes', and show a confirmation message 'Thank you for voting for Candidate C!' on the page. The confirmation message should appear as a temporary DOM element with the class 'confirmation' and fade out after 3 seconds. If the user has already voted, the system should prevent additional votes by displaying an alert with the message 'You've already voted!' and ensure the total votes remain unchanged. The system should track voting status using localStorage with the key 'hasVoted'.
+- Requirement 4: 
+The web application must dynamically update the bar chart to reflect the current vote counts for all candidates whenever a vote is cast. The page should include a voting section with buttons for each candidate, each having a unique data-testid attribute ('vote-button-A', 'vote-button-B', 'vote-button-C') for Candidate A, B, and C respectively. When a user clicks any of these buttons, the system should check if the user has already voted by verifying the presence of a 'hasVoted' key in localStorage. If the user has not voted, the system should increment the vote count for the selected candidate, update the total vote count, and store a 'hasVoted' flag in localStorage to prevent multiple votes. The bar chart, identified by the data-testid 'results-chart', should be updated to display the new vote counts. Additionally, a confirmation message should appear on the screen, thanking the user for their vote, and should fade out after a few seconds. If the user attempts to vote again, an alert should notify them that they have already voted. The system should also provide a 'Reset' button with data-testid 'reset-button' to clear all votes and remove the 'hasVoted' flag from localStorage, resetting the chart and vote counts to zero.
+- Requirement 5: 
+The system must update the 'Total Votes' count displayed on the page whenever a vote is cast, reset, or modified, ensuring accurate real-time updates. Specifically: 1) When a user clicks a vote button (data-testid: 'vote-button-A', 'vote-button-B', or 'vote-button-C'), the 'Total Votes' count (data-testid: 'total-votes') must increment by 1. 2) If the 'Reset' button (data-testid: 'reset-button') is clicked, the 'Total Votes' count must reset to '0'. 3) The 'Total Votes' count must reflect the cumulative votes cast across all candidates and update dynamically in the DOM. Persistent storage (localStorage) must prevent duplicate voting by storing a key 'hasVoted' with a value of 'true' after a vote is cast. If 'hasVoted' exists, the system must display an alert preventing further votes. All updates must be visually reflected in the UI without requiring a page refresh.
+- Requirement 6: 
+The web application must allow users to view a detailed vote breakdown by clicking the 'Show Results' button, identified by the attribute data-testid='show-results-button'. Upon clicking, the section with data-testid='detailed-results' should become visible, displaying the number of votes and percentage for each candidate. The vote count for each candidate is shown in elements with data-testid='votes-A', 'votes-B', and 'votes-C', respectively, while the percentage is displayed in elements with data-testid='percent-A', 'percent-B', and 'percent-C'. The percentage calculation should be based on the total votes, which is updated dynamically and shown in the element with data-testid='total-votes'. If no votes have been cast, all vote counts and percentages should display '0' and '0%', respectively. The system should ensure that the detailed results are accurately updated and displayed based on the current voting data stored in the application state.
+- Requirement 7: 
+Upon clicking the 'Reset' button with data-testid 'reset-button', the system must reset all vote counts to zero, remove the 'hasVoted' flag from localStorage, hide the detailed results section with data-testid 'detailed-results', and display an alert message confirming the reset. This functionality should work regardless of whether the user has voted or not. After resetting, if the user clicks the 'Show Results' button with data-testid 'show-results-button', the detailed results section should become visible, showing zero votes and zero percent for all candidates. The total votes displayed in the element with data-testid 'total-votes' should be updated to '0'.
+- Requirement 8: 
+The voting application must ensure that the detailed results section, identified by the data-testid 'detailed-results', is initially hidden upon page load. This section should only become visible when the user clicks the 'Show Results' button, identified by the data-testid 'show-results-button'. The visibility of the detailed results section should remain consistent even if the 'Show Results' button is clicked multiple times. Additionally, if the 'Reset' button, identified by the data-testid 'reset-button', is clicked, the detailed results section should be hidden again, and the user should be alerted with a confirmation message that the votes have been reset. The application must handle these interactions without errors, ensuring a seamless user experience.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

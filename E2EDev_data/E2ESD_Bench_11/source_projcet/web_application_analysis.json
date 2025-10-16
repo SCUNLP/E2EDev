@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["calculator"],
+  "InteractionModes": ["form input", "slider input", "button click", "chart visualization"],
+  "LogicComplexityLevel": "conditionals, state management",
+  "TechnicalPoints": ["dynamic DOM manipulation", "canvas element", "theme toggling"],
+  "ExternalResources": ["Google Fonts", "Chart.js from CDN"]
+}
+```

@@ -1,0 +1,28 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The Student Grade Book application allows users to add students with their respective grades and view the list of students. It provides a form for inputting student details and dynamically updates the student list upon form submission.",
+    "predefined_options": "The application sets predefined options for the grade input field, allowing values between 0 and 100 to ensure valid grade entries.",
+    "external_resources": "The application uses external resources such as stylesheets (styles.css) and JavaScript files (script.js) to enhance the UI and functionality.",
+    "external_js_libraries": "No external JavaScript libraries are explicitly mentioned in the provided code."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The web application should provide a 'Student Grade Book' interface where users can add student details. The interface must include a form with a 'Student Name' input field (data-testid: 'student-name') and a 'Grade (0-100)' input field (data-testid: 'student-grade'), both of which are required. The grade input should accept numeric values between 0 and 100, inclusive. A submit button labeled 'Add Student' (data-testid: 'add-student-button') should be present to submit the form. Upon clicking the 'Add Student' button, if the inputs are valid, the student's name and grade should be appended to a list (data-testid: 'student-list') as a new list item with a unique data-id attribute. The form fields should then be reset to empty. If the grade is outside the 0-100 range, the system should prevent submission, display an error message indicating the valid range, and retain the entered values in the input fields. The system should handle normal cases, edge cases (minimum and maximum grades), and error scenarios (invalid grades) as described.
+- Requirement 2: 
+The system must validate form submissions on the 'Student Grade Book' page to ensure data integrity. Specifically: 1) The 'Student Name' input field (identified by data-testid='student-name') must not be empty. 2) The 'Grade (0-100)' input field (identified by data-testid='student-grade') must contain a numeric value within the inclusive range of 0 to 100. If either condition is violated, the form submission should be blocked, and no new student entry should be added to the student list (identified by data-testid='student-list'). Upon successful validation, the form submission should add a new list item to the student list, displaying the student's name and grade in the format 'Name: Grade'. Each list item must have a unique data-id attribute in the format 'student-item-{index}', where {index} is the 1-based position of the student in the list. The form (identified by data-testid='student-form') should reset after a successful submission. The system must handle edge cases, including grades at the boundaries (0 and 100), and prevent submission for grades below 0 or above 100. All interactions should be performed using the specified data-testid attributes for consistency and testability.
+- Requirement 3: 
+The web application 'Student Grade Book' must allow users to add students with their respective grades using a form. The form consists of an input field for the student's name (data-testid: 'student-name') and an input field for the student's grade (data-testid: 'student-grade'), which accepts numeric values between 0 and 100 inclusive. Upon clicking the 'Add Student' button (data-testid: 'add-student-button'), the system should validate the inputs. If the inputs are valid, the student's name and grade should be added to the student list (data-testid: 'student-list'), displayed as a list item with a unique data-id attribute. After successfully adding a student, the input fields should be cleared to allow for new entries. If the grade input is invalid (e.g., not within the 0-100 range), the student should not be added to the list, and the input fields should retain their values for correction. The system should ensure consistent use of data-testid attributes for accessing and manipulating DOM elements.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

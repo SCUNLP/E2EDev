@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["content generator"],
+  "InteractionModes": ["form input", "real-time feedback"],
+  "LogicComplexityLevel": "conditionals",
+  "TechnicalPoints": ["dynamic DOM manipulation"],
+  "ExternalResources": ["stylesheets (styles.css)", "custom JavaScript files (script.js)"]
+}
+```

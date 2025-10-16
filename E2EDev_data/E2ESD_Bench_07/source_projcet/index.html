@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>BMI Calculator</title>
+<meta content="JS app to calculates Body Mass Index" name="description"/>
+<meta content="Supritha" name="author"/>
+<link href="style.css" rel="stylesheet"/>
+<!-- =====BOX ICONS===== -->
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="bmi">
+<h2>Body Mass Index Calculator</h2>
+<p class="text">Height in cm</p><input data-testid="height-input" id="height" type="text"/>
+<p class="text">Weight in kg</p><input data-testid="weight-input" id="weight" type="text"/>
+<p data-testid="result-display" id="result"></p><button data-testid="calculate-button" id="btn">Calculate</button>
+</div>
+<div class="chart">
+<table>
+<thead>
+<tr>
+<th data-testid="bmi-header">BMI</th>
+<th data-testid="category-header">Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-testid="bmi-value-1" data-column="bmi">less than 18.5</td>
+<td data-testid="category-value-1" data-column="category">Underweight</td>
+</tr>
+<tr>
+<td data-testid="bmi-value-2" data-column="bmi">between 18.5 and 24.9</td>
+<td data-testid="category-value-2" data-column="category">Ideal</td>
+</tr>
+<tr>
+<td data-testid="bmi-value-3" data-column="bmi">between 25 and 29.9</td>
+<td data-testid="category-value-3" data-column="category">Overweight</td>
+</tr>
+<tr>
+<td data-testid="bmi-value-4" data-column="bmi">over 30 </td>
+<td data-testid="category-value-4" data-column="category">Obesity</td>
+</tr>
+</tbody>
+</table>
+</div>
+<script src="script.js"></script>
+<footer class="footer">
+<p class="footer__title" data-testid="footer-title">Supritha Ravishankar</p>
+<div class="footer__social">
+<a class="footer__icon" data-testid="facebook-link" href="https://de-de.facebook.com/supritha.ravishankar"><i class="bx bxl-facebook"></i></a>
+<a class="footer__icon" data-testid="github-link" href="https://github.com/supzi-del"><i class="bx bxl-github"></i></a>
+<a class="footer__icon" data-testid="twitter-link" href="https://twitter.com/SuprithaRavish1"><i class="bx bxl-twitter"></i></a>
+<a class="footer__icon" data-testid="linkedin-link" href="https://www.linkedin.com/in/supritha-ravishankar-560008216/"><i class="bx bxl-linkedin"></i></a>
+</div>
+<p data-testid="footer-copyright">© 2021 copyright all right reserved</p>
+</footer>
+</body>
+</html>

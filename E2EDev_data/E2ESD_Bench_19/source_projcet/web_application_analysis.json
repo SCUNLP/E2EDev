@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["data manager"],
+  "InteractionModes": ["form input", "click interaction", "right-click interaction"],
+  "LogicComplexityLevel": "state management",
+  "TechnicalPoints": ["localStorage", "dynamic DOM manipulation"],
+  "ExternalResources": ["style.css", "script.js"]
+}
+```

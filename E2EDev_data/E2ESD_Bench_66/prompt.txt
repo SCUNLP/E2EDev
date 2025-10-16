@@ -1,0 +1,28 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The web application is a Random Choice Picker that allows users to input multiple choices separated by commas, processes the input into visual tags, and randomly selects one of the tags after simulating a selection process. The application provides immediate visual feedback and interaction for the user.",
+    "predefined_options": "No predefined options are set by the system. Users manually input their choices in the textarea.",
+    "external_resources": "No external resources such as images, audio files, or links are used in the application.",
+    "external_js_libraries": "No external JavaScript libraries are used. The application relies solely on custom JavaScript code."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+Upon loading the webpage, the textarea element identified by the attribute data-testid='choices-textarea' must automatically receive focus, enabling the user to begin typing without additional interaction. The user inputs choices separated by commas into this textarea. As the user types, each choice is dynamically parsed and displayed as individual tags within the container identified by data-testid='tags-container'. When the user presses the 'Enter' key, the textarea is cleared, and a random selection process begins. This process involves highlighting tags in a rapid sequence for a duration of 3 seconds (30 iterations at 100ms intervals), culminating in the final selection of one tag, which remains highlighted. Each tag is created with a unique data-id attribute in the format 'tag-{index}', where index is the tag's position in the sequence. The highlight effect is achieved by toggling the 'highlight' class on the selected tag.
+- Requirement 2: 
+The user must be able to input multiple choices into the textarea with the attribute data-testid 'choices-textarea', separated by commas. Upon input, the system should process the entries, trimming any leading or trailing spaces, and ignoring empty entries. Each valid choice should be displayed as a visual tag within the container identified by data-testid 'tags-container'. Each tag should be a span element with the class 'tag' and a unique 'data-id' attribute in the format 'tag-{index}', where {index} is the position of the tag starting from 1. The system should handle various input scenarios, including normal cases with valid entries, edge cases with extra spaces or single entries, and error cases with only commas or special characters. When the 'Enter' key is pressed, the textarea should be cleared, and a random tag should be highlighted for a brief period, simulating a selection process. The highlighting involves adding and removing the 'highlight' class to the randomly selected tag.
+- Requirement 3: 
+The Random Choice Picker web application should allow users to input multiple choices into a textarea, separated by commas. When the user presses the 'Enter' key, the application must: 1) Clear the textarea with data-testid 'choices-textarea'. 2) Parse the input to create individual tags for each non-empty, trimmed choice, displaying them within the tags container with data-testid 'tags-container'. Each tag should have a unique 'data-id' attribute. 3) If no valid choices are entered (e.g., only commas or empty input), the tags container should remain empty, and no random selection should occur. 4) Initiate a random selection process where tags are highlighted in sequence, simulating a selection process for a duration of 3 seconds (30 iterations at 100ms intervals). 5) Conclude the process by highlighting one randomly selected tag to indicate the final choice. The application should handle edge cases such as single choice input, extra spaces around choices, and ensure no tags are created or highlighted when invalid input is provided.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

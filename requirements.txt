@@ -1,0 +1,4 @@
+openai
+tiktoken
+beautifulsoup4
+psutil

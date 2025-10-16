@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<title>Height Convertor</title>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+<div class="col-12 col-sm-6 offset-sm-6 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+<h1 class="display-4 text-center mb-3" style="color:brown;font-weight:bold;font-family:Cambria">Height Convertor</h1>
+<div class="row">
+<div class="col-sm-3">
+<form data-testid="main-form" id="mainForm">
+<div class="form-group">
+<input class="form-control-lg" data-testid="height-input" id="heightInput" placeholder="Enter Height..." type="number"/>
+</div>
+</form>
+</div>
+<div class="col-sm-4">
+<select class="form-control" data-testid="first-option-select" id="firOpt">
+<option data-testid="first-option-select-default" selected="">Select an Option</option>
+<option data-testid="first-option-select-centimeters">Centimeters</option>
+<option data-testid="first-option-select-inches">Inches</option>
+<option data-testid="first-option-select-meters">Meters</option>
+<option data-testid="first-option-select-kilometers">Kilometers</option>
+<option data-testid="first-option-select-miles">Miles</option>
+</select>
+</div>
+<div class="col-sm-1">-</div>
+<div class="col-sm-3">
+<select class="form-control" data-testid="second-option-select" id="secOpt">
+<option data-testid="second-option-select-default" selected="">Select</option>
+<option data-testid="second-option-select-miles">Miles</option>
+<option data-testid="second-option-select-centimeters">Centimeters</option>
+<option data-testid="second-option-select-meters">Meters</option>
+<option data-testid="second-option-select-kilometers">Kilometers</option>
+<option data-testid="second-option-select-inches">Inches</option>
+</select>
+</div>
+</div>
+<div class="row" data-testid="output-row" id="output">
+<div class="col-sm-5">
+<div class="card">
+<div class="card-block card-primary">
+<h3 class="card-title" data-testid="height-name" id="heightName"></h3>
+<p class="card-text" data-testid="height-output" id="heightOutput"></p>
+</div>
+</div>
+</div>
+<div class="col-sm-5">
+<div class="card">
+<div class="card-block card-danger">
+<h3 class="card-title" data-testid="converted-height-name" id="convertedHeightName"></h3>
+<p class="card-text" data-testid="final-output" id="finalOutput"></p>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<button class="btn btn-outline-warning" data-testid="reset-button" id="resetButton" type="button">Reset</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

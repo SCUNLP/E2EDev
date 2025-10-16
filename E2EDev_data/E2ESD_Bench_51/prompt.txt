@@ -1,0 +1,41 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The 'Speed Typer' web application is a typing game where users type displayed words as quickly and accurately as possible within a time limit. The game tracks the user's score, adjusts the time based on difficulty, and ends when the timer reaches zero. Users can customize the difficulty level through a settings menu.",
+    "predefined_options": "Difficulty levels: Easy, Medium, Hard. Each level adjusts the time added per correct word (Easy: +5s, Medium: +3s, Hard: +2s).",
+    "external_resources": [
+        {
+            "name": "Font Awesome Icons",
+            "source": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        },
+        {
+            "name": "Custom CSS",
+            "source": "style.css"
+        }
+    ],
+    "external_js_libraries": []
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The web application must provide a 'Settings' button, identifiable by the attribute data-testid='settings-btn'. When this button is clicked, it should toggle the visibility of the settings form, which is identifiable by the attribute data-testid='settings'. Initially, the settings form should be visible upon page load. The toggle functionality must handle rapid consecutive clicks, ensuring the form's visibility state changes accordingly with each click. The application should maintain a consistent user experience by ensuring the form's visibility state is accurately reflected after each interaction.
+- Requirement 2: 
+The web application must provide a settings form accessible via a button with data-testid 'settings-btn'. This form should allow users to select a difficulty level (Easy, Medium, Hard) from a dropdown menu with data-testid 'difficulty-select'. Upon selection, the difficulty level must be immediately updated in the application and stored in localStorage under the key 'difficulty', ensuring persistence across sessions. The settings form should toggle visibility when the settings button is clicked, and the difficulty selection should dynamically affect game mechanics, such as time adjustments upon correct word entry. The application must initialize with the difficulty level retrieved from localStorage, defaulting to 'Medium' if no prior selection exists.
+- Requirement 3: 
+The application must display a random word from a predefined list in the word display area with the attribute data-testid 'word' when the game starts or when the user types the correct word into the text input field with the attribute data-testid 'text-input'. Upon loading the Speed Typer page, the game initializes by selecting a random word from the list and displaying it. If the user correctly types the displayed word within the time limit, the text input field is cleared, and a new random word is displayed. This functionality should work regardless of whether the localStorage is empty or contains a previously set difficulty level. The difficulty level affects the time increment added upon typing the correct word: 5 seconds for 'easy', 3 seconds for 'medium', and 2 seconds for 'hard'.
+- Requirement 4: 
+The Speed Typer web application must allow users to interact with the game interface as follows: Users should be able to type words into the input field identified by the attribute data-testid='text-input'. When the typed word matches the word displayed in the element with data-testid='word' within the remaining time shown in the element with data-testid='time', the input field must be cleared automatically. The score, displayed in the element with data-testid='score', should increment by 1. Subsequently, a new random word from the predefined list should be displayed in the element with data-testid='word'. If the typed word is incorrect, the input field should retain the user's input, the score should remain unchanged, and the displayed word should not change. The game should continue until the time reaches zero, at which point the game ends, displaying a message and the final score in the element with data-testid='end-game-container'. The difficulty level, which affects the time increment upon correct word entry, can be adjusted via a settings menu toggled by clicking the button with data-testid='settings-btn'. The selected difficulty is stored in localStorage under the key 'difficulty' and retrieved upon page load to set the initial game state.
+- Requirement 5: 
+When the user types the correct word into the text input field (data-testid='text-input'), the remaining time displayed in the time element (data-testid='time') should increase based on the selected difficulty level. The difficulty level is determined by the value of the difficulty select dropdown (data-testid='difficulty-select'), which can be 'easy', 'medium', or 'hard'. Specifically: 'easy' increases time by 5 seconds, 'medium' increases time by 3 seconds, and 'hard' increases time by 2 seconds. The updated time should be reflected immediately in the time element. The difficulty setting is persistently stored in localStorage under the key 'difficulty', and the application should retrieve this value on page load to initialize the difficulty select dropdown and game behavior. The word element (data-testid='word') displays the current word to be typed, and upon correct entry, the text input field is cleared, a new word is displayed, and the score element (data-testid='score') is incremented by 1.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

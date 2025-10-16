@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ID Card and Badge Generator</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container" data-testid="formContainer" id="formContainer">
+<h1>Badge Generator</h1>
+<form data-testid="badgeForm" id="badgeForm">
+<label for="eventname" data-testid="label-eventname">Event Name:</label>
+<input data-testid="eventname" id="eventname" required="" type="text"/>
+<label for="name" data-testid="label-name">Person Name:</label>
+<input data-testid="name" id="name" required="" type="text"/>
+<label for="designation" data-testid="label-designation">Designation:</label>
+<input data-testid="designation" id="designation" required="" type="text"/>
+<label for="company" data-testid="label-company">Company Name:</label>
+<input data-testid="company" id="company" required="" type="text"/>
+<label for="access" data-testid="label-access">Access Level:</label>
+<select data-testid="access" id="access" required="">
+<option value="Attendee" data-testid="option-attendee">Attendee</option>
+<option value="VIP" data-testid="option-vip">VIP</option>
+</select>
+<button type="submit" data-testid="generate-badge-button">Generate Badge</button>
+</form>
+</div>
+<div class="badge" data-testid="badge" id="badge">
+<div class="badge-header">
+<h1 data-testid="badgeEvent" id="badgeEvent"></h1>
+</div>
+<div class="badge-body">
+<h2 data-testid="badgeName" id="badgeName"></h2>
+<p data-testid="badgeDesignation" id="badgeDesignation"></p>
+<h3 data-testid="badgecontainer" id="badgecontainer"></h3>
+</div>
+<div class="badge-qr" data-testid="qrcode" id="qrcode">
+</div>
+<div class="badge-footer">
+<p data-testid="badgeAccess" id="badgeAccess">ATTENDEE</p>
+</div>
+</div>
+<button class="dwnBadge" data-testid="dwnBadge" id="dwnBadge">Download Badge</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

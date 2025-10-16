@@ -1,0 +1,38 @@
+{
+    "summary": {
+        "overview": "The Exchange Rate Calculator application allows users to select currencies and input amounts to calculate and display the exchange rate and converted amount. Users can swap selected currencies to view the reverse exchange rate.",
+        "predefined_options": "The application provides predefined currency options in dropdowns for selection, with USD and EUR set as default selections.",
+        "external_resources": "The application uses an external image resource for visual representation: 'https://i.ibb.co/rvJd2XR/rate.png'.",
+        "external_js_libraries": "The application fetches data from an external API: 'https://api.exchangerate-api.com/v4/latest/'. No external JavaScript libraries are explicitly mentioned in the provided code."
+    },
+    "requirements": [
+        {
+            "id": "REQ-001",
+            "description": "When the user selects a currency from the 'currency-one' dropdown, the system must fetch the latest exchange rate for the selected currency and update the exchange rate display and converted amount."
+        },
+        {
+            "id": "REQ-002",
+            "description": "When the user inputs a value in the 'amount-one' field, the system must recalculate the converted amount using the current exchange rate and update the 'amount-two' field."
+        },
+        {
+            "id": "REQ-003",
+            "description": "When the user selects a currency from the 'currency-two' dropdown, the system must fetch the latest exchange rate for the selected currency and update the exchange rate display and converted amount."
+        },
+        {
+            "id": "REQ-004",
+            "description": "When the user inputs a value in the 'amount-two' field, the system must recalculate the converted amount using the current exchange rate and update the 'amount-one' field."
+        },
+        {
+            "id": "REQ-005",
+            "description": "When the user clicks the 'swap' button, the system must swap the selected currencies between 'currency-one' and 'currency-two', recalculate the exchange rate, and update the display and converted amounts accordingly."
+        },
+        {
+            "id": "REQ-006",
+            "description": "The system must display the current exchange rate in the format '1 [currency-one] = [rate] [currency-two]' in the 'exchange-rate' element."
+        },
+        {
+            "id": "REQ-007",
+            "description": "The system must initialize the application by fetching the exchange rate for the default selected currencies (USD and EUR) and displaying the rate and converted amount."
+        }
+    ]
+}

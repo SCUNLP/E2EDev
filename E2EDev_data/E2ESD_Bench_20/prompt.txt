@@ -1,0 +1,56 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The Car Registration System is a web application that allows users to register cars, view all registrations, edit existing registrations, and delete registrations. The application uses a tabbed interface to switch between the 'Register Car' form and the 'View All Registrations' table. Data is stored in the browser's local storage for persistence.",
+    "predefined_options": "No predefined options are present in the form fields. All inputs are manually entered by the user.",
+    "external_resources": [
+        {
+            "name": "Google Fonts (Poppins)",
+            "source": "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        },
+        {
+            "name": "CSS Stylesheet",
+            "source": "styles.css"
+        }
+    ],
+    "external_js_libraries": []
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+Upon initial load, the 'Register a Car' form (data-testid='register-tab-content') should be visible. When the user clicks the 'Register Car' tab button (data-testid='register-tab-button'), the system must show the 'Register a Car' form (data-testid='register-tab-content') and hide the 'View All Registrations' table (data-testid='view-tab-content'). The 'Register a Car' form should stay visible even after multiple clicks. The active tab button should be visually highlighted with the 'active' class, and the content toggled dynamically based on the active tab.
+- Requirement 2: 
+When the user clicks the 'View All Registrations' tab button (located via data-testid='view-tab-button'), the system should update the UI as follows: the 'View All Registrations' table (located via data-testid='view-tab-content') should become visible, and the 'Register a Car' form (located via data-testid='register-tab-content') should be hidden. Additionally, the 'View All Registrations' tab button should have the 'active' class applied, while the 'Register Car' tab button (located via data-testid='register-tab-button') should have the 'active' class removed. If the user clicks the 'View All Registrations' tab button multiple times, the system should maintain the visibility of the 'View All Registrations' table and the hidden state of the 'Register a Car' form without any changes to the active class states.
+- Requirement 3: 
+When the user interacts with the 'Register a Car' form in the 'Car Registration System' web application, the following requirements must be met: 
+1. The form must include the following fields with their respective attributes: 
+   - 'Owner's Name' field, located by data-testid 'owner-name-input', which accepts text input. 
+   - 'Car Model' field, located by data-testid 'car-model-input', which accepts text input. 
+   - 'License Number' field, located by data-testid 'license-number-input', which accepts text input. 
+   - 'Registration Date' date picker field, located by data-testid 'registration-date-input', which accepts a date input or select. 
+2. When the user clicks the 'Save Registration' button, located by data-testid 'submit-button', the system must validate that all fields are filled. 
+3. The following scenarios must be handled: 
+   - If all fields are filled: 
+     - The system must save the registration data in localStorage under the key 'registrations'. 
+     - The registration data must include the following properties: 'ownerName', 'carModel', 'licenseNumber', and 'registrationDate'. 
+     - The saved registration must be displayed in the 'All Registrations' table, located by data-testid 'registration-table', with each property displayed in its respective column. 
+     - The form must be reset, clearing all input fields. 
+   - If any field is empty: 
+     - The system must display an alert with the message 'Please fill out all fields.' 
+The system must ensure that the 'Save Registration' button is functional only when the 'Register a Car' tab is active, as determined by the presence of the 'active' class on the tab button located by data-testid 'register-tab-button'.
+- Requirement 4: 
+When the user navigates to the 'View All Registrations' tab by clicking the button with data-testid 'view-tab-button', the system should dynamically populate the table with data-testid 'registration-table' with all saved registrations from local storage. The 'View All Registrations' tab content with data-testid 'view-tab-content' should become active, displaying each registration as a row in the table. Each row should include the Owner's Name, Car Model, License Number, and Registration Date. If local storage contains no registrations, the table should contain no rows, and the table body should be empty. The system should ensure that the 'View All Registrations' tab content is visible and the 'Register Car' tab content is hidden upon navigation.
+- Requirement 5: 
+The Car Registration System must allow users to delete a car registration from the table and local storage, ensuring the table is updated to reflect the change. When the 'Car Registration System' page is loaded with the 'View All Registrations' tab active and at least one registration displayed in the table, clicking the 'Delete' button for the first row registration (located by data-id='delete-btn-0') should remove the registration from local storage (under the key 'registrations') and refresh the table to no longer display the deleted registration.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

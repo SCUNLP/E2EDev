@@ -1,0 +1,30 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The Random Number Generator application allows users to generate a random number within a specified range. Users can input minimum and maximum values, generate a random number, and copy the result to the clipboard.",
+    "predefined_options": "Default minimum value is set to 1 and maximum value is set to 100 if no input is provided.",
+    "external_resources": "Google Fonts for Poppins font family (https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap).",
+    "external_js_libraries": "None specified."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The system must allow the user to enter a numerical value in the 'Min' input field, identified by the data-testid 'min'. This value should be accepted and stored as the minimum range for generating a random number. The input field should handle both positive and negative numerical values. If a non-numerical value is entered, the field should default to '1', which is the placeholder value. The system should ensure that the input field reflects the user's input accurately, and any invalid input should not alter the default value.
+- Requirement 2: 
+The web application should allow users to define the maximum range for generating a random number by entering a numerical value in the 'Max' input field. The 'Max' input field is identified by the attribute data-testid='max'. When a valid numerical value is entered, it should be stored as the maximum range. If a non-numerical value is entered, the field should default to the initial value of '100'. The application should visually display the generated random number within the specified range in the element with data-testid='random-number-display'. The 'Generate Random Number' button, identified by data-testid='generate-random-number-button', should trigger the generation of a random number, which is then displayed with a temporary scaling effect. Additionally, the 'Copy to Clipboard' button, identified by data-testid='copy-to-clipboard-button', should allow users to copy the displayed random number to the clipboard, temporarily changing the button text to 'Copied!' for feedback.
+- Requirement 3: 
+The web application should allow users to generate a random number by interacting with the UI as follows: The page should load with a title 'Random Number Generator' and contain input fields for 'Min' and 'Max' values, each with data-testid attributes 'min' and 'max', defaulting to '1' and '100' respectively. When the user clicks the 'Generate Random Number' button (data-testid 'generate-random-number-button'), the system should generate a random number between the specified 'Min' and 'Max' values and display it in the 'randomNumber' display element (data-testid 'random-number-display'). If 'Min' and 'Max' are equal, the display should show that value. If 'Min' is greater than 'Max', the system should still generate a number between the two values, treating them as a range. If non-numeric values are entered, the system should default to using '1' and '100' as the range. The displayed number should briefly scale up in size for visual emphasis. Additionally, a 'Copy to Clipboard' button (data-testid 'copy-to-clipboard-button') should allow users to copy the displayed number to the clipboard, temporarily changing the button text to 'Copied!' for user feedback.
+- Requirement 4: 
+The web application must allow users to generate a random number within a specified range using input fields with data-testid 'min' and 'max'. Upon clicking the 'Generate Random Number' button with data-testid 'generate-random-number-button', the system should display the generated number in the element with data-testid 'random-number-display', applying a temporary scale transformation for visual emphasis. Users can copy the displayed random number to the clipboard by clicking the 'Copy to Clipboard' button with data-testid 'copy-to-clipboard-button'. After copying, the button text must change to 'Copied!' for 2000 milliseconds before reverting to 'Copy to Clipboard'. The system should handle edge cases, such as when the random number is zero, ensuring consistent functionality and user feedback.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

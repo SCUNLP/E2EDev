@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["content generator", "media tool"],
+  "InteractionModes": ["form input", "button click"],
+  "LogicComplexityLevel": "conditionals, dynamic content generation",
+  "TechnicalPoints": ["dynamic DOM manipulation", "external API calls", "image generation"],
+  "ExternalResources": ["Google Fonts", "jQuery", "jQuery QR Code plugin", "html-to-image library"]
+}
+```

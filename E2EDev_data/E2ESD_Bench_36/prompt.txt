@@ -1,0 +1,28 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The Word Counter application allows users to input text and receive real-time feedback on the number of words, characters, and paragraphs. Users can also set a character limit, highlight specific words, and save their progress using local storage.",
+    "predefined_options": "Default values for word, character, and paragraph counts are set to zero. The character limit input is optional and can be set by the user.",
+    "external_resources": "None specified in the provided code.",
+    "external_js_libraries": "None specified in the provided code."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The web application should provide a textarea element with the attribute data-testid='text-input' where users can input text freely without immediate restrictions. Upon entering text, the system should update the word count, character count, and paragraph count displayed in elements with data-testid='word-count', 'char-count', and 'para-count', respectively. The user can input text of any length, including large texts up to 5000 characters, without restrictions. The system should persist the entered text and counts in localStorage using keys 'text', 'words', 'chars', and 'paras'. Additionally, the application should allow users to set a character limit via an input element with data-testid='char-limit', and visually indicate when the character count exceeds this limit by changing the text color to red in the 'char-count' element. The system should also provide functionality to clear the text and counts via a button with data-testid='clear-button', and highlight specific words in the text using a button with id='highlight-button' and an input with id='highlight-word'.
+- Requirement 2: 
+The web application should provide a text input area identified by the attribute data-testid='text-input' where users can enter text. Upon clicking the 'Count' button, identified by data-testid='count-button', the system must calculate and display the number of words, characters, and paragraphs in the text input. The results should be shown in elements with data-testid='word-count', 'char-count', and 'para-count', respectively. The word count should exclude empty strings resulting from spaces or newlines. The character count should include all characters, including spaces and special characters. The paragraph count should consider non-empty lines separated by newlines. The system should handle edge cases such as empty input, input with only spaces or newlines, and input with special characters. Additionally, the application should persist the text input and counts in localStorage using keys 'text', 'words', 'chars', and 'paras', and reload them upon page refresh. If a character limit is set in the input field with data-testid='char-limit', the character count should change color to red if the limit is exceeded, and the text should indicate the excess.
+- Requirement 3: 
+The web application must provide a 'Clear' button, identifiable by the data-testid 'clear-button', which, when clicked by the user, clears the text input field with data-testid 'text-input' and resets the word count (data-testid 'word-count'), character count (data-testid 'char-count'), and paragraph count (data-testid 'para-count') to zero. This functionality should work regardless of the current state of the text input, including when it is already empty. Upon clearing, the text input field should be empty, and the counts should display 'Words: 0', 'Characters: 0', and 'Paragraphs: 0'. The system should ensure that these changes are reflected in the UI immediately after the button is clicked.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["Game"],
+  "InteractionModes": ["Form input", "Click events"],
+  "LogicComplexityLevel": "Conditionals, State management",
+  "TechnicalPoints": ["Dynamic DOM manipulation"],
+  "ExternalResources": []
+}
+```

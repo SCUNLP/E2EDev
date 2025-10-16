@@ -1,0 +1,34 @@
+{
+    "summary": {
+        "overview": "The Notes App allows users to create, edit, and delete notes. Users can add new notes, edit existing ones using a toggle between a textarea and a display mode, and delete notes. The application uses localStorage to persist notes across sessions.",
+        "predefined_options": "The application does not have predefined options for note content; users start with an empty note or edit existing ones.",
+        "external_resources": "Font Awesome icons for buttons (plus, edit, delete) sourced from a CDN.",
+        "external_js_libraries": "Marked.js for Markdown rendering, sourced from a CDN."
+    },
+    "requirements": [
+        {
+            "id": "REQ-001",
+            "description": "When the user clicks the 'Add note' button, a new note is created and displayed on the page with an empty textarea for input."
+        },
+        {
+            "id": "REQ-002",
+            "description": "When the user types into the textarea of a note, the content is rendered in Markdown format in the main display area of the note."
+        },
+        {
+            "id": "REQ-003",
+            "description": "When the user clicks the 'Edit' button on a note, the note toggles between displaying the main content and the editable textarea."
+        },
+        {
+            "id": "REQ-004",
+            "description": "When the user clicks the 'Delete' button on a note, the note is removed from the page and the localStorage is updated to reflect this change."
+        },
+        {
+            "id": "REQ-005",
+            "description": "When the page loads, any notes stored in localStorage are retrieved and displayed on the page."
+        },
+        {
+            "id": "REQ-006",
+            "description": "When the user inputs text into the textarea, the application updates the localStorage with the current state of all notes."
+        }
+    ]
+}

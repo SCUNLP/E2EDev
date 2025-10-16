@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Loan Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="dark-mode-toggle">
+<label class="switch">
+<input data-testid="dark-mode-switch" id="dark-mode-switch" type="checkbox"/>
+<span class="slider" data-testid="dark-mode-slider"></span>
+</label>
+</div>
+<div class="container">
+<h1 data-testid="page-title">Loan Calculator</h1>
+<div class="calculator">
+<div class="input-group">
+<label for="amount" data-testid="amount-label">Loan Amount ($)</label>
+<input data-testid="amount-input" id="amount" placeholder="Enter amount" type="number">
+</input></div>
+<div class="input-group">
+<label for="rate" data-testid="rate-label">Interest Rate (%)</label>
+<input data-testid="rate-input" id="rate" placeholder="Enter rate" type="number"/>
+</div>
+<div class="input-group">
+<label for="years" data-testid="years-label">Loan Term (Years)</label>
+<input data-testid="years-input" id="years" placeholder="Enter years" type="number"/>
+<input data-testid="year-slider" id="year-slider" max="30" min="1" type="range" value="15"/>
+</div>
+<button data-testid="calculate-button" id="calculate">Calculate</button>
+</div>
+<div class="results">
+<div class="result-box" data-testid="monthly-payment" id="monthly-payment">Monthly Payment: $0.00</div>
+<div class="result-box" data-testid="total-payment" id="total-payment">Total Payment: $0.00</div>
+<div class="result-box" data-testid="total-interest" id="total-interest">Total Interest: $0.00</div>
+</div>
+<div data-testid="chart-container" id="chart-container">
+<canvas data-testid="payment-chart" id="payment-chart"></canvas>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

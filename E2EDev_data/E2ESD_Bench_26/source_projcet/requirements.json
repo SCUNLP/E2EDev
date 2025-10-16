@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "overview": "The application provides a text manipulation interface where users can search for specific text within a paragraph and replace it with new text. It includes a tabbed interface for switching between search and replace functionalities.",
+    "predefined_options": "The application does not define any predefined options for text input; instead, users are required to manually enter both the search and replacement text for operations.\nHowever, a specific sample value is provided for testing purposes:\n1969年1月，我到文安驿公社接北京知青。就是在这个时候，我第一次见到了近平。当时，梁家河派了十几个年轻力壮的社员去接知青。怕人手不够，我们还牵了毛驴，帮着驮行李。知青们的行李有铺盖卷，有箱子，我们轮流帮着拿行李，你拿一气儿，我拿一气儿，几十个人，浩浩荡荡地就回到村里来了。我记得很清楚，当时梁家河村一共来了十五名北京知青，十一名男知青，四名女知青。当时梁家河村委会接待室是一队的地方，分来五名男知青，四名女知青；近平和其余五名男知青在后面的二队。村里当时安排我父亲给二队的知青做饭。",
+    "external_resources": "No external resources such as links, images, or audio files are used in the application.",
+    "external_js_libraries": "No external JavaScript libraries are used; the application relies on native JavaScript for functionality."
+  },
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "description": "When the user clicks on the '展开' list item, the system should display the sub-list containing '查找' and '替换' options."
+    },
+    {
+      "id": "REQ-002",
+      "description": "When the user clicks on the '查找' list item, the system should display the '查找' tab and its associated input field and button."
+    },
+    {
+      "id": "REQ-003",
+      "description": "When the user clicks on the '替换' list item, the system should display the '替换' tab and its associated input fields and button."
+    },
+    {
+      "id": "REQ-004",
+      "description": "When the user enters text into the '查找' input field and clicks the '查找' button, the system should highlight all occurrences of the entered text within the paragraph. If the text is not found, the system should display an alert stating '未找到您要找的文字！'."
+    },
+    {
+      "id": "REQ-005",
+      "description": "When the user enters text into the '替换' input fields (old text and new text) and clicks the '替换' button, the system should replace all occurrences of the old text with the new text within the paragraph. If the old text is not found, the system should display an alert stating '未找到您要找的文字！'."
+    },
+    {
+      "id": "REQ-006",
+      "description": "When the user clicks on a tab ('查找' or '替换'), the system should switch to the selected tab and display its associated input fields and buttons, while hiding the other tab's content."
+    }
+  ]
+}

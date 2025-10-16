@@ -1,0 +1,34 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The SM-Task Manager application allows users to add, manage, and clear tasks. Users can input tasks, set expected completion times, mark tasks as completed, and delete tasks individually or clear all tasks at once.",
+    "predefined_options": "The application provides default placeholder text in the task input field to guide users in entering new tasks.",
+    "external_resources": "External resources include Google Fonts for Montserrat font styling and a local stylesheet (styles.css) for additional styling.",
+    "external_js_libraries": "No external JavaScript libraries are used; functionality is implemented using vanilla JavaScript."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The SM-Task Manager application allows users to add tasks through a user-friendly interface. Users can input a task description into the text field identified by the data-testid 'task-input'. Upon entering a valid task description (non-empty and trimmed of leading/trailing spaces), users can either press the 'Enter' key or click the 'Add Task' button, identified by the data-testid 'add-task-btn', to add the task to the task list. The task list is displayed as an unordered list with the data-testid 'task-list'. Each task entry includes the task description, an input for expected completion time, and buttons for marking the task as completed or deleting it. After a task is successfully added, the input field is cleared, and the 'Clear All' button, identified by the data-testid 'clear-all-btn', becomes visible. If the task input is empty or consists solely of spaces, the task is not added, and the 'Clear All' button remains hidden if no tasks exist. The application ensures that the task list is dynamically updated with animations for new entries, and the 'Clear All' button's visibility is contingent on the presence of tasks in the list.
+- Requirement 2: 
+Users can add a task by pressing the 'Enter' key after entering text in the task input field. The task input field is identified by the data-testid 'task-input'. When the user presses the 'Enter' key, the system should trigger the 'Add Task' button click event. If the input contains only whitespace or is empty, no task should be added, and the input field should remain empty. If the input contains valid text, the task should be added to the task list identified by the data-testid 'task-list', with leading and trailing spaces trimmed. After adding the task, the input field should be cleared. The system should ensure that the task list is updated accordingly, and the 'Clear All' button, identified by the data-testid 'clear-all-btn', should be displayed if there are tasks in the list.
+- Requirement 3: 
+The SM-Task Manager web application allows users to manage tasks through a user-friendly interface. Each task entry in the task list includes a 'Completed' button, identifiable by the data-id 'complete-btn', which users can click to toggle the task's completion status. Upon clicking the 'Completed' button, the system visually updates the task by adding or removing the 'completed' class to the task's DOM element, providing immediate feedback on the task's status. This functionality supports toggling for individual tasks as well as multiple tasks simultaneously. The task list is dynamically updated to reflect these changes, ensuring users can efficiently manage their task completion statuses.
+- Requirement 4: 
+The web application must allow users to delete individual tasks from the task list using a 'Delete' button associated with each task entry. The 'Delete' button must be identifiable by the class 'delete-btn' and should be located within each task's container in the task list, which is identified by the data-testid 'task-list'. Upon clicking the 'Delete' button, the system must remove the corresponding task from the DOM. If the task list becomes empty after deletion, the system must hide the 'Clear All' button, which is identified by the data-testid 'clear-all-btn'. The 'Clear All' button should only be visible when there is at least one task in the list. This functionality must handle normal cases where multiple tasks exist, as well as edge cases where the deleted task is the only task in the list.
+- Requirement 5: 
+The SM-Task Manager application allows users to clear all tasks from the task list by interacting with the 'Clear All' button. When the user clicks the 'Clear All' button, identified by the data-testid 'clear-all-btn', the system will remove all tasks from the task list, which is identified by the data-testid 'task-list'. Additionally, the 'Clear All' button will be hidden from view after all tasks are cleared. This functionality is only applicable when there are tasks present in the list. The 'Clear All' button should be visible only when there is at least one task in the list, and it should be hidden when the list is empty, ensuring a clear and intuitive user experience.
+- Requirement 6: 
+The task input field, identified by the data-testid 'task-input' and id 'task-input', must display the placeholder text 'Enter a new task...' when the 'SM-Task Manager' page is fully loaded. This placeholder guides users in entering new tasks. No user action is required for this placeholder to be visible; it should be present by default upon page load. The placeholder text should remain visible until the user begins typing in the input field.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["content generator"],
+  "InteractionModes": ["dynamic content update"],
+  "LogicComplexityLevel": "simple input-output",
+  "TechnicalPoints": ["dynamic DOM manipulation"],
+  "ExternalResources": []
+}
+```

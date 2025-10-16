@@ -1,0 +1,36 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "This is a web-based Tic Tac Toe game that allows two players to take turns marking tiles on a 3x3 grid. The application determines the winner based on predefined winning conditions or declares a tie if all tiles are filled without a winner. Players can reset the game at any time to start a new round.",
+    "predefined_options": "The game alternates turns between Player X and Player O. The game board consists of 9 tiles, and the winning conditions are predefined as combinations of three tiles in a row, column, or diagonal.",
+    "external_resources": "No external resources such as images, audio, or links are used in this application.",
+    "external_js_libraries": "No external JavaScript libraries are used. The application relies on vanilla JavaScript for functionality."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+Upon loading the Tic Tac Toe webpage, the system must display the following UI elements: a title with the text 'Tic Tac Toe', a message indicating the current player's turn ('Player X's turn') within an element identified by the attribute data-testid='current-player', a 3x3 grid of tiles each uniquely identified by data-testid attributes ranging from 'tile-1' to 'tile-9', and a reset button identified by data-testid='reset-button'. All tiles must initially be empty, without any inner text or classes 'playerX' or 'playerO'.
+- Requirement 2: 
+When a player clicks on an empty tile, the system must display the current player's symbol ('X' or 'O') in the tile and visually indicate the player's move by adding a corresponding CSS class ('playerX' for Player X or 'playerO' for Player O). The system must validate that the tile is empty before allowing the action. If the tile is already occupied, no changes should be made to the tile's content or CSS class, and the current player should remain unchanged. The tiles are identified using the 'data-testid' attribute (e.g., 'tile-1', 'tile-2', etc.). The current player's symbol is displayed in the element with 'data-testid="current-player"', and its CSS class dynamically updates to reflect the active player ('playerX' or 'playerO').
+- Requirement 3: 
+When a player clicks on a tile that is already occupied, the system must ignore the action and prevent any changes to the tile or game state. Specifically: 1) The tile's content (innerText) and associated class (e.g., 'playerX' or 'playerO') must remain unchanged. 2) The current player indicator (element with data-testid='current-player') must not update. 3) The game state must remain active or inactive as it was prior to the click. 4) If the game is inactive (e.g., after a win or tie), clicking on any tile must not alter the announcer's message (element with data-testid='announcer') or the game state. These behaviors must apply consistently across all tiles (elements with class 'tile' and data-testid attributes 'tile-1' through 'tile-9').
+- Requirement 4: 
+When a player wins the Tic Tac Toe game, the system must display a message in the announcer section indicating the winner ('Player X Won' or 'Player O Won') and prevent further interactions with the game board. Specifically: 1) The announcer section (identified by the attribute data-testid='announcer') must display the text 'Player X Won' or 'Player O Won' based on the winning player, with the winner's symbol styled using the respective CSS class ('playerX' or 'playerO'). 2) The announcer section must have the 'hide' class removed to make it visible. 3) All tiles on the game board (identified by the class 'tile' and data-testid attributes such as 'tile-1', 'tile-2', etc.) must no longer accept user clicks or updates. This behavior must apply to all winning scenarios, including normal cases, edge cases (e.g., winning on the last move), and boundary conditions (e.g., winning with the minimum number of moves).
+- Requirement 5: 
+When the game ends in a tie (i.e., all tiles are filled without any player meeting the winning conditions), the system must perform the following actions: 1) Display the message 'Tie' in the announcer section, replacing its innerText with 'Tie'. 2) Ensure the announcer section becomes visible by removing the 'hide' class from its class list. 3) Disable further interactions with the game board by preventing any additional clicks on tiles. The announcer section is identified by the attribute 'data-testid="announcer"', and each tile on the game board is identified by the attribute 'data-testid' with values ranging from 'tile-1' to 'tile-9'.
+- Requirement 6: 
+Upon loading the Tic Tac Toe game, the system initializes with Player X as the current player, indicated by the player display element with data-testid 'current-player'. The game board consists of nine tiles, each with a unique data-testid ranging from 'tile-1' to 'tile-9'. When a user clicks on a tile, if the tile is empty and the game is active, the system updates the tile to display the current player's symbol ('X' or 'O') and adds a corresponding class ('playerX' or 'playerO'). Subsequently, the system switches the current player, updating the player display element to reflect the new player's turn ('Player X's turn' or 'Player O's turn'). This change is visually represented by updating the inner text and class of the player display element. The system ensures that the player switch only occurs after a valid move, maintaining the integrity of the game flow.
+- Requirement 7: 
+When the reset button (with data-testid 'reset-button') is clicked, the system must perform the following actions: clear all tiles (elements with data-testid 'tile-1' to 'tile-9'), reset the internal game board state to all empty values, hide the announcer section (element with data-testid 'announcer'), and set the current player to 'X' in the element with data-testid 'current-player' if it was previously 'O'. This functionality should work correctly in various scenarios, including when some tiles are marked, when the game is in progress, when a win has been announced, when a tie has been announced, and when no tiles have been marked.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

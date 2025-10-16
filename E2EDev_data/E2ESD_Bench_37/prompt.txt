@@ -1,0 +1,30 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The application is a text-moving tool that allows users to input text into a textarea and move it to a display area on the right by clicking a button. It provides visual feedback on the progress of the text movement through a progress indicator and a progress bar.",
+    "predefined_options": "The application does not specify predefined options or default values for user inputs.",
+    "external_resources": "No external resources such as links, images, or audio files are used in this application.",
+    "external_js_libraries": "No external JavaScript libraries or packages are used in this application."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+The web application should allow users to transfer text from a textarea to a content display area through a button click. Specifically, when a user inputs text into the textarea with data-testid 'text-area' and clicks the button with data-testid 'move-text-button', the text should be moved to the content display area with data-testid 'content-display'. The textarea should then be cleared. The system should handle various scenarios: 1) If the textarea is empty when the button is clicked, an alert with the message '请输入文本信息' should be displayed, and no changes should occur in the content display area or textarea. 2) The system should support text input up to a maximum length of 280 characters, including special characters. 3) A progress indicator with data-testid 'progress-indicator' should update to reflect the number of characters moved relative to the total characters initially entered. Additionally, a progress bar with data-testid 'progress-bar' should visually indicate the text movement process, with each list item (data-testid 'progress-bar-item-1' to 'progress-bar-item-6') changing color sequentially during the transfer. The button should change its background color to '#ccc' during the text transfer process and revert once complete.
+- Requirement 2: 
+The web application should allow users to move text from a textarea (data-testid='text-area', id='text') to a content display area (data-testid='content-display', id='content') by clicking a button (data-testid='move-text-button', id='button'). Upon clicking the button, if the textarea is empty, an alert with the message '请输入文本信息' should be displayed, and no further action should occur. If the textarea contains text, the button's background should change to '#ccc', and a progress bar (data-testid='progress-bar') should become visible. The text should be moved character by character from the textarea to the content display area, updating the progress indicator (data-testid='progress-indicator', strong element) to show the format 'X/Y', where X is the number of characters moved and Y is the total number of characters initially present in the textarea. The progress bar should visually indicate progress by changing the background color of its items (data-testid='progress-bar-item-1' to 'progress-bar-item-6') as the text is moved. The system should handle text up to a maximum length of 280 characters, and the progress indicator should accurately reflect the movement of special characters as well.
+- Requirement 3: 
+When the button with data-testid 'move-text-button' is clicked, the system should change the button's background color to '#ccc' to indicate activation, provided that the textarea with data-testid 'text-area' is not empty. If the textarea is empty, the button's background color should remain unchanged, and an alert should be displayed with the message '请输入文本信息'.
+- Requirement 4: 
+The system must clear the content display area with data-testid 'content-display' each time the button with data-testid 'move-text-button' is clicked. If the text area with data-testid 'text-area' contains text, the content display area should initially be empty before displaying the text. If the text area is empty, an alert with the message '请输入文本信息' should be shown, and the content display area should remain empty.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

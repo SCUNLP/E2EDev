@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["media tool", "content generator"],
+  "InteractionModes": ["form input", "click events", "speech synthesis"],
+  "LogicComplexityLevel": "state management, conditionals",
+  "TechnicalPoints": ["dynamic DOM manipulation", "Web Speech API", "event handling"],
+  "ExternalResources": ["JS libraries (Font Awesome)", "external media (images from GitHub)"]
+}
+```

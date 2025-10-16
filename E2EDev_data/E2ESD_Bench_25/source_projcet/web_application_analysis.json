@@ -1,0 +1,9 @@
+```json
+{
+  "FunctionType": ["Media Tool", "Interactive Feature"],
+  "InteractionModes": ["Double-click interaction", "Visual feedback"],
+  "LogicComplexityLevel": "Conditionals, Timed animations",
+  "TechnicalPoints": ["Dynamic DOM manipulation", "CSS styling"],
+  "ExternalResources": ["Unsplash image URL", "Font Awesome CSS from CDN"]
+}
+```

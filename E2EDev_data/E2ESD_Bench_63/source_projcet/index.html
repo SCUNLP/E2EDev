@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="./public/css/style.css" rel="stylesheet"/>
+<link href="./public/img/logo.jfif" rel="shortcut icon" type="image/png"/>
+<title>LCM and HCF</title>
+</head>
+<body>
+<div class="container">
+  <div>
+    <button data-testid="lcm-button" id="lcmBtn"></button>
+    <div class="resultboxLcm box">
+      <form>
+        <div>
+          <input data-testid="lcm-num1-input" id="numLcm1" placeholder="Num1..." type="number"/>
+          <input data-testid="lcm-num2-input" id="numLcm2" placeholder="Num2..." type="number"/>
+        </div>
+        <input class="resultBtn" data-testid="lcm-submit-button" id="lcm" type="submit" value="Calculate"/>
+      </form>
+      <div class="property">
+        <div class="even evenLcm" data-testid="lcm-even-display">even</div>
+        <div class="odd oddLcm" data-testid="lcm-odd-display">odd</div>
+      </div>
+      <p class="resultLcm result" data-testid="lcm-result-display"></p>
+    </div>
+  </div>
+  <div>
+    <button data-testid="hcf-button" id="hcfBtn"></button>
+    <div class="resultboxHcf box">
+      <form>
+        <div>
+          <input data-testid="hcf-num1-input" id="numHcf1" placeholder="Num1..." type="number"/>
+          <input data-testid="hcf-num2-input" id="numHcf2" placeholder="Num2..." type="number"/>
+        </div>
+        <input class="resultBtn" data-testid="hcf-submit-button" id="hcf" type="submit" value="Calculate"/>
+      </form>
+      <div class="property">
+        <div class="even evenHcf" data-testid="hcf-even-display">even</div>
+        <div class="odd oddHcf" data-testid="hcf-odd-display">odd</div>
+      </div>
+      <p class="resultHcf result" data-testid="hcf-result-display"></p>
+    </div>
+  </div>
+</div>
+<script crossorigin="anonymous" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./public/js/main.js"></script>
+</body>
+</html>

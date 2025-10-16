@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Timetable Generator</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<h1 class="title">Timetable Generator</h1>
+<form data-testid="timetable-form" id="timetable-form">
+<div class="form-group">
+<label for="subject" data-testid="subject-label">Subject:</label>
+<input data-testid="subject" id="subject" placeholder="Enter Subject" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="start-time" data-testid="start-time-label">Start Time:</label>
+<input data-testid="start-time" id="start-time" required="" type="time"/>
+</div>
+<div class="form-group">
+<label for="end-time" data-testid="end-time-label">End Time:</label>
+<input data-testid="end-time" id="end-time" required="" type="time"/>
+</div>
+<div class="form-group">
+<label for="days" data-testid="days-label">Days:</label>
+<div class="checkbox-group" data-testid="days" id="days">
+<label data-testid="day-monday"><input type="checkbox" value="Monday"/> Monday</label>
+<label data-testid="day-tuesday"><input type="checkbox" value="Tuesday"/> Tuesday</label>
+<label data-testid="day-wednesday"><input type="checkbox" value="Wednesday"/> Wednesday</label>
+<label data-testid="day-thursday"><input type="checkbox" value="Thursday"/> Thursday</label>
+<label data-testid="day-friday"><input type="checkbox" value="Friday"/> Friday</label>
+<label data-testid="day-saturday"><input type="checkbox" value="Saturday"/> Saturday</label>
+</div>
+</div>
+<button class="btn" type="submit" data-testid="add-timetable-button">Add to Timetable</button>
+</form>
+<table class="timetable" data-testid="timetable" id="timetable">
+<thead>
+<tr>
+<th data-testid="time-header">Time</th>
+<th data-testid="monday-header">Monday</th>
+<th data-testid="tuesday-header">Tuesday</th>
+<th data-testid="wednesday-header">Wednesday</th>
+<th data-testid="thursday-header">Thursday</th>
+<th data-testid="friday-header">Friday</th>
+<th data-testid="saturday-header">Saturday</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+    You are tasked with implementing a complete web application using HTML, JavaScript, and CSS. Your implementation must strictly follow the specifications described below.
+    SUMMARY:
+    {
+    "overview": "The Online Quiz Portal allows users to participate in a quiz by answering multiple-choice questions. Users can navigate through questions, select answers, and view their final score at the end of the quiz.",
+    "predefined_options": "quizData = [\n  {\n    question: \"What is the capital of France?\",\n    options: [\"Berlin\", \"Madrid\", \"Paris\", \"Lisbon\"],\n    answer: \"Paris\",\n  },\n  {\n    question: \"What is 2 + 2?\",\n    options: [\"3\", \"4\", \"5\", \"6\"],\n    answer: \"4\",\n  },\n  {\n    question: \"What is the largest ocean on Earth?\",\n    options: [\n      \"Atlantic Ocean\",\n      \"Indian Ocean\",\n      \"Arctic Ocean\",\n      \"Pacific Ocean\",\n    ],\n    answer: \"Pacific Ocean\",\n  },\n]",
+    "external_resources": "No external resources are explicitly mentioned in the provided code.",
+    "external_js_libraries": "No external JavaScript libraries are explicitly mentioned in the provided code."
+}
+    ## Functional Requirements
+    Implement the following features as described. For each requirement, make sure the HTML structure, JavaScript behavior, and CSS styles match the specifications exactly.
+    REQUIREMENTS:
+    - Requirement 1: 
+When the user accesses the Online Quiz Portal webpage, the system must display an h1 element with the text 'Online Quiz Portal', an h2 element with the text 'What is the capital of France?' (data-testid: 'question'), a div (data-testid: 'options') containing four radio button options ('Berlin', 'Madrid', 'Paris', 'Lisbon', each with type 'radio', name 'option', and their respective data-testids: 'option-0' to 'option-3'), and a button labeled 'Next Question' (data-testid: 'next-button').
+- Requirement 2: 
+When the user views a question on the Online Quiz Portal page, the system displays the current question text in the <h2> element (data-testid: 'question'). Initially, it shows 'What is the capital of France?'. After the user clicks the button (data-testid: 'next-button'), the question updates to 'What is 2 + 2?', and after another click, it updates to 'What is the largest ocean on Earth?'.
+- Requirement 3: 
+When the user accesses the 'Online Quiz Portal' page, the system dynamically generates answer options for the current question, displaying them as radio buttons within the <div> element (data-testid: 'options'). Each option is a radio input with a unique value matching the option text, a label showing the text, and a shared name attribute 'option' to allow single selection. The system updates the radio buttons for each question based on the quizData array.
+- Requirement 4: 
+The Online Quiz Portal must allow users to select one answer per question using radio buttons within the <div> element (data-testid: 'options'). Each radio button has a unique data-testid in the format 'option-{index}', and no option is selected by default. When the user clicks a radio button, it becomes selected while any previous selection is cleared.
+- Requirement 5: 
+After the user selects an option and clicks the <button> (data-testid: 'next-button') to proceed. Upon clicking, the system checks if an option is selected: if correct, it increments the score by 1; if not selected, it proceeds without scoring. The system updates to the next question or, if none remain, hides the question, options, and button (by adding the 'hidden' class) and displays the final score in the <div> (data-testid: 'score') with the message 'You scored {score} out of {total number of questions}'.
+- Requirement 6: 
+When the user clicks the button with data-testid 'next-button' after answering or skipping the last question on the Online Quiz Portal, if all questions are completed, the system must hide the element with data-testid 'question', hide the element with data-testid 'options', hide the element with data-testid 'next-button', and display the element with data-testid 'score' showing the text 'You scored X out of Y'.
+
+    
+    ## Output Format
+    Provide a clean and complete implementation including:
+    1. HTML structure (including necessary `data-testid`, `id`, and `class` values).
+    2. JavaScript functionality that matches the behavior described.
+    3. CSS for styling according to BEM and required class names.
+    4. Ensure that the text content in the components is exactly as specified in the requirements.
+    Do not include any extra components or libraries not listed above. Keep your code concise, semantic, and standards-compliant.
+    

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<title>Password Generator</title>
+</head>
+<body>
+<div class="container">
+<h2>Password Generator</h2>
+<div class="result-container">
+<span data-testid="result-display" id="result"></span>
+<button class="btn" data-testid="copy-to-clipboard-button" id="clipboard">
+<i class="far fa-copy"></i>
+</button>
+</div>
+<div class="settings">
+<div class="setting">
+<label for="length" data-testid="length-label">Password Length</label>
+<input data-testid="password-length-input" id="length" max="20" min="4" name="length" type="number" value="20"/>
+</div>
+<div class="setting">
+<label for="uppercase" data-testid="uppercase-label">Include uppercase letters</label>
+<input checked="" data-testid="include-uppercase-checkbox" id="uppercase" name="uppercase" type="checkbox"/>
+</div>
+<div class="setting">
+<label for="lowercase" data-testid="lowercase-label">Include lowercase letters</label>
+<input checked="" data-testid="include-lowercase-checkbox" id="lowercase" name="lowercase" type="checkbox"/>
+</div>
+<div class="setting">
+<label for="numbers" data-testid="numbers-label">Include numbers</label>
+<input checked="" data-testid="include-numbers-checkbox" id="numbers" name="numbers" type="checkbox"/>
+</div>
+<div class="setting">
+<label for="symbols" data-testid="symbols-label">Include symbols</label>
+<input checked="" data-testid="include-symbols-checkbox" id="symbols" name="symbols" type="checkbox"/>
+</div>
+</div>
+<button class="btn btn-large" data-testid="generate-password-button" id="generate">Generate Password</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
